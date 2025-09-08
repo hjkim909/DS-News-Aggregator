@@ -1,0 +1,17 @@
+# DS News Aggregator - Environment Variables Example
+# 이 내용을 .env 파일로 저장하고 실제 API 키로 교체하세요
+
+# Reddit API 설정 (필수 - 무료)
+# https://www.reddit.com/prefs/apps 에서 앱 생성
+REDDIT_CLIENT_ID=your-reddit-client-id
+REDDIT_CLIENT_SECRET=your-reddit-client-secret
+REDDIT_USER_AGENT=DSNewsAggregator/1.0
+
+# Google Gemini API 설정 (요약용 - 유료지만 저렴)
+# https://makersuite.google.com/app/apikey 에서 API 키 생성
+GEMINI_API_KEY=your-gemini-api-key
+
+# Flask 설정 (선택적)
+SECRET_KEY=your-secret-key-here
+FLASK_DEBUG=True
+PORT=5000

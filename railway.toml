@@ -1,0 +1,32 @@
+# Railway 배포 설정
+[build]
+builder = "nixpacks"
+
+[deploy]
+startCommand = "gunicorn --bind 0.0.0.0:$PORT app:app"
+healthcheckPath = "/"
+healthcheckTimeout = 300
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 3
+
+[env]
+PYTHONPATH = "/app"
+FLASK_ENV = "production"
+FLASK_DEBUG = "False"
+
+# 자동 배포 설정
+[deploy.trigger]
+branch = "main"
+
+# 빌드 최적화
+[build.cache]
+enabled = true
+
+# 리소스 설정 
+[resources]
+cpu = 1
+memory = 512
+
+# 로그 설정
+[logging]
+level = "info"
