@@ -9,7 +9,7 @@ DS News Aggregator - Content Filter
 
 import re
 import logging
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from typing import List, Dict, Any, Optional, Set, Tuple
 from collections import Counter
 from difflib import SequenceMatcher
@@ -95,28 +95,105 @@ class ContentFilter:
         
         return similarity >= similarity_threshold
     
-    def _has_ds_ml_keywords(self, article: Dict[str, Any]) -> bool:
+    def _is_recent_article(self, article: Dict[str, Any]) -> bool:
         """
-        DS/ML 관련 키워드가 있는지 확인 (한국 블로그용)
+        최근 1~2달 이내 발행된 기사인지 확인 (사용자 요구사항)
         
         Args:
             article: 검사할 글
             
         Returns:
-            DS/ML 키워드 포함 여부
+            최근 기사 여부
+        """
+        pub_date_str = article.get('published', '')
+        if not pub_date_str:
+            logger.debug(f"발행일 없음으로 제외: {article.get('title', '')[:50]}")
+            return False
+        
+        try:
+            # ISO 형식 날짜 파싱
+            if pub_date_str.endswith('+00:00'):
+                pub_date = datetime.fromisoformat(pub_date_str.replace('+00:00', '+00:00'))
+            elif 'T' in pub_date_str:
+                pub_date = datetime.fromisoformat(pub_date_str.replace('Z', '+00:00'))
+            else:
+                pub_date = datetime.fromisoformat(pub_date_str)
+            
+            # timezone이 없으면 UTC로 가정
+            if pub_date.tzinfo is None:
+                pub_date = pub_date.replace(tzinfo=timezone.utc)
+            
+            # 현재 시간과 비교
+            now = datetime.now(timezone.utc)
+            article_age_days = (now - pub_date).days
+            max_age = self.config.MAX_ARTICLE_AGE_DAYS  # 기본 60일
+            
+            # 연도 체크 (2025년 이후만)
+            if pub_date.year < self.config.MIN_PUBLISH_YEAR:
+                logger.debug(f"{pub_date.year}년 기사로 제외: {article.get('title', '')[:50]}")
+                return False
+            
+            # 최대 나이 체크
+            if article_age_days > max_age:
+                logger.debug(f"{article_age_days}일 전 기사로 제외 (최대: {max_age}일): {article.get('title', '')[:50]}")
+                return False
+            
+            logger.debug(f"최신 기사 승인 ({article_age_days}일 전): {article.get('title', '')[:50]}")
+            return True
+            
+        except (ValueError, TypeError) as e:
+            logger.warning(f"날짜 파싱 실패 '{pub_date_str}': {e}")
+            return False
+    
+    def _has_ds_ml_keywords(self, article: Dict[str, Any], strict_mode: bool = True) -> bool:
+        """
+        DS/ML/LLM/AI 관련 키워드가 있는지 엄격하게 확인
+        
+        Args:
+            article: 검사할 글
+            strict_mode: 엄격 모드 (기본값: True)
+            
+        Returns:
+            DS/ML/LLM/AI 키워드 포함 여부
         """
         title = article.get('title', '').lower()
         content = article.get('content', '').lower()
         full_text = title + ' ' + content
         
-        # DS/ML 키워드 리스트
-        ds_ml_keywords = self.config.DS_KEYWORDS + [
-            # 추가 키워드
-            '인공지능', 'AI', '데이터', '분석', '예측', '모델링',
-            '딥러닝', '머신러닝', '기계학습', '신경망', '알고리즘'
-        ]
+        # 엄격 모드: 핵심 AI/ML/LLM 키워드만 허용
+        if strict_mode:
+            # 1단계: 제외 키워드 체크 (일반 개발 내용 제외)
+            excluded_keywords = getattr(self.config, 'EXCLUDED_TECH_KEYWORDS', [])
+            for excluded_keyword in excluded_keywords:
+                if excluded_keyword.lower() in full_text:
+                    logger.debug(f"제외 키워드로 거부: {excluded_keyword}")
+                    return False
+            
+            # 2단계: 핵심 AI/ML/LLM 키워드 확인
+            required_keyword_found = False
+            core_keywords = [
+                # 핵심 AI/ML
+                'machine learning', 'deep learning', 'artificial intelligence', 'neural network',
+                'data science', 'llm', 'large language model', 'gpt', 'transformer',
+                'computer vision', 'natural language processing', 'nlp',
+                
+                # 한국어 핵심 키워드  
+                '머신러닝', '딥러닝', '인공지능', 'llm', '대형언어모델', '생성형ai',
+                '자연어처리', '컴퓨터비전', '데이터사이언스'
+            ]
+            
+            for keyword in core_keywords:
+                if keyword.lower() in full_text:
+                    required_keyword_found = True
+                    logger.debug(f"핵심 키워드 발견: {keyword}")
+                    break
+            
+            if not required_keyword_found:
+                logger.debug(f"핵심 AI/ML 키워드 부족으로 거부")
+                return False
         
-        for keyword in ds_ml_keywords:
+        # 3단계: 추가 DS/ML 키워드 확인
+        for keyword in self.config.DS_KEYWORDS:
             if keyword.lower() in full_text:
                 return True
         
@@ -175,9 +252,40 @@ class ContentFilter:
         logger.info(f"점수 필터링: {len(articles)} → {len(filtered)}개 (임계값: {threshold}점)")
         return filtered
     
+    def filter_all_articles_by_keywords(self, articles: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """
+        모든 글에서 AI/ML/LLM 주제만 엄격하게 필터링 (사용자 요구사항)
+        
+        Args:
+            articles: 필터링할 글 목록
+            
+        Returns:
+            AI/ML/LLM 주제로 필터링된 글 목록
+        """
+        filtered = []
+        rejected_count = 0
+        
+        for article in articles:
+            # 1단계: 날짜 필터링 (최근 1~2달)
+            if not self._is_recent_article(article):
+                rejected_count += 1
+                logger.debug(f"거부: {article.get('title', '')[:50]} (오래된 기사)")
+                continue
+            
+            # 2단계: 엄격한 AI/ML/LLM 키워드 필터링 적용
+            if self._has_ds_ml_keywords(article, strict_mode=True):
+                filtered.append(article)
+                logger.debug(f"승인: {article.get('title', '')[:50]} (소스: {article.get('source', '')})")
+            else:
+                rejected_count += 1
+                logger.debug(f"거부: {article.get('title', '')[:50]} (AI/ML/LLM 주제 아님)")
+        
+        logger.info(f"🎯 날짜+AI/ML/LLM 필터링: {len(articles)} → {len(filtered)}개 (거부: {rejected_count}개)")
+        return filtered
+    
     def filter_korean_blogs_by_keywords(self, articles: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """
-        한국 블로그 글에서 DS/ML 키워드 포함 글만 필터링
+        한국 블로그 글에서 DS/ML 키워드 포함 글만 필터링 (기존 호환성 유지)
         
         Args:
             articles: 필터링할 글 목록
@@ -185,23 +293,8 @@ class ContentFilter:
         Returns:
             키워드 필터링된 글 목록
         """
-        korean_blog_sources = ['naver_d2', 'kakao_tech', 'ai_times']
-        
-        filtered = []
-        for article in articles:
-            source = article.get('source', '')
-            
-            # 한국 블로그가 아니면 통과
-            if source not in korean_blog_sources:
-                filtered.append(article)
-            # 한국 블로그면 DS/ML 키워드 체크
-            elif self._has_ds_ml_keywords(article):
-                filtered.append(article)
-            else:
-                logger.debug(f"DS/ML 키워드 부족으로 제외: {article.get('title', '')[:50]}")
-        
-        logger.info(f"한국 블로그 키워드 필터링: {len(articles)} → {len(filtered)}개")
-        return filtered
+        # 이제 모든 소스에 엄격한 필터링 적용
+        return self.filter_all_articles_by_keywords(articles)
     
     def get_top_articles(self, articles: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """
@@ -219,8 +312,8 @@ class ContentFilter:
         
         logger.info(f"===== 콘텐츠 필터링 시작: {len(articles)}개 글 =====")
         
-        # 1단계: 한국 블로그 키워드 필터링
-        filtered_articles = self.filter_korean_blogs_by_keywords(articles)
+        # 1단계: 엄격한 AI/ML/LLM 주제 필터링 (사용자 요구사항)
+        filtered_articles = self.filter_all_articles_by_keywords(articles)
         
         # 2단계: 점수 임계값 필터링 (70점 이상)
         filtered_articles = self.filter_by_score_threshold(filtered_articles)

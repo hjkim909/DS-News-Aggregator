@@ -1,9 +1,9 @@
 # DS News Aggregator - Progress Plan
 
 ## Current Status
-**Date: 2024-12-30**  
-**Phase: Phase 1 Complete - Core System Ready**  
-**Status: COMPLETED - Ready for Testing**
+**Date: 2025-01-04**  
+**Phase: Advanced System - Core Features + Date Filtering Complete**  
+**Status: ENHANCED - 사용자 맞춤 개선 + 날짜 필터링 시스템 완료**
 
 ## Project Overview
 데이터 사이언티스트용 개인 뉴스 큐레이션 웹사이트 개발
@@ -36,14 +36,27 @@
 - [x] 모달 창 구현 (번역 토글, 원문 링크)
 - [x] 반응형 디자인 적용 (모바일/데스크톱 최적화)
 
-### Phase 4: Testing & Deployment
+### Phase 4: Testing & Deployment ✅ **COMPLETED**
 - [x] 개별 모듈 테스트 스크립트 (test_collectors.py)
-- [x] 통합 테스트 (test_integration.py, test_performance.py, test_quality.py, test_mobile.py) **[COMPLETED]**
+- [x] 통합 테스트 (test_integration.py, test_performance.py, test_quality.py, test_mobile.py)
+- [x] 사용자 맞춤 개선 (AI/ML 필터링, 날짜별 UI, 외부 접근)
+- [x] 날짜 필터링 시스템 (최근 2달, 2025년+ 기사만)
 - [ ] Railway 배포 설정 **[READY]**
 - [ ] 자동화 스케줄링 설정 **[READY]**
 
+### Phase 5: Next Improvements **[PLANNING]**
+- [ ] 정렬 기본값을 최신순으로 변경
+- [ ] 페이지네이션 구현 (12개 단위)
+- [ ] 매일 자동 실행 + 중복 방지 시스템
+- [ ] 한국 소스 확장 (datarian 등)
+
 ## Current Focus  
-**🎉 DS News Aggregator 프로젝트 완전 완성! 모든 테스트 통과 + 배포 준비 완료!**
+**🚀 DS News Aggregator 사용자 맞춤 개선 완료! 필터링 강화 + 날짜별 정리 + 외부 접근**
+
+### 2025-01-04 개선사항 완료 ✅
+1. **AI/ML/LLM 필터링 강화** - 관련 주제만 엄격하게 수집하도록 필터링 시스템 개선
+2. **날짜별 1depth 구조** - 수집일별로 카드를 정리하고 접기/펼치기 기능 추가  
+3. **외부 접근 허용** - host='0.0.0.0' 설정으로 다른 기기에서도 접근 가능
 
 ## Next Steps - 완성된 시스템 실행 가이드
 1. **API 키 설정**: `cp env.example .env` → API 키 입력 (Reddit, Gemini)
@@ -124,3 +137,47 @@
   - 품질 테스트: 필터링 정확도 70%+, 번역 성공률 80%+, 요약 품질 검증
   - 모바일 테스트: 반응형 디자인, 터치 UI, 3초 로딩 목표 검증
   - 마스터 테스트: run_all_tests.py 전체 자동화 테스트 스위트
+- 2025-01-04: **🎯 사용자 맞춤 개선 완료 - 3가지 핵심 개선사항 적용!**
+  - 필터링 강화: AI/ML/LLM 키워드 엄격 적용, 일반 개발글 제외 로직 추가
+  - UI 개선: 날짜별 섹션으로 1depth 구조화, 접기/펼치기 + 일괄 읽음 기능
+  - 접근성 개선: 외부 접근 허용 설정, IP 주소 자동 표시, 네트워크 접근 가능
+  - 사용자 경험: 카드 레이아웃 최적화, 읽음 상태 관리, 반응형 디자인 유지
+- 2025-01-04: **📅 날짜 필터링 시스템 구축 완료 - 최신성 보장!**
+  - 기존 데이터 정리: 2025년 이전 오래된 기사 5개 제거 (31개 → 26개)
+  - 날짜 필터링 적용: 최근 60일(2달) 이내 기사만 수집 및 표시
+  - 수집기 강화: TechBlog/Medium 수집기에 날짜 필터링 로직 추가
+  - 품질 향상: 연도 체크(2025년+) + 최신성 체크로 이중 필터링
+
+## Next Phase TODO List 📋
+
+### Phase 5: UX & Automation Improvements
+**우선순위: 높음**
+
+#### 1. 정렬 기본값 개선 **[TODO]**
+- [ ] 현재 품질순 → 최신순으로 기본 정렬 변경
+- [ ] 사용자 선택 기본값 localStorage 저장
+- [ ] 정렬 옵션 UI 개선
+
+#### 2. 페이지네이션 구현 **[TODO]** 
+- [ ] 12개 단위로 글 분할 표시
+- [ ] 하단 페이지 번호 네비게이션 (1, 2, 3...)
+- [ ] 페이지 이동시 스크롤 위치 조정
+- [ ] 날짜별 섹션과 페이지네이션 조화
+
+#### 3. 자동화 시스템 강화 **[TODO]**
+- [ ] 매일 자동 수집 크론잡 설정 완료
+- [ ] 중복 기사 방지 시스템 (URL 해시 기반)
+- [ ] 수집 실패시 알림 시스템
+- [ ] 자동 백업 및 데이터 관리
+
+#### 4. 한국 소스 확장 **[TODO]**
+- [ ] datarian.io RSS 수집 추가  
+- [ ] 추가 한국 기술 블로그 발굴 및 추가
+- [ ] 한국어 키워드 필터링 강화
+- [ ] 소스별 품질 가중치 조정
+
+### Phase 6: Advanced Features **[FUTURE]**
+- [ ] 사용자 맞춤 키워드 설정
+- [ ] 모바일 앱 버전 개발
+- [ ] AI 기반 추천 시스템
+- [ ] 소셜 공유 기능

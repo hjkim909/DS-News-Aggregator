@@ -29,35 +29,77 @@ logger = logging.getLogger(__name__)
 # 데이터 파일 경로
 DATA_FILE = 'data/articles.json'
 
-def load_today_articles():
+def load_articles_by_date():
     """
-    오늘 날짜 글 목록 로드 (사용자 요구사항: 새로운 JSON 형식)
-    형식: {"date": "2024-12-30", "articles": [...]}
+    날짜별 글 목록 로드 (사용자 요구사항: 날짜별 1depth 구조)
+    Returns:
+        dict: {date: {'articles': [...], 'count': int, 'sources': [...]}, ...}
     """
+    articles_by_date = {}
+    
     try:
+        # 현재 파일 로드
         if os.path.exists(DATA_FILE):
             with open(DATA_FILE, 'r', encoding='utf-8') as f:
-                data = json.load(f)
+                current_data = json.load(f)
                 
             # 새로운 형식인지 확인
-            if isinstance(data, dict) and 'articles' in data:
-                articles = data['articles']
-                date_str = data.get('date', 'Unknown')
-                logger.info(f"오늘 글 로드: {len(articles)}개 ({date_str})")
-                return articles, date_str
-            # 기존 형식 호환
-            elif isinstance(data, list):
-                logger.info(f"기존 형식 글 로드: {len(data)}개")
-                return data, datetime.now().date().isoformat()
-            else:
-                logger.warning("알 수 없는 데이터 형식")
-                return [], datetime.now().date().isoformat()
-        else:
-            logger.info("데이터 파일이 없습니다.")
-            return [], datetime.now().date().isoformat()
-            
+            if isinstance(current_data, dict) and 'articles' in current_data:
+                date_str = current_data.get('date', 'Unknown')
+                articles = current_data['articles']
+                articles_by_date[date_str] = {
+                    'articles': articles,
+                    'count': len(articles),
+                    'sources': list(set(article.get('source', 'Unknown') for article in articles))
+                }
+        
+        # 백업 폴더에서 과거 데이터 로드
+        backup_dir = 'data/backup'
+        if os.path.exists(backup_dir):
+            for filename in os.listdir(backup_dir):
+                if filename.startswith('articles_') and filename.endswith('.json'):
+                    file_path = os.path.join(backup_dir, filename)
+                    try:
+                        with open(file_path, 'r', encoding='utf-8') as f:
+                            backup_data = json.load(f)
+                            
+                        if isinstance(backup_data, dict) and 'articles' in backup_data:
+                            date_str = backup_data.get('date', filename.replace('articles_', '').replace('.json', ''))
+                            articles = backup_data['articles']
+                            
+                            if date_str not in articles_by_date:
+                                articles_by_date[date_str] = {
+                                    'articles': articles,
+                                    'count': len(articles),
+                                    'sources': list(set(article.get('source', 'Unknown') for article in articles))
+                                }
+                    except Exception as e:
+                        logger.warning(f"백업 파일 로드 실패: {filename} - {e}")
+        
+        # 날짜별 정렬 (최신 순)
+        sorted_dates = sorted(articles_by_date.keys(), reverse=True)
+        sorted_articles_by_date = {date: articles_by_date[date] for date in sorted_dates}
+        
+        total_articles = sum(data['count'] for data in sorted_articles_by_date.values())
+        logger.info(f"날짜별 글 로드 완료: {len(sorted_articles_by_date)}일, 총 {total_articles}개 글")
+        
+        return sorted_articles_by_date
+        
     except Exception as e:
-        logger.error(f"글 데이터 로드 실패: {e}")
+        logger.error(f"날짜별 글 데이터 로드 실패: {e}")
+        return {}
+
+def load_today_articles():
+    """
+    오늘 날짜 글 목록 로드 (호환성 유지)
+    """
+    articles_by_date = load_articles_by_date()
+    if articles_by_date:
+        # 가장 최근 날짜의 글들 반환
+        latest_date = next(iter(articles_by_date))
+        latest_data = articles_by_date[latest_date]
+        return latest_data['articles'], latest_date
+    else:
         return [], datetime.now().date().isoformat()
 
 def find_article_by_id(article_id: str):
@@ -87,45 +129,56 @@ def find_article_by_id(article_id: str):
 # 메인 라우트: 오늘 날짜 글 목록 표시
 @app.route('/')
 def dashboard():
-    """메인 대시보드 페이지 (사용자 요구사항 반영)"""
+    """메인 대시보드 페이지 - 날짜별 글 구조 (사용자 요구사항 반영)"""
     try:
-        articles, date_str = load_today_articles()
+        # 날짜별로 글 로드
+        articles_by_date = load_articles_by_date()
         
-        # 통계 정보 계산
-        total_articles = len(articles)
-        sources = list(set(article.get('source', 'Unknown') for article in articles))
-        
-        # 태그 통계
+        # 전체 통계 계산
+        total_articles = 0
+        all_sources = set()
         all_tags = []
-        for article in articles:
-            tags = article.get('tags', [])
-            all_tags.extend(tags)
+        
+        for date_data in articles_by_date.values():
+            total_articles += date_data['count']
+            all_sources.update(date_data['sources'])
+            
+            # 각 날짜의 글에서 태그 추출
+            for article in date_data['articles']:
+                tags = article.get('tags', [])
+                all_tags.extend(tags)
+        
         unique_tags = list(set(all_tags))
         
         stats = {
             'total_articles': total_articles,
-            'sources_count': len(sources),
-            'sources': sources,
+            'sources_count': len(all_sources),
+            'sources': list(all_sources),
             'tags': unique_tags,
-            'date': date_str,
+            'date_count': len(articles_by_date),
+            'dates': list(articles_by_date.keys()),
             'last_updated': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         }
         
         return render_template('dashboard.html', 
-                             articles=articles, 
-                             stats=stats)
+                             articles_by_date=articles_by_date,
+                             stats=stats,
+                             is_date_view=True)
                              
     except Exception as e:
         logger.error(f"대시보드 로드 실패: {e}")
         return render_template('dashboard.html', 
-                             articles=[], 
+                             articles_by_date={},
                              stats={
                                  'total_articles': 0, 
                                  'sources_count': 0, 
                                  'sources': [],
                                  'tags': [],
-                                 'date': datetime.now().date().isoformat()
+                                 'date_count': 0,
+                                 'dates': [],
+                                 'last_updated': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
                              },
+                             is_date_view=True,
                              error="대시보드를 로드할 수 없습니다.")
 
 # API 라우트: /api/article/<id> 개별 글 상세 정보  
@@ -369,6 +422,55 @@ if __name__ == '__main__':
     if is_port_in_use(port):
         port = 5001
         logger.warning(f"포트 5000이 사용 중입니다. 포트 {port}로 변경합니다.")
-        logger.info(f"   - 새로운 접속 URL: http://localhost:{port}")
+    
+    # 외부 접근 가능하도록 host='0.0.0.0' 설정
+    logger.info(f"🚀 DS News Aggregator 서버 시작")
+    logger.info(f"   - 디버그 모드: {debug_mode}")
+    logger.info(f"   - 포트: {port}")
+    logger.info(f"   - 로컬 접속: http://localhost:{port}")
+    logger.info(f"   - 외부 접속: http://<YOUR_IP>:{port}")
+    logger.info(f"   - 데이터 파일: {DATA_FILE}")
+    
+    # 현재 시스템의 IP 주소들 표시
+    try:
+        import netifaces
+        interfaces = netifaces.interfaces()
+        ips = []
+        for interface in interfaces:
+            addrs = netifaces.ifaddresses(interface)
+            if netifaces.AF_INET in addrs:
+                for addr in addrs[netifaces.AF_INET]:
+                    ip = addr['addr']
+                    if ip != '127.0.0.1' and not ip.startswith('169.254'):
+                        ips.append(ip)
+        
+        if ips:
+            logger.info(f"   - 사용 가능한 외부 IP: {', '.join(ips)}")
+        else:
+            logger.info(f"   - 외부 IP를 확인할 수 없습니다. 'ifconfig' 명령어로 확인하세요.")
+            
+    except ImportError:
+        # netifaces 라이브러리가 없는 경우, 간단한 방법으로 IP 확인
+        try:
+            import subprocess
+            import re
+            
+            # macOS/Linux에서 IP 주소 가져오기
+            result = subprocess.run(['ifconfig'], capture_output=True, text=True)
+            if result.returncode == 0:
+                # inet xxx.xxx.xxx.xxx 형태의 IP 주소 찾기
+                ips = re.findall(r'inet (\d+\.\d+\.\d+\.\d+)', result.stdout)
+                # 로컬호스트와 169.254로 시작하는 IP 제외
+                external_ips = [ip for ip in ips if ip != '127.0.0.1' and not ip.startswith('169.254')]
+                
+                if external_ips:
+                    logger.info(f"   - 사용 가능한 외부 IP: {', '.join(external_ips)}")
+                else:
+                    logger.info(f"   - 터미널에서 'ifconfig'로 IP 주소를 확인하세요.")
+            else:
+                logger.info(f"   - 터미널에서 'ifconfig'로 IP 주소를 확인하세요.")
+                
+        except Exception:
+            logger.info(f"   - 터미널에서 'ifconfig'로 IP 주소를 확인하세요.")
     
     app.run(debug=debug_mode, host='0.0.0.0', port=port)

@@ -7,7 +7,7 @@ Medium 계열 플랫폼에서 RSS 피드를 통해 데이터 수집
 
 import logging
 import time
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from typing import Dict, List, Optional, Any
 import requests
 import feedparser
@@ -51,6 +51,9 @@ class MediumCollector:
         # 세션 생성
         self.session = requests.Session()
         self.session.headers.update(self.headers)
+        
+        # 날짜 필터링 설정
+        self.cutoff_date = datetime.now(timezone.utc) - timedelta(days=self.config.MAX_ARTICLE_AGE_DAYS)
         
         # Medium 특화 키워드 (데이터 사이언스, ML, AI 중심)
         self.medium_keywords = [
@@ -323,6 +326,16 @@ class MediumCollector:
                     published_time = datetime(*entry.published_parsed[:6], tzinfo=timezone.utc)
                 else:
                     published_time = datetime.now(timezone.utc)
+                
+                # 날짜 필터링 (사용자 요구사항: 최근 1~2달)
+                if published_time.year < self.config.MIN_PUBLISH_YEAR:
+                    logger.debug(f"{published_time.year}년 기사 제외: {title[:50]}")
+                    continue
+                    
+                article_age_days = (datetime.now(timezone.utc) - published_time).days
+                if article_age_days > self.config.MAX_ARTICLE_AGE_DAYS:
+                    logger.debug(f"{article_age_days}일 전 기사 제외: {title[:50]}")
+                    continue
                 
                 # 태그 추출
                 tags = self._extract_medium_tags(title, content, source_id)

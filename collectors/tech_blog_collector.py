@@ -7,7 +7,7 @@ DS News Aggregator - Tech Blog Collector
 
 import logging
 import time
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from typing import Dict, List, Optional, Any
 import requests
 import feedparser
@@ -47,6 +47,9 @@ class TechBlogCollector:
         # 세션 생성 (연결 재사용)
         self.session = requests.Session()
         self.session.headers.update(self.headers)
+        
+        # 날짜 필터링 설정
+        self.cutoff_date = datetime.now(timezone.utc) - timedelta(days=self.config.MAX_ARTICLE_AGE_DAYS)
         
         # DS/ML 관련 키워드 (영어 + 한국어)
         self.ds_keywords = self.config.DS_KEYWORDS + self.config.TECH_KEYWORDS + [
@@ -274,6 +277,16 @@ class TechBlogCollector:
                     published_time = datetime(*entry.updated_parsed[:6], tzinfo=timezone.utc)
                 else:
                     published_time = datetime.now(timezone.utc)
+                
+                # 날짜 필터링 (사용자 요구사항: 최근 1~2달)
+                if published_time.year < self.config.MIN_PUBLISH_YEAR:
+                    logger.debug(f"{published_time.year}년 기사 제외: {title[:50]}")
+                    continue
+                    
+                article_age_days = (datetime.now(timezone.utc) - published_time).days
+                if article_age_days > self.config.MAX_ARTICLE_AGE_DAYS:
+                    logger.debug(f"{article_age_days}일 전 기사 제외: {title[:50]}")
+                    continue
                 
                 # 태그 추출
                 tags = self._extract_tags(title, content, source_id)

@@ -59,8 +59,8 @@ class Summarizer:
         try:
             genai.configure(api_key=self.config.GEMINI_API_KEY)
             
-            # Gemini Pro 모델 초기화
-            model_name = 'gemini-pro'
+            # Gemini 모델 초기화
+            model_name = self.config.GEMINI_MODEL
             self.gemini_model = genai.GenerativeModel(model_name)
             
             logger.info(f"Gemini API 초기화 성공 - 모델: {model_name}")

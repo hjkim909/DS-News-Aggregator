@@ -18,6 +18,7 @@ class Config:
     SECRET_KEY = os.getenv('SECRET_KEY', 'dev-secret-key-change-in-production')
     DEBUG = os.getenv('FLASK_DEBUG', 'True').lower() == 'true'
     PORT = int(os.getenv('PORT', 5000))
+    HOST = os.getenv('HOST', '0.0.0.0')  # 외부 접근 허용
     
     # Reddit API 설정 (사용 중지 - 고민상담글 많음)
     # REDDIT_CLIENT_ID = os.getenv('REDDIT_CLIENT_ID', '')
@@ -36,7 +37,7 @@ class Config:
     
     # Gemini API 설정
     GEMINI_API_KEY = os.getenv('GEMINI_API_KEY', '')
-    GEMINI_MODEL = os.getenv('GEMINI_MODEL', 'gemini-pro')
+    GEMINI_MODEL = os.getenv('GEMINI_MODEL', 'gemini-1.5-flash')
     
     # Google Translate 설정
     GOOGLE_TRANSLATE_API_KEY = os.getenv('GOOGLE_TRANSLATE_API_KEY', '')
@@ -120,21 +121,49 @@ class Config:
     MAX_ARTICLES_PER_SOURCE = int(os.getenv('MAX_ARTICLES_PER_SOURCE', 20))  # 요구사항: 일 최대 20개
     SUMMARY_MAX_SENTENCES = int(os.getenv('SUMMARY_MAX_SENTENCES', 3))
     
-    # 필터링 설정
+    # 날짜 필터링 설정 (사용자 요구사항: 최근 1~2달만)
+    MAX_ARTICLE_AGE_DAYS = int(os.getenv('MAX_ARTICLE_AGE_DAYS', 60))  # 기본 60일 (2달)
+    MIN_PUBLISH_YEAR = int(os.getenv('MIN_PUBLISH_YEAR', 2025))  # 2025년 이후만
+    
+    # 필터링 설정 - ML/DS/LLM/AI 주제로 강화
     DS_KEYWORDS = [
-        'machine learning', 'data science', 'artificial intelligence', 'deep learning',
-        'neural network', 'statistics', 'data analysis', 'big data', 'analytics',
-        'python data', 'r programming', 'pandas', 'numpy', 'scikit-learn',
-        'tensorflow', 'pytorch', 'keras', 'jupyter', 'visualization',
-        '머신러닝', '딥러닝', '데이터사이언스', '인공지능', '통계학',
-        '데이터분석', '빅데이터', '분석', '시각화', '예측모델'
+        # 핵심 AI/ML 키워드
+        'machine learning', 'deep learning', 'artificial intelligence', 'neural network',
+        'data science', 'data analysis', 'statistics', 'statistical learning',
+        
+        # LLM 관련
+        'llm', 'large language model', 'gpt', 'bert', 'transformer', 'chatgpt',
+        'generative ai', 'natural language processing', 'nlp', 'language model',
+        
+        # 구체적 AI/ML 기술
+        'computer vision', 'reinforcement learning', 'supervised learning', 'unsupervised learning',
+        'classification', 'regression', 'clustering', 'dimensionality reduction',
+        'feature engineering', 'model training', 'hyperparameter', 'optimization',
+        
+        # AI/ML 라이브러리 및 도구
+        'tensorflow', 'pytorch', 'keras', 'scikit-learn', 'pandas', 'numpy',
+        'huggingface', 'openai api', 'langchain', 'vector database',
+        
+        # 데이터 관련
+        'big data', 'data mining', 'predictive analytics', 'time series',
+        'data visualization', 'business intelligence', 'etl', 'data pipeline',
+        
+        # 한국어 키워드
+        '머신러닝', '딥러닝', '인공지능', '데이터사이언스', '데이터분석',
+        'LLM', '대형언어모델', '생성형AI', '자연어처리', '컴퓨터비전',
+        '강화학습', '지도학습', '비지도학습', '분류', '회귀', '클러스터링',
+        '특성공학', '모델훈련', '하이퍼파라미터', '최적화', '시계열',
+        '빅데이터', '데이터마이닝', '예측분석', '데이터시각화', '비즈니스인텔리전스'
     ]
     
-    TECH_KEYWORDS = [
-        'python', 'programming', 'development', 'software', 'coding',
-        'algorithm', 'backend', 'frontend', 'database', 'cloud',
-        '프로그래밍', '개발', '소프트웨어', '코딩', '알고리즘',
-        '백엔드', '프론트엔드', '데이터베이스', '클라우드'
+    # 제외할 일반 기술 키워드 (AI/ML이 아닌 순수 개발 내용)
+    EXCLUDED_TECH_KEYWORDS = [
+        'web development', 'frontend', 'backend', 'javascript', 'react', 'vue', 'angular',
+        'css', 'html', 'mobile app', 'ios', 'android', 'swift', 'kotlin',
+        'database design', 'sql optimization', 'devops', 'kubernetes', 'docker',
+        'microservices', 'api design', 'system design', 'networking',
+        '웹개발', '프론트엔드', '백엔드', '모바일앱', '데이터베이스설계',
+        '시스템설계', '네트워킹', '쿠버네티스', '도커', '마이크로서비스'
     ]
     
     # 사용자 요구사항에 맞는 점수화 시스템
