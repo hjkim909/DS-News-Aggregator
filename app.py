@@ -27,6 +27,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # 데이터 파일 경로
+DATA_DIR = 'data'
 DATA_FILE = 'data/articles.json'
 
 def load_articles_by_date():
@@ -230,6 +231,98 @@ def api_articles():
             'total': 0
         }), 500
 
+@app.route('/api/dates')
+def api_dates():
+    """사용 가능한 날짜 목록 API"""
+    try:
+        import glob
+        
+        # data 디렉토리에서 날짜별 파일 찾기 (articles.json 제외)
+        date_files = glob.glob(os.path.join(DATA_DIR, 'articles_*.json'))
+        dates = []
+        
+        for file_path in date_files:
+            filename = os.path.basename(file_path)
+            
+            # articles.json은 제외 (날짜별 파일만 포함)
+            if filename == 'articles.json':
+                continue
+            
+            # articles_2025-10-05.json -> 2025-10-05 추출
+            date_str = filename.replace('articles_', '').replace('.json', '')
+            
+            # 날짜 형식 검증 (YYYY-MM-DD)
+            if len(date_str) != 10 or date_str.count('-') != 2:
+                continue
+            
+            # 파일 크기와 글 개수 확인
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                    article_count = len(data.get('articles', []))
+                    dates.append({
+                        'date': date_str,
+                        'count': article_count,
+                        'file': filename
+                    })
+            except:
+                continue
+        
+        # 날짜 역순 정렬 (최신순)
+        dates.sort(key=lambda x: x['date'], reverse=True)
+        
+        logger.info(f"📅 날짜 목록 조회: {len(dates)}개 날짜")
+        
+        return jsonify({
+            'success': True,
+            'dates': dates,
+            'total': len(dates)
+        })
+        
+    except Exception as e:
+        logger.error(f"날짜 목록 조회 실패: {e}")
+        return jsonify({
+            'success': False,
+            'error': str(e),
+            'dates': []
+        }), 500
+
+@app.route('/api/articles/<date>')
+def api_articles_by_date(date):
+    """특정 날짜의 글 목록 API"""
+    try:
+        # 파일명 생성
+        filename = f'articles_{date}.json'
+        filepath = os.path.join(DATA_DIR, filename)
+        
+        if not os.path.exists(filepath):
+            return jsonify({
+                'success': False,
+                'error': f'{date} 날짜의 데이터가 없습니다.',
+                'articles': []
+            }), 404
+        
+        # 파일 로드
+        with open(filepath, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        
+        articles = data.get('articles', [])
+        
+        return jsonify({
+            'success': True,
+            'date': date,
+            'articles': articles,
+            'total': len(articles)
+        })
+        
+    except Exception as e:
+        logger.error(f"날짜별 글 조회 실패 ({date}): {e}")
+        return jsonify({
+            'success': False,
+            'error': str(e),
+            'articles': []
+        }), 500
+
 @app.route('/api/collect', methods=['POST'])
 def api_collect():
     """수동 수집 트리거 API"""
@@ -399,7 +492,7 @@ def debug_info():
 if __name__ == '__main__':
     # 개발 서버 실행
     debug_mode = os.getenv('FLASK_DEBUG', 'True').lower() == 'true'
-    port = int(os.getenv('PORT', 5000))
+    port = int(os.getenv('PORT', 8080))
     
     logger.info(f"🚀 DS News Aggregator 시작")
     logger.info(f"   - Port: {port}")
@@ -412,7 +505,7 @@ if __name__ == '__main__':
     os.makedirs('static', exist_ok=True)
     os.makedirs('templates', exist_ok=True)
     
-    # macOS AirPlay 때문에 5000번 포트 충돌시 5001번 사용
+    # 포트 충돌 확인 및 대체 포트 사용
     import socket
     
     def is_port_in_use(port):
@@ -420,8 +513,8 @@ if __name__ == '__main__':
             return s.connect_ex(('localhost', port)) == 0
     
     if is_port_in_use(port):
-        port = 5001
-        logger.warning(f"포트 5000이 사용 중입니다. 포트 {port}로 변경합니다.")
+        port = 8081
+        logger.warning(f"포트 8080이 사용 중입니다. 포트 {port}로 변경합니다.")
     
     # 외부 접근 가능하도록 host='0.0.0.0' 설정
     logger.info(f"🚀 DS News Aggregator 서버 시작")

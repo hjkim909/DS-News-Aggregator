@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
  */
 function initializeElements() {
     elements.articlesGrid = document.getElementById('articlesGrid');
+    elements.dateArticlesContainer = document.getElementById('dateArticlesContainer');
     elements.articleModal = document.getElementById('articleModal');
     elements.loadingState = document.getElementById('loadingState');
     elements.emptyState = document.getElementById('emptyState');
@@ -50,6 +51,7 @@ function initializeElements() {
     elements.collectIcon = document.getElementById('collectIcon');
     elements.sortSelect = document.getElementById('sortSelect');
     elements.filterSelect = document.getElementById('filterSelect');
+    elements.dateSelect = document.getElementById('dateSelect');
     elements.toast = document.getElementById('toast');
     
     // 모달 요소들
@@ -65,6 +67,8 @@ function initializeElements() {
     elements.openOriginalBtn = document.getElementById('openOriginalBtn');
     
     console.log('DOM 요소 초기화 완료');
+    console.log('articlesGrid:', elements.articlesGrid);
+    console.log('dateArticlesContainer:', elements.dateArticlesContainer);
 }
 
 /**
@@ -185,6 +189,9 @@ function initializeData() {
         console.log(`글 데이터 ${articlesData.length}개 로드됨`);
         updateLastVisit();
     }
+    
+    // 사용 가능한 날짜 목록 로드
+    loadAvailableDates();
 }
 
 /**
@@ -552,34 +559,41 @@ function setReadArticles(articles) {
 }
 
 /**
- * 글 정렬
+ * 글 정렬 (날짜별 섹션 구조용)
  */
 function sortArticles(criteria) {
-    if (!elements.articlesGrid) return;
+    console.log('정렬 기준:', criteria);
     
-    const cards = Array.from(elements.articlesGrid.children);
+    // 모든 날짜 섹션에서 카드들을 찾기
+    const allSections = document.querySelectorAll('.date-section');
     
-    cards.sort((a, b) => {
-        switch (criteria) {
-            case 'score':
-                return parseFloat(b.dataset.score || 0) - parseFloat(a.dataset.score || 0);
-            case 'date':
-                return new Date(b.dataset.published) - new Date(a.dataset.published);
-            case 'source':
-                return a.dataset.source.localeCompare(b.dataset.source);
-            default:
-                return 0;
-        }
+    allSections.forEach(section => {
+        const contentDiv = section.querySelector('.date-content .grid');
+        if (!contentDiv) return;
+        
+        const cards = Array.from(contentDiv.querySelectorAll('.article-card'));
+        
+        // 정렬
+        cards.sort((a, b) => {
+            switch (criteria) {
+                case 'score':
+                    return parseFloat(b.dataset.score || 0) - parseFloat(a.dataset.score || 0);
+                case 'date':
+                    return new Date(b.dataset.published) - new Date(a.dataset.published);
+                case 'source':
+                    return (a.dataset.source || '').localeCompare(b.dataset.source || '');
+                default:
+                    return 0;
+            }
+        });
+        
+        // 재배치
+        cards.forEach(card => {
+            contentDiv.appendChild(card);
+        });
     });
     
-    // 부드러운 애니메이션과 함께 재배치
-    cards.forEach((card, index) => {
-        card.style.order = index;
-        card.style.animation = 'fadeIn 0.3s ease-out';
-        elements.articlesGrid.appendChild(card);
-    });
-    
-    showToast(`${getSortName(criteria)} 정렬되었습니다`, 'info');
+    showToast(`${getSortName(criteria)} 정렬되었습니다`, 'success');
 }
 
 /**
@@ -845,6 +859,207 @@ function updateLastVisit() {
     localStorage.setItem(CONFIG.STORAGE_KEYS.LAST_VISIT, new Date().toISOString());
 }
 
+/**
+ * 날짜별 필터링 기능 (사용자 요구사항)
+ */
+
+/**
+ * 사용 가능한 날짜 목록 로드
+ */
+async function loadAvailableDates() {
+    try {
+        console.log('📅 날짜 목록 로드 시작...');
+        const response = await fetch('/api/dates');
+        
+        if (!response.ok) {
+            console.error(`날짜 API 응답 오류: ${response.status}`);
+            return;
+        }
+        
+        const data = await response.json();
+        console.log('날짜 API 응답:', data);
+        
+        if (data.success && data.dates && data.dates.length > 0) {
+            populateDateSelect(data.dates);
+            console.log(`✅ ${data.dates.length}개 날짜 로드 완료`);
+        } else {
+            console.warn('⚠️ 날짜 목록이 비어있습니다.');
+            // 드롭다운 비활성화
+            if (elements.dateSelect) {
+                elements.dateSelect.disabled = true;
+                elements.dateSelect.title = '사용 가능한 날짜가 없습니다';
+            }
+        }
+    } catch (error) {
+        console.error('❌ 날짜 목록 로드 실패:', error);
+    }
+}
+
+/**
+ * 날짜 선택 드롭다운 채우기
+ */
+function populateDateSelect(dates) {
+    if (!elements.dateSelect) {
+        console.error('dateSelect 엘리먼트를 찾을 수 없습니다');
+        return;
+    }
+    
+    console.log(`날짜 옵션 ${dates.length}개 추가 중...`);
+    
+    // 기존 옵션 제거 (첫 번째 "최신 날짜" 옵션 제외)
+    while (elements.dateSelect.options.length > 1) {
+        elements.dateSelect.remove(1);
+    }
+    
+    // 날짜 옵션 추가
+    dates.forEach((dateInfo, index) => {
+        const option = document.createElement('option');
+        option.value = dateInfo.date;
+        
+        // 날짜 포맷팅
+        const dateStr = formatDateLabel(dateInfo.date);
+        const label = `${index === 0 ? '📅 ' : '   '}${dateStr} (${dateInfo.count}개)`;
+        option.textContent = label;
+        
+        elements.dateSelect.appendChild(option);
+        console.log(`  추가: ${label}`);
+    });
+    
+    // 드롭다운 활성화
+    elements.dateSelect.disabled = false;
+}
+
+/**
+ * 날짜 레이블 포맷팅
+ */
+function formatDateLabel(dateString) {
+    try {
+        const date = new Date(dateString);
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        const dateOnly = new Date(dateString);
+        dateOnly.setHours(0, 0, 0, 0);
+        
+        const diffTime = today - dateOnly;
+        const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+        
+        if (diffDays === 0) return `오늘 (${dateString})`;
+        if (diffDays === 1) return `어제 (${dateString})`;
+        if (diffDays < 7) return `${diffDays}일 전 (${dateString})`;
+        
+        const month = date.getMonth() + 1;
+        const day = date.getDate();
+        return `${month}월 ${day}일 (${dateString})`;
+    } catch (e) {
+        return dateString;
+    }
+}
+
+/**
+ * 날짜 필터 변경 핸들러 (날짜별 섹션 구조용)
+ */
+function changeDateFilter(date) {
+    console.log('날짜 필터 변경:', date);
+    
+    if (date === 'latest') {
+        // 최신 날짜 = 모든 섹션 보이기
+        const allSections = document.querySelectorAll('.date-section');
+        allSections.forEach(section => {
+            section.style.display = 'block';
+        });
+        showToast('모든 날짜 표시', 'info');
+        return;
+    }
+    
+    // 모든 날짜 섹션 숨기기
+    const allSections = document.querySelectorAll('.date-section');
+    let found = false;
+    
+    allSections.forEach(section => {
+        const dateHeader = section.querySelector('.date-header h2');
+        if (dateHeader && dateHeader.textContent.trim() === date) {
+            section.style.display = 'block';
+            found = true;
+        } else {
+            section.style.display = 'none';
+        }
+    });
+    
+    if (found) {
+        showToast(`${date} 날짜만 표시`, 'success');
+    } else {
+        showToast(`${date} 날짜를 찾을 수 없습니다`, 'error');
+    }
+}
+
+/**
+ * 글 목록 렌더링 (날짜 변경시)
+ */
+function renderArticles(articles) {
+    if (!elements.articlesGrid) return;
+    
+    if (!articles || articles.length === 0) {
+        elements.articlesGrid.innerHTML = '<div class="col-span-full text-center py-12 text-gray-500 dark:text-gray-400">선택한 날짜에 글이 없습니다.</div>';
+        return;
+    }
+    
+    // 카드 HTML 생성
+    const cardsHTML = articles.map(article => createArticleCard(article)).join('');
+    elements.articlesGrid.innerHTML = cardsHTML;
+    
+    // 읽은 글 상태 다시 적용
+    initializeReadStatus();
+    
+    console.log(`${articles.length}개 글 렌더링 완료`);
+}
+
+/**
+ * 카드 HTML 생성
+ */
+function createArticleCard(article) {
+    const isRead = getReadArticles().includes(article.id);
+    const readClass = isRead ? 'opacity-60' : '';
+    
+    const titleKo = article.title_ko || article.title || '제목 없음';
+    const summary = article.summary || '요약 없음';
+    const source = article.source || 'unknown';
+    const score = article.score || 0;
+    const tags = article.tags || [];
+    
+    // 태그 HTML
+    const tagsHTML = tags.slice(0, 3).map(tag => 
+        `<span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">${tag}</span>`
+    ).join('');
+    
+    return `
+        <div class="article-card bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer ${readClass}"
+             onclick="showArticleModal('${article.id}')"
+             data-article-id="${article.id}">
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-3 line-clamp-2">
+                    ${titleKo}
+                </h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-3">
+                    ${summary}
+                </p>
+                <div class="flex flex-wrap items-center gap-2 mb-3">
+                    ${tagsHTML}
+                </div>
+                <div class="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400">
+                    <span class="flex items-center gap-2">
+                        <i class="fas fa-newspaper"></i>
+                        ${source}
+                    </span>
+                    <span class="flex items-center gap-2">
+                        <i class="fas fa-star text-yellow-500"></i>
+                        ${score}점
+                    </span>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
 // 전역 함수로 노출 (HTML에서 사용)
 window.showArticleModal = showArticleModal;
 window.closeArticleModal = closeArticleModal;
@@ -853,5 +1068,6 @@ window.openOriginalLink = openOriginalLink;
 window.markAsRead = markAsRead;
 window.sortArticles = sortArticles;
 window.filterArticles = filterArticles;
+window.changeDateFilter = changeDateFilter;
 window.collectArticles = collectArticles;
 window.toggleDarkMode = toggleDarkMode;

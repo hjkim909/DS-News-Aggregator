@@ -14,9 +14,9 @@ import time
 
 # 로컬 모듈 임포트
 from config import Config
-from collectors.tech_blog_collector import TechBlogCollector
-from collectors.medium_collector import MediumCollector
-from collectors.hackernews_collector import HackerNewsCollector
+from collectors.news_media_collector import NewsMediaCollector
+from collectors.practical_blog_collector import PracticalBlogCollector
+from collectors.company_blog_collector import CompanyBlogCollector
 from collectors.content_filter import ContentFilter
 from processors.translator import Translator
 from processors.summarizer import Summarizer
@@ -35,10 +35,10 @@ class DSNewsPipeline:
         """
         self.config = config or Config()
         
-        # 각 단계별 컴포넌트 초기화
-        self.tech_blog_collector = TechBlogCollector(self.config)
-        self.medium_collector = MediumCollector(self.config)
-        self.hackernews_collector = HackerNewsCollector(self.config)
+        # PRD v2.0 - 각 단계별 컴포넌트 초기화
+        self.news_media_collector = NewsMediaCollector(self.config)
+        self.practical_blog_collector = PracticalBlogCollector(self.config)
+        self.company_blog_collector = CompanyBlogCollector(self.config)
         self.content_filter = ContentFilter(self.config)
         self.translator = Translator(self.config)
         self.summarizer = Summarizer(self.config)
@@ -73,7 +73,7 @@ class DSNewsPipeline:
     
     def step1_collect_articles(self) -> List[Dict[str, Any]]:
         """
-        1단계: 글 수집 (Reddit + 한국 블로그)
+        1단계: PRD v2.0 - 뉴스 미디어(50%) + 블로그(30%) + 기업(20%) 수집
         
         Returns:
             수집된 모든 글 목록
@@ -83,23 +83,36 @@ class DSNewsPipeline:
         all_articles = []
         
         try:
-            # 글로벌 기술 블로그에서 수집
-            logger.info("글로벌 기술 블로그에서 글 수집 중...")
-            tech_articles = self.tech_blog_collector.collect_all_sources()
-            all_articles.extend(tech_articles)
-            logger.info(f"기술 블로그 수집 완료: {len(tech_articles)}개")
+            # 뉴스 미디어 수집 (50%)
+            logger.info("뉴스 미디어에서 AI/ML 뉴스 수집 중...")
+            news_articles = self.news_media_collector.collect(
+                max_articles_per_source=self.config.NEWS_MEDIA_MAX_ARTICLES
+            )
+            all_articles.extend(news_articles)
+            logger.info(f"뉴스 미디어 수집 완료: {len(news_articles)}개")
             
-            # Medium에서 수집
-            logger.info("Medium 플랫폼에서 글 수집 중...")
-            medium_articles = self.medium_collector.collect_all_medium_sources()
-            all_articles.extend(medium_articles)
-            logger.info(f"Medium 수집 완료: {len(medium_articles)}개")
+            # 실용 블로그 수집 (30%)
+            logger.info("실용 블로그/꿀팁 플랫폼에서 수집 중...")
+            blog_articles = self.practical_blog_collector.collect(
+                max_articles_per_source=self.config.PRACTICAL_BLOG_MAX_ARTICLES
+            )
+            all_articles.extend(blog_articles)
+            logger.info(f"실용 블로그 수집 완료: {len(blog_articles)}개")
             
-            # Hacker News에서 수집
-            logger.info("Hacker News에서 글 수집 중...")
-            hackernews_articles = self.hackernews_collector.collect_from_hackernews()
-            all_articles.extend(hackernews_articles)
-            logger.info(f"Hacker News 수집 완료: {len(hackernews_articles)}개")
+            # 기업 블로그 수집 (20%)
+            logger.info("기업 기술 블로그에서 수집 중...")
+            company_articles = self.company_blog_collector.collect(
+                max_articles_per_source=self.config.COMPANY_BLOG_MAX_ARTICLES
+            )
+            all_articles.extend(company_articles)
+            logger.info(f"기업 블로그 수집 완료: {len(company_articles)}개")
+            
+            # 수집 비율 분석
+            news_ratio = len(news_articles) / len(all_articles) * 100 if all_articles else 0
+            blog_ratio = len(blog_articles) / len(all_articles) * 100 if all_articles else 0
+            company_ratio = len(company_articles) / len(all_articles) * 100 if all_articles else 0
+            
+            logger.info(f"수집 비율 - 뉴스: {news_ratio:.1f}%, 블로그: {blog_ratio:.1f}%, 기업: {company_ratio:.1f}%")
             
         except Exception as e:
             error_msg = f"글 수집 실패: {e}"
@@ -113,7 +126,7 @@ class DSNewsPipeline:
     
     def step2_filter_articles(self, articles: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """
-        2단계: 콘텐츠 필터링 (점수화 시스템, 70점 이상, 5-10개 선별)
+        2단계: PRD v2.0 콘텐츠 필터링 (뉴스 50%, 블로그 30%, 기업 20% 비율 유지)
         
         Args:
             articles: 필터링할 글 목록
@@ -124,8 +137,37 @@ class DSNewsPipeline:
         self._log_stage_start("콘텐츠 필터링")
         
         try:
-            filtered_articles = self.content_filter.get_top_articles(articles)
+            # 소스별 분류
+            news_articles = [a for a in articles if a.get('source_id', '').startswith(('techcrunch', 'venturebeat', 'mit_tech', 'ai_times', 'zdnet', 'tech42'))]
+            blog_articles = [a for a in articles if a.get('source_id', '').startswith(('towards_data', 'analytics_vidhya', 'kdnuggets', 'neptune'))]
+            company_articles = [a for a in articles if a.get('source_id', '').startswith(('google_ai', 'openai', 'naver_d2', 'kakao_tech'))]
+            
+            logger.info(f"소스별 분류: 뉴스 {len(news_articles)}개, 블로그 {len(blog_articles)}개, 기업 {len(company_articles)}개")
+            
+            # PRD v2.0 비율에 따른 선별 (5-10개 총 목표)
+            target_total = min(10, len(articles))  # 최대 10개
+            
+            # 뉴스 3-5개 (50%)
+            news_target = max(3, min(5, int(target_total * self.config.NEWS_MEDIA_RATIO)))
+            news_filtered = self.content_filter.get_top_articles(news_articles)[:news_target]
+            
+            # 블로그 2-3개 (30%)
+            blog_target = max(2, min(3, int(target_total * self.config.PRACTICAL_BLOG_RATIO)))
+            blog_filtered = self.content_filter.get_top_articles(blog_articles)[:blog_target]
+            
+            # 기업 1-2개 (20%)
+            company_target = max(1, min(2, int(target_total * self.config.COMPANY_BLOG_RATIO)))
+            company_filtered = self.content_filter.get_top_articles(company_articles)[:company_target]
+            
+            # 최종 결합
+            filtered_articles = news_filtered + blog_filtered + company_filtered
+            
+            # 점수순 정렬
+            filtered_articles.sort(key=lambda x: x.get('score', 0), reverse=True)
+            
             self.pipeline_stats['filtered_articles'] = len(filtered_articles)
+            
+            logger.info(f"최종 선별: 뉴스 {len(news_filtered)}개, 블로그 {len(blog_filtered)}개, 기업 {len(company_filtered)}개 = 총 {len(filtered_articles)}개")
             
             # 필터링 분석 결과
             analysis = self.content_filter.analyze_filtering_results(articles, filtered_articles)
@@ -135,7 +177,8 @@ class DSNewsPipeline:
             error_msg = f"콘텐츠 필터링 실패: {e}"
             logger.error(error_msg)
             self.pipeline_stats['errors'].append(error_msg)
-            filtered_articles = articles  # 실패시 원본 반환
+            # 실패시 기본 필터링 적용
+            filtered_articles = self.content_filter.get_top_articles(articles)
         
         self._log_stage_end("콘텐츠 필터링", len(filtered_articles))
         return filtered_articles

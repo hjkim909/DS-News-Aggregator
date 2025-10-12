@@ -31,8 +31,8 @@ class ContentFilter:
     
     def calculate_score(self, title: str, content: str, source_id: str) -> float:
         """
-        사용자 요구사항에 맞는 점수 계산
-        기본 50점 + 우선 키워드 보너스 + 소스 가중치 - 제외 패턴 패널티
+        PRD v2.0 점수화 시스템 - 소스별 기본 점수 + 키워드 보너스
+        뉴스 미디어: 100점, 블로그: 80점, 기업: 70점 + 키워드 보너스
         
         Args:
             title: 글 제목
@@ -42,7 +42,9 @@ class ContentFilter:
         Returns:
             계산된 점수
         """
-        score = self.config.BASE_SCORE  # 기본 50점
+        # PRD v2.0 - 소스별 기본 점수
+        base_score = self.config.SOURCE_BASE_SCORES.get(source_id, self.config.BASE_SCORE)
+        score = base_score
         
         # 전체 텍스트 (제목 + 내용)
         full_text = (title + " " + content).lower()
@@ -59,10 +61,7 @@ class ContentFilter:
                 score -= 30
                 logger.debug(f"제외 패턴 '{pattern}' 패널티: -30점")
         
-        # 3. 소스 가중치 적용
-        source_weight = self.config.SOURCE_WEIGHTS.get(source_id, 0)
-        score += source_weight
-        logger.debug(f"소스 '{source_id}' 가중치: +{source_weight}점")
+        logger.debug(f"'{source_id}' 최종 점수: {score}점 (기본 {base_score}점)")
         
         return max(0, score)  # 최소 0점
     

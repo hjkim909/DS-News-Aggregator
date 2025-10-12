@@ -20,16 +20,19 @@ class Config:
     PORT = int(os.getenv('PORT', 5000))
     HOST = os.getenv('HOST', '0.0.0.0')  # 외부 접근 허용
     
-    # Reddit API 설정 (사용 중지 - 고민상담글 많음)
-    # REDDIT_CLIENT_ID = os.getenv('REDDIT_CLIENT_ID', '')
-    # REDDIT_CLIENT_SECRET = os.getenv('REDDIT_CLIENT_SECRET', '')
-    # REDDIT_USER_AGENT = os.getenv('REDDIT_USER_AGENT', 'DSNewsAggregator/1.0')
+    # PRD v2.0: 새로운 소스 구성 (뉴스 50% + 블로그 30% + 기업 20%)
     
-    # Reddit 서브레딧 설정 (사용 중지)
-    # REDDIT_SUBREDDITS = [
-    #     'MachineLearning',
-    #     'datascience'
-    # ]
+    # 뉴스 미디어 소스 비율 설정 (50%)
+    NEWS_MEDIA_RATIO = 0.50
+    NEWS_MEDIA_MAX_ARTICLES = 6  # 뉴스 3-5개 목표
+    
+    # 실용 블로그 소스 비율 설정 (30%)
+    PRACTICAL_BLOG_RATIO = 0.30
+    PRACTICAL_BLOG_MAX_ARTICLES = 4  # 블로그 2-3개 목표
+    
+    # 기업 블로그 소스 비율 설정 (20%)
+    COMPANY_BLOG_RATIO = 0.20
+    COMPANY_BLOG_MAX_ARTICLES = 3  # 기업 1-2개 목표
     
     # Google Cloud 설정
     GOOGLE_CLOUD_PROJECT_ID = os.getenv('GOOGLE_CLOUD_PROJECT_ID', '')
@@ -43,78 +46,116 @@ class Config:
     GOOGLE_TRANSLATE_API_KEY = os.getenv('GOOGLE_TRANSLATE_API_KEY', '')
     TARGET_LANGUAGE = os.getenv('TARGET_LANGUAGE', 'ko')
     
-    # 고품질 기술 블로그 소스 설정
-    TECH_BLOG_SOURCES = [
-        # 글로벌 AI/ML 블로그
+    # PRD v2.0 - 뉴스 미디어 소스 설정 (50%) - 작동 확인된 소스만
+    NEWS_MEDIA_SOURCES = [
+        # 해외 AI 전문 뉴스
+        {
+            'name': 'TechCrunch AI',
+            'url': 'https://techcrunch.com/category/artificial-intelligence/',
+            'rss': 'https://techcrunch.com/category/artificial-intelligence/feed/',
+            'source_id': 'techcrunch_ai',
+            'score_bonus': 100,
+            'tags': ['뉴스', '해외', 'AI']
+        },
+        {
+            'name': 'MIT Technology Review',
+            'url': 'https://www.technologyreview.com/topic/artificial-intelligence/',
+            'rss': 'https://www.technologyreview.com/topic/artificial-intelligence/feed/',
+            'source_id': 'mit_tech_review',
+            'score_bonus': 110,
+            'tags': ['뉴스', '해외', '심층', 'AI']
+        },
+        {
+            'name': 'WIRED AI',
+            'url': 'https://www.wired.com/tag/artificial-intelligence/',
+            'rss': 'https://www.wired.com/feed/tag/ai/latest/rss',
+            'source_id': 'wired_ai',
+            'score_bonus': 105,
+            'tags': ['뉴스', '해외', 'AI', '기술']
+        },
+        # 국내 기술 뉴스
+        {
+            'name': 'Tech42',
+            'url': 'https://tech42.co.kr',
+            'rss': 'https://tech42.co.kr/feed/',
+            'source_id': 'tech42',
+            'score_bonus': 85,
+            'tags': ['뉴스', '국내', '스타트업', 'AI']
+        }
+    ]
+    
+    # PRD v2.0 - 실용 블로그 소스 설정 (30%)
+    PRACTICAL_BLOG_SOURCES = [
+        {
+            'name': 'Towards Data Science',
+            'url': 'https://towardsdatascience.com',
+            'rss': 'https://towardsdatascience.com/feed',
+            'source_id': 'towards_data_science',
+            'score_bonus': 80,
+            'tags': ['블로그', '튜토리얼', '실용'],
+            'clap_filter': True
+        },
+        {
+            'name': 'Analytics Vidhya',
+            'url': 'https://www.analyticsvidhya.com',
+            'rss': 'https://www.analyticsvidhya.com/blog/feed/',
+            'source_id': 'analytics_vidhya',
+            'score_bonus': 75,
+            'tags': ['블로그', '실습', '교육']
+        },
+        {
+            'name': 'KDnuggets',
+            'url': 'https://www.kdnuggets.com',
+            'rss': 'https://www.kdnuggets.com/feed',
+            'source_id': 'kdnuggets',
+            'score_bonus': 75,
+            'tags': ['블로그', '리소스', '뉴스']
+        },
+        {
+            'name': 'Neptune.ai Blog',
+            'url': 'https://neptune.ai/blog',
+            'rss': 'https://neptune.ai/blog/rss.xml',
+            'source_id': 'neptune_ai',
+            'score_bonus': 80,
+            'tags': ['블로그', 'MLOps', '꿀팁']
+        }
+    ]
+    
+    # PRD v2.0 - 기업 블로그 소스 설정 (20%)
+    COMPANY_BLOG_SOURCES = [
         {
             'name': 'Google AI Blog',
             'url': 'https://ai.googleblog.com',
             'rss': 'https://ai.googleblog.com/feeds/posts/default',
-            'source_id': 'google_ai'
+            'source_id': 'google_ai',
+            'score_bonus': 70,
+            'tags': ['기업블로그', '연구', 'Google']
         },
         {
             'name': 'OpenAI Blog',
             'url': 'https://openai.com/blog',
             'rss': 'https://openai.com/blog/rss.xml',
-            'source_id': 'openai'
-        },
-        # 기술 회사 블로그
-        {
-            'name': 'Netflix Tech Blog',
-            'url': 'https://netflixtechblog.com',
-            'rss': 'https://netflixtechblog.com/feed',
-            'source_id': 'netflix_tech'
+            'source_id': 'openai_blog',
+            'score_bonus': 90,
+            'tags': ['기업블로그', '최신기술', 'OpenAI']
         },
         {
-            'name': 'Uber Engineering',
-            'url': 'https://eng.uber.com',
-            'rss': 'https://eng.uber.com/rss/',
-            'source_id': 'uber_eng'
-        },
-        # 한국 기술 블로그 (유지)
-        {
-            'name': '네이버 D2',
-            'url': 'https://d2.naver.com/news',
-            'rss': 'https://d2.naver.com/news.rss',
-            'source_id': 'naver_d2'
+            'name': 'NAVER D2',
+            'url': 'https://d2.naver.com',
+            'rss': 'https://d2.naver.com/helloworld.rss',
+            'source_id': 'naver_d2',
+            'score_bonus': 75,
+            'tags': ['기업블로그', '국내', 'NAVER']
         },
         {
-            'name': '카카오테크',
-            'url': 'https://tech.kakao.com/blog',
+            'name': 'Kakao Tech Blog',
+            'url': 'https://tech.kakao.com',
             'rss': 'https://tech.kakao.com/rss.xml',
-            'source_id': 'kakao_tech'
+            'source_id': 'kakao_tech',
+            'score_bonus': 75,
+            'tags': ['기업블로그', '국내', 'Kakao']
         }
     ]
-    
-    # Medium 계열 소스
-    MEDIUM_SOURCES = [
-        {
-            'name': 'Towards Data Science',
-            'url': 'https://towardsdatascience.com',
-            'rss': 'https://towardsdatascience.com/feed',
-            'source_id': 'towards_ds'
-        },
-        {
-            'name': 'Better Programming',
-            'url': 'https://betterprogramming.pub',
-            'rss': 'https://betterprogramming.pub/feed',
-            'source_id': 'better_prog'
-        },
-        {
-            'name': 'The Startup',
-            'url': 'https://medium.com/swlh',
-            'rss': 'https://medium.com/feed/swlh',
-            'source_id': 'the_startup'
-        }
-    ]
-    
-    # Hacker News 설정 (별도 API 사용)
-    HACKER_NEWS_CONFIG = {
-        'name': 'Hacker News',
-        'base_url': 'https://hacker-news.firebaseio.com/v0',
-        'web_url': 'https://news.ycombinator.com',
-        'source_id': 'hackernews'
-    }
     
     # 수집 설정
     COLLECTION_INTERVAL_HOURS = int(os.getenv('COLLECTION_INTERVAL_HOURS', 6))
@@ -181,27 +222,26 @@ class Config:
         '추천해주세요', '어떻게 생각', '감탄사', 'recommend', 'what do you think'
     ]
     
-    # 소스 가중치 (업데이트됨)
-    SOURCE_WEIGHTS = {
-        # 최고 품질 AI/ML 소스
-        'google_ai': 40,        # Google AI Blog +40점
-        'openai': 40,           # OpenAI Blog +40점
+    # PRD v2.0 새로운 점수화 시스템
+    # 뉴스 미디어: 100점 기본, 블로그: 80점 기본, 기업: 70점 기본
+    SOURCE_BASE_SCORES = {
+        # 뉴스 미디어 (100점 기본) - 작동 확인된 소스만
+        'techcrunch_ai': 100,
+        'mit_tech_review': 110,  # 높은 품질
+        'wired_ai': 105,
+        'tech42': 85,
         
-        # 고품질 기술 회사 블로그
-        'netflix_tech': 35,     # Netflix Tech +35점
-        'uber_eng': 35,         # Uber Engineering +35점
+        # 실용 블로그 (80점 기본)
+        'towards_data_science': 80,
+        'analytics_vidhya': 75,
+        'kdnuggets': 75,
+        'neptune_ai': 80,
         
-        # Medium 계열 (높은 품질)
-        'towards_ds': 35,       # Towards Data Science +35점
-        'better_prog': 30,      # Better Programming +30점
-        'the_startup': 25,      # The Startup +25점
-        
-        # 한국 기술블로그
-        'naver_d2': 30,         # 네이버 D2 +30점
-        'kakao_tech': 30,       # 카카오테크 +30점
-        
-        # Hacker News (큐레이션됨)
-        'hackernews': 20        # Hacker News +20점
+        # 기업 블로그 (70점 기본)
+        'google_ai': 70,
+        'openai_blog': 90,  # OpenAI 특별 가중치
+        'naver_d2': 75,
+        'kakao_tech': 75
     }
     
     # 최소 통과 점수

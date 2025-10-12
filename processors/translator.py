@@ -340,6 +340,37 @@ class TranslatorEnhanced:
         
         return translated_article
     
+    def translate_articles_batch(self, articles: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """
+        여러 글을 배치로 번역
+        
+        Args:
+            articles: 번역할 글 목록
+            
+        Returns:
+            번역된 글 목록
+        """
+        translated_articles = []
+        
+        logger.info(f"{len(articles)}개 글 번역 시작")
+        
+        for i, article in enumerate(articles, 1):
+            try:
+                translated_article = self.translate_article(article)
+                translated_articles.append(translated_article)
+                
+                if i % 5 == 0:
+                    logger.info(f"번역 진행: {i}/{len(articles)}개 완료")
+                    time.sleep(1)  # API Rate Limiting 방지
+                    
+            except Exception as e:
+                logger.error(f"글 번역 중 오류 ({article.get('title', '')[:50]}): {e}")
+                # 오류가 발생해도 원본 글은 반환
+                translated_articles.append(article)
+        
+        logger.info(f"배치 번역 완료: {len(translated_articles)}개")
+        return translated_articles
+    
     def get_translation_stats(self) -> Dict[str, Any]:
         """번역 통계 반환"""
         total_gemini = self.translation_stats['gemini_success'] + self.translation_stats['gemini_fail']

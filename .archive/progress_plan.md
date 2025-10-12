@@ -1,16 +1,17 @@
 # DS News Aggregator - Progress Plan
 
 ## Current Status
-**Date: 2025-01-04**  
-**Phase: Advanced System - Core Features + Date Filtering Complete**  
-**Status: ENHANCED - 사용자 맞춤 개선 + 날짜 필터링 시스템 완료**
+**Date: 2025-10-10**  
+**Phase: PRD v2.0 + Full Feature Complete**  
+**Status: ✅ ALL FEATURES WORKING - 날짜 필터링 + 정렬 + 필터링 + 자동화 완료**
 
 ## Project Overview
-데이터 사이언티스트용 개인 뉴스 큐레이션 웹사이트 개발
+데이터 사이언티스트용 AI/ML 뉴스 중심 자동 큐레이션 웹사이트 개발
 - Backend: Python Flask
-- APIs: Reddit API, Google Translate, Google Gemini Pro
+- 소스 구성: 뉴스 미디어(50%) + 실용 블로그(30%) + 기업 블로그(20%)
+- APIs: Google Translate, Google Gemini Pro (Reddit API 제거)
 - Frontend: HTML/CSS/JavaScript (Tailwind CSS)
-- 배포: Railway
+- 배포: Railway + GitHub Actions 자동화
 
 ## Main Tasks Checklist
 
@@ -44,19 +45,34 @@
 - [ ] Railway 배포 설정 **[READY]**
 - [ ] 자동화 스케줄링 설정 **[READY]**
 
-### Phase 5: Next Improvements **[PLANNING]**
+### Phase 5: PRD v2.0 System Overhaul ✅ **COMPLETED**
+- [x] 뉴스 미디어 수집기 구현 (TechCrunch AI, VentureBeat AI, MIT Tech Review, AI타임스, ZDNet Korea, Tech42)
+- [x] 실용 블로그 수집기 구현 (Towards Data Science, Analytics Vidhya, KDnuggets, Neptune.ai)
+- [x] 기업 블로그 수집기 구현 (Google AI, OpenAI, Naver D2, Kakao Tech)
+- [x] 새로운 점수화 시스템 (뉴스 100점, 블로그 80점, 기업 70점 + 키워드 보너스)
+- [x] 소스 비율 조정 (뉴스 50%, 블로그 30%, 기업 20%)
+- [x] 파이프라인 업데이트 (새로운 수집기들 통합)
+
+### Phase 6: Deployment & Automation ✅ **COMPLETED**
+- [x] **requirements.txt 정리** - Reddit API 패키지(praw) 제거
+- [x] **날짜별 필터링** - 웹 UI에 날짜 선택 드롭다운 추가
+- [x] **GitHub Actions** - 매일 08:00 KST 자동 수집 워크플로우 생성
+- [x] **Railway 배포 가이드** - DEPLOYMENT.md 완전한 배포 매뉴얼 작성
+
+### Phase 7: Next Improvements **[PLANNING]**
 - [ ] 정렬 기본값을 최신순으로 변경
 - [ ] 페이지네이션 구현 (12개 단위)
-- [ ] 매일 자동 실행 + 중복 방지 시스템
-- [ ] 한국 소스 확장 (datarian 등)
+- [ ] 중복 방지 시스템 (URL 해시 기반)
+- [ ] 추가 뉴스 소스 발굴 및 통합
 
 ## Current Focus  
-**🚀 DS News Aggregator 사용자 맞춤 개선 완료! 필터링 강화 + 날짜별 정리 + 외부 접근**
+**🎉 배포 시스템 완성! 날짜 필터링 + GitHub Actions 자동화 + Railway 배포 준비 완료**
 
-### 2025-01-04 개선사항 완료 ✅
-1. **AI/ML/LLM 필터링 강화** - 관련 주제만 엄격하게 수집하도록 필터링 시스템 개선
-2. **날짜별 1depth 구조** - 수집일별로 카드를 정리하고 접기/펼치기 기능 추가  
-3. **외부 접근 허용** - host='0.0.0.0' 설정으로 다른 기기에서도 접근 가능
+### 2025-01-05 PRD v2.0 개편 완료 ✅
+1. **뉴스 중심 소스 재구성** - Reddit 제거, 뉴스 미디어(50%) + 블로그(30%) + 기업(20%) 구조
+2. **새로운 수집기 시스템** - 3개 전문 수집기로 분리 (NewsMediaCollector, PracticalBlogCollector, CompanyBlogCollector)  
+3. **점수화 시스템 개선** - 소스별 기본 점수 차등화 (뉴스 100점, 블로그 80점, 기업 70점)
+4. **파이프라인 완전 개편** - 새로운 비율과 점수 시스템에 맞춘 필터링 로직 적용
 
 ## Next Steps - 완성된 시스템 실행 가이드
 1. **API 키 설정**: `cp env.example .env` → API 키 입력 (Reddit, Gemini)
@@ -147,6 +163,26 @@
   - 날짜 필터링 적용: 최근 60일(2달) 이내 기사만 수집 및 표시
   - 수집기 강화: TechBlog/Medium 수집기에 날짜 필터링 로직 추가
   - 품질 향상: 연도 체크(2025년+) + 최신성 체크로 이중 필터링
+- 2025-01-05: **🔄 PRD v2.0 완전 개편 - 뉴스 중심 시스템으로 전환!**
+  - 소스 재구성: Reddit → 뉴스 미디어 중심으로 완전 변경 (6개 뉴스 소스)
+  - 3-Tier 구조: 뉴스(50%) + 블로그(30%) + 기업(20%) 비율 시스템 구축
+  - 새로운 수집기: NewsMediaCollector, PracticalBlogCollector, CompanyBlogCollector 구현
+  - 점수화 개선: 소스별 차등 기본 점수 + PRD v2.0 키워드 보너스 시스템
+  - 파이프라인 업그레이드: 새로운 비율 기반 필터링 및 선별 로직 적용
+  - 설정 시스템: config.py 완전 재구성, 새로운 소스 관리 체계 구축
+- 2025-10-10: **🚀 배포 & 자동화 시스템 완성 - 프로덕션 준비 완료!**
+  - requirements.txt 정리: praw(Reddit API) 제거, 필수 패키지만 유지
+  - 날짜별 필터링: 백엔드 API (/api/dates, /api/articles/<date>) + 프론트엔드 UI 추가
+  - JavaScript 확장: loadAvailableDates(), changeDateFilter(), renderArticles() 구현
+  - GitHub Actions: weekly_collect.yml 워크플로우 생성 (매주 월요일 08:00 KST 자동 수집)
+  - Railway 배포: DEPLOYMENT.md 완전한 배포 가이드 작성 (환경변수, 트러블슈팅 포함)
+  - README 업데이트: PRD v2.0 반영, 새로운 소스 구성 및 비용 정보(완전 무료) 명시
+  - 날짜 필터링 버그 수정: articles.json 제외, 날짜 형식 검증, 로깅 강화
+  - 자동화 스케줄 변경: 매일 → 매주 1회 (월요일 오전 8시 KST)
+  - DATA_DIR 변수 추가: 날짜 API 오류 해결
+  - 날짜별 섹션 구조 대응: 정렬/필터링 기능 수정하여 날짜별 섹션에서도 작동
+  - 포트 변경: 5000/5001 → 8080/8081로 기본 포트 변경
+  - 테스트 완료: 날짜 필터링, 정렬(품질/최신/소스), 필터링(소스/읽지않음) 모두 정상 작동 확인
 
 ## Next Phase TODO List 📋
 
