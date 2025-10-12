@@ -882,12 +882,22 @@ async function loadAvailableDates() {
         if (data.success && data.dates && data.dates.length > 0) {
             populateDateSelect(data.dates);
             console.log(`✅ ${data.dates.length}개 날짜 로드 완료`);
+            
+            // 초기 로드 시 'latest' (모든 날짜) 자동 선택
+            if (elements.dateSelect) {
+                elements.dateSelect.value = 'latest';
+            }
+            await changeDateFilter('latest');
         } else {
             console.warn('⚠️ 날짜 목록이 비어있습니다.');
             // 드롭다운 비활성화
             if (elements.dateSelect) {
                 elements.dateSelect.disabled = true;
                 elements.dateSelect.title = '사용 가능한 날짜가 없습니다';
+            }
+            // 빈 상태 표시
+            if (elements.articlesGrid) {
+                elements.articlesGrid.innerHTML = '<div class="col-span-full text-center py-12 text-gray-500 dark:text-gray-400">수집된 뉴스가 없습니다. 수집 버튼을 클릭해주세요.</div>';
             }
         }
     } catch (error) {
@@ -958,37 +968,54 @@ function formatDateLabel(dateString) {
 /**
  * 날짜 필터 변경 핸들러 (날짜별 섹션 구조용)
  */
-function changeDateFilter(date) {
+async function changeDateFilter(date) {
     console.log('날짜 필터 변경:', date);
     
-    if (date === 'latest') {
-        // 최신 날짜 = 모든 섹션 보이기
-        const allSections = document.querySelectorAll('.date-section');
-        allSections.forEach(section => {
-            section.style.display = 'block';
-        });
-        showToast('모든 날짜 표시', 'info');
-        return;
+    // 로딩 상태 표시
+    if (elements.articlesGrid) {
+        elements.articlesGrid.innerHTML = '<div class="col-span-full text-center py-12 text-gray-500 dark:text-gray-400"><i class="fas fa-spinner fa-spin mr-2"></i>로딩 중...</div>';
     }
     
-    // 모든 날짜 섹션 숨기기
-    const allSections = document.querySelectorAll('.date-section');
-    let found = false;
-    
-    allSections.forEach(section => {
-        const dateHeader = section.querySelector('.date-header h2');
-        if (dateHeader && dateHeader.textContent.trim() === date) {
-            section.style.display = 'block';
-            found = true;
-        } else {
-            section.style.display = 'none';
+    try {
+        if (date === 'latest') {
+            // 최신 날짜 = 모든 날짜의 기사 표시
+            const response = await fetch('/api/dates');
+            const data = await response.json();
+            
+            if (data.success && data.dates && data.dates.length > 0) {
+                // 모든 날짜의 기사를 가져와서 합치기
+                const allArticles = [];
+                for (const dateInfo of data.dates) {
+                    const articlesResponse = await fetch(`/api/articles/${dateInfo.date}`);
+                    const articlesData = await articlesResponse.json();
+                    if (articlesData.success && articlesData.articles) {
+                        allArticles.push(...articlesData.articles);
+                    }
+                }
+                
+                renderArticles(allArticles);
+                showToast(`모든 날짜 표시 (${allArticles.length}개)`, 'info');
+            }
+            return;
         }
-    });
-    
-    if (found) {
-        showToast(`${date} 날짜만 표시`, 'success');
-    } else {
-        showToast(`${date} 날짜를 찾을 수 없습니다`, 'error');
+        
+        // 특정 날짜의 기사 가져오기
+        const response = await fetch(`/api/articles/${date}`);
+        const data = await response.json();
+        
+        if (data.success && data.articles) {
+            renderArticles(data.articles);
+            showToast(`${date} 기사 ${data.articles.length}개 표시`, 'info');
+        } else {
+            renderArticles([]);
+            showToast('선택한 날짜에 기사가 없습니다.', 'warning');
+        }
+    } catch (error) {
+        console.error('날짜 필터 오류:', error);
+        if (elements.articlesGrid) {
+            elements.articlesGrid.innerHTML = '<div class="col-span-full text-center py-12 text-red-500"><i class="fas fa-exclamation-triangle mr-2"></i>기사를 불러오는 중 오류가 발생했습니다.</div>';
+        }
+        showToast('기사 로드 실패', 'error');
     }
 }
 
