@@ -928,7 +928,7 @@ function populateDateSelect(dates) {
         
         // 날짜 포맷팅
         const dateStr = formatDateLabel(dateInfo.date);
-        const label = `${index === 0 ? '📅 ' : '   '}${dateStr} (${dateInfo.count}개)`;
+        const label = `${index === 0 ? '📅 ' : '   '}${dateStr}`;
         option.textContent = label;
         
         elements.dateSelect.appendChild(option);
@@ -1052,6 +1052,7 @@ function createArticleCard(article) {
     const source = article.source || 'unknown';
     const score = article.score || 0;
     const tags = article.tags || [];
+    const published = article.published || article.created_at || '';
     
     // 태그 HTML
     const tagsHTML = tags.slice(0, 3).map(tag => 
@@ -1061,7 +1062,10 @@ function createArticleCard(article) {
     return `
         <div class="article-card bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer ${readClass}"
              onclick="showArticleModal('${article.id}')"
-             data-article-id="${article.id}">
+             data-article-id="${article.id}"
+             data-score="${score}"
+             data-source="${source}"
+             data-published="${published}">
             <div class="p-6">
                 <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-3 line-clamp-2">
                     ${titleKo}
