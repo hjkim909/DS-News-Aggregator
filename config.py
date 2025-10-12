@@ -112,24 +112,48 @@ class Config:
             'tags': ['블로그', '리소스', '뉴스']
         },
         {
-            'name': 'Neptune.ai Blog',
-            'url': 'https://neptune.ai/blog',
-            'rss': 'https://neptune.ai/blog/rss.xml',
-            'source_id': 'neptune_ai',
-            'score_bonus': 80,
-            'tags': ['블로그', 'MLOps', '꿀팁']
+            'name': 'Distill',
+            'url': 'https://distill.pub',
+            'rss': 'https://distill.pub/rss.xml',
+            'source_id': 'distill',
+            'score_bonus': 90,
+            'tags': ['블로그', '연구', 'ML시각화']
+        },
+        {
+            'name': 'Hugging Face Blog',
+            'url': 'https://huggingface.co/blog',
+            'rss': 'https://huggingface.co/blog/feed.xml',
+            'source_id': 'huggingface_blog',
+            'score_bonus': 85,
+            'tags': ['블로그', 'Transformers', 'LLM']
         }
     ]
     
     # PRD v2.0 - 기업 블로그 소스 설정 (20%)
     COMPANY_BLOG_SOURCES = [
         {
-            'name': 'Google AI Blog',
-            'url': 'https://ai.googleblog.com',
-            'rss': 'https://ai.googleblog.com/feeds/posts/default',
-            'source_id': 'google_ai',
+            'name': 'Google Developers Blog',
+            'url': 'https://developers.googleblog.com',
+            'rss': 'https://developers.googleblog.com/feeds/posts/default',
+            'source_id': 'google_developers',
             'score_bonus': 70,
-            'tags': ['기업블로그', '연구', 'Google']
+            'tags': ['기업블로그', '개발', 'Google']
+        },
+        {
+            'name': 'AWS Machine Learning Blog',
+            'url': 'https://aws.amazon.com/blogs/machine-learning',
+            'rss': 'https://aws.amazon.com/blogs/machine-learning/feed/',
+            'source_id': 'aws_ml',
+            'score_bonus': 75,
+            'tags': ['기업블로그', 'ML', '클라우드']
+        },
+        {
+            'name': 'Microsoft AI Blog',
+            'url': 'https://blogs.microsoft.com/ai',
+            'rss': 'https://blogs.microsoft.com/ai/feed/',
+            'source_id': 'microsoft_ai',
+            'score_bonus': 75,
+            'tags': ['기업블로그', 'AI', 'Microsoft']
         },
         {
             'name': 'OpenAI Blog',
@@ -140,20 +164,12 @@ class Config:
             'tags': ['기업블로그', '최신기술', 'OpenAI']
         },
         {
-            'name': 'NAVER D2',
-            'url': 'https://d2.naver.com',
-            'rss': 'https://d2.naver.com/helloworld.rss',
-            'source_id': 'naver_d2',
+            'name': 'NVIDIA Technical Blog',
+            'url': 'https://developer.nvidia.com/blog',
+            'rss': 'https://developer.nvidia.com/blog/feed/',
+            'source_id': 'nvidia_blog',
             'score_bonus': 75,
-            'tags': ['기업블로그', '국내', 'NAVER']
-        },
-        {
-            'name': 'Kakao Tech Blog',
-            'url': 'https://tech.kakao.com',
-            'rss': 'https://tech.kakao.com/rss.xml',
-            'source_id': 'kakao_tech',
-            'score_bonus': 75,
-            'tags': ['기업블로그', '국내', 'Kakao']
+            'tags': ['기업블로그', 'GPU', 'AI가속']
         }
     ]
     
@@ -235,13 +251,15 @@ class Config:
         'towards_data_science': 80,
         'analytics_vidhya': 75,
         'kdnuggets': 75,
-        'neptune_ai': 80,
+        'distill': 90,
+        'huggingface_blog': 85,
         
         # 기업 블로그 (70점 기본)
-        'google_ai': 70,
+        'google_developers': 70,
+        'aws_ml': 75,
+        'microsoft_ai': 75,
         'openai_blog': 90,  # OpenAI 특별 가중치
-        'naver_d2': 75,
-        'kakao_tech': 75
+        'nvidia_blog': 75
     }
     
     # 최소 통과 점수
