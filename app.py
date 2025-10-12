@@ -39,22 +39,55 @@ def load_articles_by_date():
     articles_by_date = {}
     
     try:
-        # 현재 파일 로드
-        if os.path.exists(DATA_FILE):
-            with open(DATA_FILE, 'r', encoding='utf-8') as f:
-                current_data = json.load(f)
-                
-            # 새로운 형식인지 확인
-            if isinstance(current_data, dict) and 'articles' in current_data:
-                date_str = current_data.get('date', 'Unknown')
-                articles = current_data['articles']
-                articles_by_date[date_str] = {
-                    'articles': articles,
-                    'count': len(articles),
-                    'sources': list(set(article.get('source', 'Unknown') for article in articles))
-                }
+        # data/ 디렉토리에서 날짜별 파일 로드 (Git에 저장된 파일들)
+        logger.info(f"📂 data/ 디렉토리 확인 중...")
+        if os.path.exists(DATA_DIR):
+            for filename in os.listdir(DATA_DIR):
+                if filename.startswith('articles_') and filename.endswith('.json'):
+                    file_path = os.path.join(DATA_DIR, filename)
+                    try:
+                        logger.info(f"  파일 로드: {filename}")
+                        with open(file_path, 'r', encoding='utf-8') as f:
+                            file_data = json.load(f)
+                            
+                        if isinstance(file_data, dict) and 'articles' in file_data:
+                            date_str = file_data.get('date', filename.replace('articles_', '').replace('.json', ''))
+                            articles = file_data['articles']
+                            
+                            articles_by_date[date_str] = {
+                                'articles': articles,
+                                'count': len(articles),
+                                'sources': list(set(article.get('source', 'Unknown') for article in articles))
+                            }
+                            logger.info(f"  ✅ {date_str}: {len(articles)}개 글")
+                    except Exception as e:
+                        logger.warning(f"  ❌ 파일 로드 실패: {filename} - {e}")
+        else:
+            logger.warning(f"❌ data/ 디렉토리가 없습니다: {DATA_DIR}")
         
-        # 백업 폴더에서 과거 데이터 로드
+        # 현재 파일 로드 (articles.json)
+        if os.path.exists(DATA_FILE):
+            try:
+                with open(DATA_FILE, 'r', encoding='utf-8') as f:
+                    current_data = json.load(f)
+                    
+                # 새로운 형식인지 확인
+                if isinstance(current_data, dict) and 'articles' in current_data:
+                    date_str = current_data.get('date', 'Unknown')
+                    articles = current_data['articles']
+                    
+                    # 이미 날짜별 파일에서 로드한 경우 덮어쓰지 않음
+                    if date_str not in articles_by_date:
+                        articles_by_date[date_str] = {
+                            'articles': articles,
+                            'count': len(articles),
+                            'sources': list(set(article.get('source', 'Unknown') for article in articles))
+                        }
+                        logger.info(f"  📄 articles.json: {len(articles)}개 글")
+            except Exception as e:
+                logger.warning(f"articles.json 로드 실패: {e}")
+        
+        # 백업 폴더에서 과거 데이터 로드 (추가)
         backup_dir = 'data/backup'
         if os.path.exists(backup_dir):
             for filename in os.listdir(backup_dir):
