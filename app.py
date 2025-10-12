@@ -505,16 +505,28 @@ if __name__ == '__main__':
     os.makedirs('static', exist_ok=True)
     os.makedirs('templates', exist_ok=True)
     
-    # 포트 충돌 확인 및 대체 포트 사용
-    import socket
+    # data/articles.json 파일이 없으면 빈 파일 생성 (초기 실행용)
+    if not os.path.exists(DATA_FILE):
+        logger.info(f"초기 데이터 파일 생성: {DATA_FILE}")
+        with open(DATA_FILE, 'w', encoding='utf-8') as f:
+            json.dump({
+                'date': datetime.now().strftime('%Y-%m-%d'),
+                'articles': [],
+                'stats': {'total': 0, 'sources': []}
+            }, f, ensure_ascii=False, indent=2)
     
-    def is_port_in_use(port):
-        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-            return s.connect_ex(('localhost', port)) == 0
-    
-    if is_port_in_use(port):
-        port = 8081
-        logger.warning(f"포트 8080이 사용 중입니다. 포트 {port}로 변경합니다.")
+    # 포트 충돌 확인 (로컬 개발 환경에서만)
+    # Railway 같은 프로덕션 환경에서는 PORT 환경변수를 그대로 사용
+    if os.getenv('RAILWAY_ENVIRONMENT') is None:  # 로컬 환경에서만 체크
+        import socket
+        
+        def is_port_in_use(port):
+            with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+                return s.connect_ex(('localhost', port)) == 0
+        
+        if is_port_in_use(port):
+            port = 8081
+            logger.warning(f"포트 8080이 사용 중입니다. 포트 {port}로 변경합니다.")
     
     # 외부 접근 가능하도록 host='0.0.0.0' 설정
     logger.info(f"🚀 DS News Aggregator 서버 시작")
