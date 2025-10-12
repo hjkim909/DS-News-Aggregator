@@ -157,6 +157,13 @@ function initializeEventListeners() {
         });
     }
     
+    // 날짜 필터 변경 이벤트
+    if (elements.dateSelect) {
+        elements.dateSelect.addEventListener('change', function() {
+            changeDateFilter(this.value);
+        });
+    }
+    
     // 무한 스크롤
     window.addEventListener('scroll', debounce(handleScroll, 100));
     
