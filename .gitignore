@@ -23,9 +23,13 @@ env.bak/
 venv.bak/
 
 # Data files (수집된 뉴스 데이터)
-data/articles*.json
+# 날짜별 파일은 Git에 보관 (영구 저장)
+# data/articles_2025-10-12.json 형식은 추적됨
+
+# 임시 파일만 무시
+data/articles.json
 data/backup/
-data/*.json
+data/test_*.json
 
 # Logs
 logs/

@@ -36,7 +36,7 @@ jobs:
     
     - name: 📰 뉴스 수집 실행
       run: |
-        python main.py
+        python -c "from processors.pipeline import run_ds_news_pipeline; run_ds_news_pipeline()"
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
     
