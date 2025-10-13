@@ -56,8 +56,8 @@ jobs:
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "GitHub Actions Bot"
         
-        # data 디렉토리의 변경사항만 추가
-        git add data/articles*.json
+        # 날짜별 히스토리 파일만 추가 (articles_YYYY-MM-DD.json)
+        git add data/articles_*.json 2>/dev/null || echo "날짜별 파일 없음"
         
         # 변경사항이 있는 경우에만 커밋
         if git diff --staged --quiet; then
