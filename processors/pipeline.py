@@ -53,8 +53,12 @@ class DSNewsPipeline:
             'translated_articles': 0,
             'summarized_articles': 0,
             'final_articles': 0,
+            'duplicates_removed': 0,  # 중복 제거 통계
             'errors': []
         }
+        
+        # URL 기반 중복 제거용 Set
+        self.collected_urls = set()
     
     def _log_stage_start(self, stage_name: str):
         """단계 시작 로깅"""
@@ -123,6 +127,43 @@ class DSNewsPipeline:
         self._log_stage_end("글 수집", len(all_articles))
         
         return all_articles
+    
+    def remove_duplicates(self, articles: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """
+        URL 기반 간단한 중복 제거
+        
+        Args:
+            articles: 중복 체크할 글 목록
+            
+        Returns:
+            중복이 제거된 글 목록
+        """
+        self._log_stage_start("중복 제거")
+        
+        unique_articles = []
+        duplicates = 0
+        
+        for article in articles:
+            url = article.get('url', '')
+            
+            # URL이 없거나 이미 수집된 경우 스킵
+            if not url or url in self.collected_urls:
+                duplicates += 1
+                continue
+            
+            # 새로운 URL이면 추가
+            unique_articles.append(article)
+            self.collected_urls.add(url)
+        
+        self.pipeline_stats['duplicates_removed'] = duplicates
+        
+        logger.info(f"중복 제거 완료: {len(articles)}개 → {len(unique_articles)}개")
+        logger.info(f"  - 중복 발견: {duplicates}개")
+        logger.info(f"  - 고유 글: {len(unique_articles)}개")
+        
+        self._log_stage_end("중복 제거", len(unique_articles))
+        
+        return unique_articles
     
     def step2_filter_articles(self, articles: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """
@@ -336,6 +377,13 @@ class DSNewsPipeline:
             
             if not articles:
                 logger.warning("수집된 글이 없습니다. 파이프라인을 종료합니다.")
+                return self.get_pipeline_stats()
+            
+            # 1.5단계: 중복 제거 (NEW!)
+            articles = self.remove_duplicates(articles)
+            
+            if not articles:
+                logger.warning("중복 제거 후 남은 글이 없습니다. 파이프라인을 종료합니다.")
                 return self.get_pipeline_stats()
             
             # 2단계: 콘텐츠 필터링
