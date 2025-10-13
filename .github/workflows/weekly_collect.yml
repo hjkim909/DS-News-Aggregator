@@ -36,7 +36,7 @@ jobs:
     
     - name: 📰 뉴스 수집 실행
       run: |
-        python -c "from processors.pipeline import run_ds_news_pipeline; run_ds_news_pipeline()"
+        python -c "from processors.pipeline import run_ds_news_pipeline; import logging; logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'); stats = run_ds_news_pipeline(); print(f'\n===== 수집 완료 ====='); print(f'수집: {stats[\"original_articles\"]}개 → 필터링: {stats[\"filtered_articles\"]}개 → 번역: {stats[\"translated_articles\"]}개 → 요약: {stats[\"summarized_articles\"]}개 → 저장: {stats[\"final_articles\"]}개'); print(f'소요시간: {stats.get(\"total_duration_str\", \"N/A\")}')"
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
     

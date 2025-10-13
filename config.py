@@ -264,7 +264,7 @@ class Config:
     
     # 최소 통과 점수
     MIN_SCORE_THRESHOLD = 70    # 70점 이상만 선별
-    FINAL_ARTICLE_COUNT = 10    # 최종 5-10개 (최대 10개로 설정)
+    FINAL_ARTICLE_COUNT = 20    # 최종 5-10개 (최대 10개로 설정)
     
     # Reddit 업보트 최소 기준
     MIN_UPVOTES = 5             # upvote 5개 이상만
