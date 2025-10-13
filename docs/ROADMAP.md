@@ -51,52 +51,36 @@ DS News Aggregator의 현재 상황과 향후 계획입니다.
 
 #### 0️⃣ 중복 뉴스 제거 시스템 (Priority: URGENT) 🔥
 
-**목표:** URL 기반 중복 제거로 데이터 품질 향상
+**목표:** URL 기반 간단한 중복 제거
 
-**현재 문제:**
-- 같은 뉴스가 여러 번 수집될 수 있음
-- 날짜별 파일 간 중복 체크 없음
-- 사용자가 이미 본 글이 다시 나타남
+**간단 구현:**
+```python
+# pipeline.py에 10줄만 추가!
+self.collected_urls = set()
 
-**구현 계획:**
+def remove_duplicates(articles):
+    unique = []
+    for article in articles:
+        url = article.get('url')
+        if url and url not in self.collected_urls:
+            unique.append(article)
+            self.collected_urls.add(url)
+    return unique
+```
 
-**Phase 1: URL 해시 기반 중복 제거 (1주)**
-1. **ArticleDeduplicator 클래스 생성**
-   - URL을 해시(SHA256)로 변환
-   - 히스토리 파일(`.dedup_history.json`) 관리
-   - 중복 체크 메서드 구현
-
-2. **파이프라인 통합**
-   - `step2_filter_articles()` 이전에 중복 체크
-   - 수집 시 자동으로 중복 제거
-   - 로그에 중복 통계 표시
-
-3. **히스토리 관리**
-   - 최근 30일 URL만 보관
-   - 오래된 기록 자동 정리
-   - 히스토리 파일 크기 제한 (1MB)
-
-**Phase 2: 고급 중복 감지 (2주)**
-4. **제목 유사도 분석**
-   - Levenshtein distance로 제목 비교
-   - 85% 이상 유사하면 중복 처리
-   - 다른 소스의 같은 뉴스 감지
-
-5. **콘텐츠 핑거프린팅**
-   - 본문 일부를 해시화
-   - URL이 달라도 같은 내용 감지
-
-**예상 시간:** 
-- Phase 1: 4-6시간
-- Phase 2: 8-10시간
+**예상 시간:** 30분 ⚡
 
 **기대 효과:**
-- ✅ 중복 뉴스 95% 이상 제거
-- ✅ 데이터 품질 향상
-- ✅ 사용자 경험 개선
-- ✅ 저장 공간 30% 절약
+- ✅ URL 중복 100% 제거
+- ✅ 구현 매우 간단 (10줄)
+- ✅ 성능 영향 없음
+- ✅ 즉시 적용 가능
 
-### 2️⃣ 추가 뉴스 소스 (Priority: HIGH)
+**상세:** `docs/DEDUPLICATION_DESIGN.md` 참고
+
+---
+
+### 1️⃣ 추가 뉴스 소스 (Priority: HIGH)
 
 **목표:** AI/ML 전문 소스 11개 추가
 
@@ -126,7 +110,9 @@ DS News Aggregator의 현재 상황과 향후 계획입니다.
 - ✅ 다양한 관점의 뉴스
 - ✅ 국내외 균형
 
-### 3️⃣ 검색 기능 (Priority: MEDIUM)
+---
+
+### 2️⃣ 검색 기능 (Priority: MEDIUM)
 
 **목표:** 제목/내용/태그 기반 실시간 검색
 
