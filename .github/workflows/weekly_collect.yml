@@ -74,27 +74,10 @@ jobs:
       run: |
         echo "=== 수집 통계 ==="
         if [ -f "data/articles.json" ]; then
-          python -c "
-import json
-from datetime import datetime
-
-with open('data/articles.json', 'r', encoding='utf-8') as f:
-    data = json.load(f)
-    
-articles = data.get('articles', [])
-print(f'📊 총 글 개수: {len(articles)}')
-print(f'📅 수집 날짜: {data.get(\"date\", \"N/A\")}')
-
-# 소스별 통계
-sources = {}
-for article in articles:
-    source = article.get('source', 'unknown')
-    sources[source] = sources.get(source, 0) + 1
-
-print('\\n📰 소스별 분포:')
-for source, count in sorted(sources.items(), key=lambda x: x[1], reverse=True):
-    print(f'  - {source}: {count}개')
-"
+          ARTICLE_COUNT=$(python -c "import json; data=json.load(open('data/articles.json')); print(len(data.get('articles', [])))")
+          COLLECT_DATE=$(python -c "import json; data=json.load(open('data/articles.json')); print(data.get('date', 'N/A'))")
+          echo "📊 총 글 개수: $ARTICLE_COUNT"
+          echo "📅 수집 날짜: $COLLECT_DATE"
         else
           echo "❌ 수집 파일 없음"
         fi
