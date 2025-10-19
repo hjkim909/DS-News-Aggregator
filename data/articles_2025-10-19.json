@@ -1,0 +1,83 @@
+{
+  "date": "2025-10-19",
+  "articles": [
+    {
+      "id": "towards_data_science_707274",
+      "title": "How to Evaluate Retrieval Quality in RAG Pipelines: Precision@k, Recall@k, and F1@k",
+      "content": "In my previous posts, I have walked you through putting together a very basic RAG pipeline in Python, as well as chunking large text documents. We’ve also looked into how documents are transformed into embeddings, allowing us to quickly search for similar documents within a vector database, along with how reranking is used to identify […] The post How to Evaluate Retrieval Quality in RAG Pipelines: Precision@k, Recall@k, and F1@k appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/how-to-evaluate-retrieval-quality-in-rag-pipelines-precisionk-recallk-and-f1k/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 100,
+      "published": "2025-10-16T12:30:00+00:00",
+      "collected_at": "2025-10-19T23:21:55.670177+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "RAG 파이프라인에서 검색 품질을 평가하는 방법: Precision@k, Recall@k 및 F1@k",
+      "content_ko": "이전 게시물에서는 Python에서 매우 기본적인 RAG 파이프라인을 구성하고 큰 텍스트 문서를 청크하는 방법을 안내했습니다.또한 문서가 임베딩으로 변환되어 벡터 데이터베이스 내에서 유사한 문서를 빠르게 검색할 수 있는 방법과 순위 재지정을 사용하여 […]을 식별하는 방법도 살펴보았습니다. RAG 파이프라인에서 검색 품질을 평가하는 방법: Precision@k, Recall@k 및 F1@k 게시물이 Towards 데이터 사이언스에 처음으로 게재되었습니다.",
+      "summary": "이전 게시물에서는 Python에서 매우 기본적인 RAG 파이프라인을 구성하고 큰 텍스트 문서를 청크하는 방법을 안내했습니다.또한 문서가 임베딩으로 변환되어 벡터 데이터베이스 내에서 유사한 문서를 빠르게 검색할 수 있는 방법과 순위 재지정을 사용하여 […]을 식별하는 방법도 살펴보았습니다. RAG 파이프라인에서 검색 품질을 평가하는 방법: Precision@k, Recall@k 및 F1@k 게시물이 Towards 데이터 사이언스에 처음으로 게재되었습니다..",
+      "summary_sentences": 3,
+      "summarized_at": "2025-10-19T23:22:17.777394+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "towards_data_science_981885",
+      "title": "How to Build Guardrails for Effective Agents",
+      "content": "Learn how to set up effective guardrails to enforce desired behaviour from your agents The post How to Build Guardrails for Effective Agents appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/how-to-build-guardrails-for-effective-agents/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 95,
+      "published": "2025-10-19T14:00:00+00:00",
+      "collected_at": "2025-10-19T23:21:55.663106+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "효과적인 에이전트를 위한 가드레일을 구축하는 방법",
+      "content_ko": "에이전트에서 원하는 동작을 시행하기 위해 효과적인 가드레일을 설정하는 방법을 알아보세요. 효과적인 에이전트를 위한 가드레일을 구축하는 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다.",
+      "summary": "에이전트에서 원하는 동작을 시행하기 위해 효과적인 가드레일을 설정하는 방법을 알아보세요. 효과적인 에이전트를 위한 가드레일을 구축하는 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다..",
+      "summary_sentences": 2,
+      "summarized_at": "2025-10-19T23:22:19.846642+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "towards_data_science_243005",
+      "title": "How to Classify Lung Cancer Subtype from DNA Copy Numbers Using PyTorch",
+      "content": "A step-by-step introduction to understanding cancer from the perspective of a data scientist. The post How to Classify Lung Cancer Subtype from DNA Copy Numbers Using PyTorch appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/classification-of-lung-cancer-type-from-genomic-copy-number-profiles-using-a-convolutional-neural-network/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 90,
+      "published": "2025-10-17T17:02:09+00:00",
+      "collected_at": "2025-10-19T23:21:55.665820+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "PyTorch를 사용하여 DNA 사본 번호에서 폐암 하위 유형을 분류하는 방법",
+      "content_ko": "데이터 과학자의 관점에서 암을 이해하는 방법을 단계별로 소개합니다.PyTorch를 사용하여 DNA 사본 번호에서 폐암 하위 유형을 분류하는 방법이라는 게시물이 Towards 데이터 사이언스에 처음 게재되었습니다.",
+      "summary": "데이터 과학자의 관점에서 암을 이해하는 방법을 단계별로 소개합니다.PyTorch를 사용하여 DNA 사본 번호에서 폐암 하위 유형을 분류하는 방법이라는 게시물이 Towards 데이터 사이언스에 처음 게재되었습니다.. PyTorch를 사용하여 DNA 사본 번호에서 폐암 하위 유형을 분류하는 방법에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 3,
+      "summarized_at": "2025-10-19T23:22:21.904787+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    }
+  ]
+}
