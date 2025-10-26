@@ -1,0 +1,131 @@
+{
+  "date": "2025-10-26",
+  "articles": [
+    {
+      "id": "towards_data_science_528662",
+      "title": "How to Keep AI Costs Under Control",
+      "content": "Lessons from Scaling LLMs The post How to Keep AI Costs Under Control appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/how-to-keep-ai-costs-under-control/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 100,
+      "published": "2025-10-23T17:00:00+00:00",
+      "collected_at": "2025-10-26T23:22:37.172189+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "AI 비용을 통제하는 방법",
+      "content_ko": "확장의 교훈 LLMs AI 비용을 통제하는 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다.",
+      "summary": "확장의 교훈 LLMs AI 비용을 통제하는 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다.. AI 비용을 통제하는 방법에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 2,
+      "summarized_at": "2025-10-26T23:22:58.468453+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "towards_data_science_542851",
+      "title": "How to Consistently Extract Metadata from Complex Documents",
+      "content": "Learn how to extract important pieces of information from your documents The post How to Consistently Extract Metadata from Complex Documents appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/how-to-consistently-extract-metadata-from-complex-documents/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 90,
+      "published": "2025-10-24T15:30:00+00:00",
+      "collected_at": "2025-10-26T23:22:37.169790+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "복잡한 문서에서 메타데이터를 일관되게 추출하는 방법",
+      "content_ko": "문서에서 중요한 정보를 추출하는 방법 알아보기 복잡한 문서에서 메타데이터를 일관되게 추출하는 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다.",
+      "summary": "문서에서 중요한 정보를 추출하는 방법 알아보기 복잡한 문서에서 메타데이터를 일관되게 추출하는 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다.. 복잡한 문서에서 메타데이터를 일관되게 추출하는 방법에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 2,
+      "summarized_at": "2025-10-26T23:23:00.537690+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "towards_data_science_672619",
+      "title": "How to Control a Robot with Python",
+      "content": "3D simulations and movement control with PyBullet The post How to Control a Robot with Python appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/how-to-control-a-robot-with-python/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 90,
+      "published": "2025-10-23T14:00:00+00:00",
+      "collected_at": "2025-10-26T23:22:37.172750+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "Python으로 로봇을 제어하는 ​​방법",
+      "content_ko": "PyBullet을 사용한 3D 시뮬레이션 및 이동 제어 Python으로 로봇을 제어하는 ​​방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다.",
+      "summary": "PyBullet을 사용한 3D 시뮬레이션 및 이동 제어 Python으로 로봇을 제어하는 ​​방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다.. Python으로 로봇을 제어하는 ​​방법에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 2,
+      "summarized_at": "2025-10-26T23:23:02.607290+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "tech42_679711",
+      "title": "딥시크 AI, 실전 가상화폐 투자대회서 수익률 1위",
+      "content": "중국 AI 딥시크가 실전 가상화폐 투자대회에서 3일 만에 35% 수익률로 1위를 차지했다. GPT-5는 27%, 제미나이는 33% 손실을 기록하며 AI 트레이딩 역량의 명암이 극명하게 갈렸다. 전문가들은 전략 동질화로 인한 시스템 리스크를 경고한다.",
+      "url": "https://www.tech42.co.kr/%eb%94%a5%ec%8b%9c%ed%81%ac-ai-%ec%8b%a4%ec%a0%84-%ea%b0%80%ec%83%81%ed%99%94%ed%8f%90-%ed%88%ac%ec%9e%90%eb%8c%80%ed%9a%8c%ec%84%9c-%ec%88%98%ec%9d%b5%eb%a5%a0-1%ec%9c%84/?utm_source=rss&utm_medium=rss&utm_campaign=%25eb%2594%25a5%25ec%258b%259c%25ed%2581%25ac-ai-%25ec%258b%25a4%25ec%25a0%2584-%25ea%25b0%2580%25ec%2583%2581%25ed%2599%2594%25ed%258f%2590-%25ed%2588%25ac%25ec%259e%2590%25eb%258c%2580%25ed%259a%258c%25ec%2584%259c-%25ec%2588%2598%25ec%259d%25b5%25eb%25a5%25a0-1%25ec%259c%2584",
+      "source": "Tech42",
+      "source_id": "tech42",
+      "tags": [
+        "뉴스",
+        "국내",
+        "스타트업",
+        "AI"
+      ],
+      "score": 85,
+      "published": "2025-10-24T03:48:04+00:00",
+      "collected_at": "2025-10-26T23:22:35.885467+00:00",
+      "needs_translation": false,
+      "summary": "중국 AI 딥시크가 실전 가상화폐 투자대회에서 3일 만에 35% 수익률로 1위를 차지했다. GPT-5는 27%, 제미나이는 33% 손실을 기록하며 AI 트레이딩 역량의 명암이 극명하게 갈렸다.",
+      "summary_sentences": 2,
+      "summarized_at": "2025-10-26T23:23:04.668983+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "tech42_441896",
+      "title": "\"간단한 작업은 OK\", '챗GPT 아틀라스' 에이전트 모드 6가지 실전 테스트",
+      "content": "아스테크니카가 오픈AI 챗GPT 아틀라스의 에이전트 모드를 6가지 실제 작업으로 테스트한 결과 평균 6.83점을 기록했다. 라디오 플레이리스트 생성과 전력 요금제 추천은 9점으로 성공했지만, 게임 다운로드는 1점으로 실패. 세션 시간 제약이 가장 큰 한계로 지적됐다.",
+      "url": "https://www.tech42.co.kr/%ea%b0%84%eb%8b%a8%ed%95%9c-%ec%9e%91%ec%97%85%ec%9d%80-ok-%ec%b1%97gpt-%ec%95%84%ed%8b%80%eb%9d%bc%ec%8a%a4-%ec%97%90%ec%9d%b4%ec%a0%84%ed%8a%b8-%eb%aa%a8%eb%93%9c-6%ea%b0%80%ec%a7%80/?utm_source=rss&utm_medium=rss&utm_campaign=%25ea%25b0%2584%25eb%258b%25a8%25ed%2595%259c-%25ec%259e%2591%25ec%2597%2585%25ec%259d%2580-ok-%25ec%25b1%2597gpt-%25ec%2595%2584%25ed%258b%2580%25eb%259d%25bc%25ec%258a%25a4-%25ec%2597%2590%25ec%259d%25b4%25ec%25a0%2584%25ed%258a%25b8-%25eb%25aa%25a8%25eb%2593%259c-6%25ea%25b0%2580%25ec%25a7%2580",
+      "source": "Tech42",
+      "source_id": "tech42",
+      "tags": [
+        "뉴스",
+        "국내",
+        "스타트업",
+        "AI"
+      ],
+      "score": 85,
+      "published": "2025-10-24T00:49:10+00:00",
+      "collected_at": "2025-10-26T23:22:35.886165+00:00",
+      "needs_translation": false,
+      "summary": "아스테크니카가 오픈AI 챗GPT 아틀라스의 에이전트 모드를 6가지 실제 작업으로 테스트한 결과 평균 6.83점을 기록했다. 라디오 플레이리스트 생성과 전력 요금제 추천은 9점으로 성공했지만, 게임 다운로드는 1점으로 실패.",
+      "summary_sentences": 3,
+      "summarized_at": "2025-10-26T23:23:06.739890+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    }
+  ]
+}
