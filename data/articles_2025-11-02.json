@@ -1,0 +1,107 @@
+{
+  "date": "2025-11-02",
+  "articles": [
+    {
+      "id": "towards_data_science_778304",
+      "title": "How to Apply Powerful AI Audio Models to Real-World Applications",
+      "content": "Learn about different types of AI audio models and the application areas they can be used in. The post How to Apply Powerful AI Audio Models to Real-World Applications appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/how-to-apply-powerful-ai-audio-models-to-real-world-applications/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 105,
+      "published": "2025-10-27T19:43:37+00:00",
+      "collected_at": "2025-11-02T23:21:48.210054+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "강력한 AI 오디오 모델을 실제 애플리케이션에 적용하는 방법",
+      "content_ko": "다양한 유형의 AI 오디오 모델과 이를 사용할 수 있는 응용 분야에 대해 알아보세요. 강력한 AI 오디오 모델을 실제 응용 프로그램에 적용하는 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다.",
+      "summary": "다양한 유형의 AI 오디오 모델과 이를 사용할 수 있는 응용 분야에 대해 알아보세요. 강력한 AI 오디오 모델을 실제 응용 프로그램에 적용하는 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다..",
+      "summary_sentences": 2,
+      "summarized_at": "2025-11-02T23:22:11.494732+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "towards_data_science_16493",
+      "title": "MobileNetV3 Paper Walkthrough: The Tiny Giant Getting Even Smarter",
+      "content": "MobileNetV3 with PyTorch — now featuring SE blocks and hard activation functions The post MobileNetV3 Paper Walkthrough: The Tiny Giant Getting Even Smarter appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/mobilenetv3-paper-walkthrough-the-tiny-giant-getting-even-smarter/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 95,
+      "published": "2025-11-02T13:00:00+00:00",
+      "collected_at": "2025-11-02T23:21:48.198305+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "MobileNetV3 문서 연습: 더욱 똑똑해지는 작은 거인",
+      "content_ko": "PyTorch가 포함된 MobileNetV3 - 이제 SE 블록 및 하드 활성화 기능 제공 MobileNetV3 이후의 Paper Walkthrough: The Tiny Giant Getting Even Smarter가 Towards 데이터 사이언스에 처음으로 게재되었습니다.",
+      "summary": "PyTorch가 포함된 MobileNetV3 - 이제 SE 블록 및 하드 활성화 기능 제공 MobileNetV3 이후의 Paper Walkthrough: The Tiny Giant Getting Even Smarter가 Towards 데이터 사이언스에 처음으로 게재되었습니다.. MobileNetV3 문서 연습: 더욱 똑똑해지는 작은 거인에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 2,
+      "summarized_at": "2025-11-02T23:22:13.543774+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "towards_data_science_162185",
+      "title": "How to Build Machine Learning Projects That Help You Get Hired",
+      "content": "What machine learning projects will actually get you interviews and jobs The post How to Build Machine Learning Projects That Help You Get Hired appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/the-machine-learning-projects-employers-want-to-see/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 90,
+      "published": "2025-10-31T14:00:00+00:00",
+      "collected_at": "2025-11-02T23:21:48.201007+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "채용에 도움이 되는 기계 학습 프로젝트를 구축하는 방법",
+      "content_ko": "어떤 기계 학습 프로젝트가 실제로 면접과 일자리를 얻을 수 있을까요? 채용에 도움이 되는 기계 학습 프로젝트를 구축하는 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다.",
+      "summary": "어떤 기계 학습 프로젝트가 실제로 면접과 일자리를 얻을 수 있을까요. 채용에 도움이 되는 기계 학습 프로젝트를 구축하는 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다..",
+      "summary_sentences": 2,
+      "summarized_at": "2025-11-02T23:22:15.589183+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "tech42_791492",
+      "title": "오픈AI, 마이크로소프트 새 계약으로 ‘AGI 딜레마’ 심화",
+      "content": "오픈AI가 영리 구조 개편과 함께 마이크로소프트(Microsoft)와의 새로운 계약을 체결하면서 인공지능 일반지능(AGI) 개발을 둘러싼 압박이 한층 커지고 있다.",
+      "url": "https://www.tech42.co.kr/%ec%98%a4%ed%94%88ai-%eb%a7%88%ec%9d%b4%ed%81%ac%eb%a1%9c%ec%86%8c%ed%94%84%ed%8a%b8-%ec%83%88-%ea%b3%84%ec%95%bd%ec%9c%bc%eb%a1%9c-agi-%eb%94%9c%eb%a0%88%eb%a7%88-%ec%8b%ac/?utm_source=rss&utm_medium=rss&utm_campaign=%25ec%2598%25a4%25ed%2594%2588ai-%25eb%25a7%2588%25ec%259d%25b4%25ed%2581%25ac%25eb%25a1%259c%25ec%2586%258c%25ed%2594%2584%25ed%258a%25b8-%25ec%2583%2588-%25ea%25b3%2584%25ec%2595%25bd%25ec%259c%25bc%25eb%25a1%259c-agi-%25eb%2594%259c%25eb%25a0%2588%25eb%25a7%2588-%25ec%258b%25ac",
+      "source": "Tech42",
+      "source_id": "tech42",
+      "tags": [
+        "뉴스",
+        "국내",
+        "스타트업",
+        "AI"
+      ],
+      "score": 75,
+      "published": "2025-10-31T00:02:12+00:00",
+      "collected_at": "2025-11-02T23:21:46.927857+00:00",
+      "needs_translation": false,
+      "summary": "오픈AI가 영리 구조 개편과 함께 마이크로소프트(Microsoft)와의 새로운 계약을 체결하면서 인공지능 일반지능(AGI) 개발을 둘러싼 압박이 한층 커지고 있다.. 오픈AI, 마이크로소프트 새 계약으로 ‘AGI 딜레마’ 심화에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 2,
+      "summarized_at": "2025-11-02T23:22:17.633608+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    }
+  ]
+}
