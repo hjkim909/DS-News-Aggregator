@@ -1,0 +1,83 @@
+{
+  "date": "2025-11-09",
+  "articles": [
+    {
+      "id": "towards_data_science_121949",
+      "title": "Beyond Numbers: How to Humanize Your Data & Analysis",
+      "content": "The scintillating grid optical illusion is a perfect metaphor for how raw data can mislead us, causing us to see false trends. To escape the \"data-rich, action-poor\" paradox, organizations should need data humanization. This approach focuses on turning abstract metrics (the what) into clear, actionable stories (the why). It requires new roles like \"Data Artisans,\" a core competency in \"Data Storytelling,\" and a focus on proving the financial Impact (ROI) of these clearer insights. The post Beyond Numbers: How to Humanize Your Data & Analysis appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/beyond-numbers-how-to-humanize-your-data-analysis/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 105,
+      "published": "2025-11-07T14:00:00+00:00",
+      "collected_at": "2025-11-09T23:22:02.413047+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "숫자를 넘어서: 데이터 및 분석을 인간화하는 방법",
+      "content_ko": "번쩍이는 격자 착시 현상은 원시 데이터가 어떻게 우리를 오도하여 잘못된 추세를 보게 하는지에 대한 완벽한 은유입니다.\"데이터는 풍부하고 행동은 부족한\" 역설에서 벗어나려면 조직에는 데이터 인간화가 필요합니다.이 접근 방식은 추상적인 지표(무엇)를 명확하고 실행 가능한 스토리(왜)로 바꾸는 데 중점을 둡니다.'데이터 스토리텔링'의 핵심 역량인 '데이터 장인'과 같은 새로운 역할과 이러한 보다 명확한 통찰력의 재무적 영향(ROI)을 입증하는 데 중점을 두어야 합니다.숫자 너머: 데이터 및 분석을 인간화하는 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다.",
+      "summary": "번쩍이는 격자 착시 현상은 원시 데이터가 어떻게 우리를 오도하여 잘못된 추세를 보게 하는지에 대한 완벽한 은유입니다.\"데이터는 풍부하고 행동은 부족한\" 역설에서 벗어나려면 조직에는 데이터 인간화가 필요합니다.이 접근 방식은 추상적인 지표(무엇)를 명확하고 실행 가능한 스토리(왜)로 바꾸는 데 중점을 둡니다.'데이터 스토리텔링'의 핵심 역량인 '데이터 장인'과 같은 새로운 역할과 이러한 보다 명확한 통찰력의 재무적 영향(ROI)을 입증하는 데 중점을 두어야 합니다.숫자 너머: 데이터 및 분석을 인간화하는 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다.. 숫자를 넘어서: 데이터 및 분석을 인간화하는 방법에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 6,
+      "summarized_at": "2025-11-09T23:22:23.945019+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "towards_data_science_693289",
+      "title": "How to Use GPT-5 Effectively",
+      "content": "Learn about GPT-5's features and settings, and how to optimally apply them to your use case The post How to Use GPT-5 Effectively appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/how-to-use-gpt-5-effectively/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 100,
+      "published": "2025-11-07T12:30:00+00:00",
+      "collected_at": "2025-11-09T23:22:02.413697+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "GPT-5를 효과적으로 사용하는 방법",
+      "content_ko": "GPT-5의 기능과 설정, 그리고 이를 사용 사례에 최적으로 적용하는 방법에 대해 알아보세요. GPT-5를 효과적으로 사용하는 방법 게시물은 Towards 데이터 사이언스에서 첫 번째로 게재되었습니다.",
+      "summary": "GPT-5의 기능과 설정, 그리고 이를 사용 사례에 최적으로 적용하는 방법에 대해 알아보세요. GPT-5를 효과적으로 사용하는 방법 게시물은 Towards 데이터 사이언스에서 첫 번째로 게재되었습니다..",
+      "summary_sentences": 2,
+      "summarized_at": "2025-11-09T23:22:26.012073+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "towards_data_science_142486",
+      "title": "How to Evaluate Retrieval Quality in RAG Pipelines (part 2): Mean Reciprocal Rank (MRR) and Average Precision (AP)",
+      "content": "Evaluating the retrieval quality of your RAG pipeline with binary, order-aware measures The post How to Evaluate Retrieval Quality in RAG Pipelines (part 2): Mean Reciprocal Rank (MRR) and Average Precision (AP) appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/how-to-evaluate-retrieval-quality-in-rag-pipelines-part-2-mean-reciprocal-rank-mrr-and-average-precision-ap/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 100,
+      "published": "2025-11-05T20:41:24+00:00",
+      "collected_at": "2025-11-09T23:22:02.418503+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "RAG 파이프라인에서 검색 품질을 평가하는 방법(2부): MRR(평균 상호 순위) 및 AP(평균 정밀도)",
+      "content_ko": "이진 순서 인식 측정값을 사용하여 RAG 파이프라인의 검색 품질 평가 게시물 RAG 파이프라인에서 검색 품질을 평가하는 방법(2부): MRR(평균 상호 순위) 및 AP(평균 정밀도)가 Towards 데이터 사이언스에 처음 게재되었습니다.",
+      "summary": "이진 순서 인식 측정값을 사용하여 RAG 파이프라인의 검색 품질 평가 게시물 RAG 파이프라인에서 검색 품질을 평가하는 방법(2부): MRR(평균 상호 순위) 및 AP(평균 정밀도)가 Towards 데이터 사이언스에 처음 게재되었습니다.. RAG 파이프라인에서 검색 품질을 평가하는 방법(2부): MRR(평균 상호 순위) 및 AP(평균 정밀도)에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 2,
+      "summarized_at": "2025-11-09T23:22:28.076440+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    }
+  ]
+}
