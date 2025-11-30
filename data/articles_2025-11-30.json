@@ -1,0 +1,107 @@
+{
+  "date": "2025-11-30",
+  "articles": [
+    {
+      "id": "towards_data_science_4721",
+      "title": "How to Scale Your LLM Usage",
+      "content": "Learn how to increase LLM usage to achieve increased productivity The post How to Scale Your LLM Usage appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/how-to-scale-your-llm-usage/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 100,
+      "published": "2025-11-29T13:00:00+00:00",
+      "collected_at": "2025-11-30T23:23:42.627048+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "LLM 사용량을 확장하는 방법",
+      "content_ko": "생산성 향상을 위해 LLM 사용량을 늘리는 방법에 대해 알아보십시오. LLM 사용량을 확장하는 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다.",
+      "summary": "생산성 향상을 위해 LLM 사용량을 늘리는 방법에 대해 알아보십시오. LLM 사용량을 확장하는 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다..",
+      "summary_sentences": 2,
+      "summarized_at": "2025-11-30T23:24:03.589099+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "towards_data_science_187455",
+      "title": "Why CrewAI’s Manager-Worker Architecture Fails — and How to Fix It",
+      "content": "A real-world analysis of why CrewAI’s hierarchical orchestration misfires—and a practical fix you can implement today. The post Why CrewAI’s Manager-Worker Architecture Fails — and How to Fix It appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/why-crewais-manager-worker-architecture-fails-and-how-to-fix-it/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 90,
+      "published": "2025-11-25T18:45:38+00:00",
+      "collected_at": "2025-11-30T23:23:42.634419+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "CrewAI의 관리자-작업자 아키텍처가 실패하는 이유와 해결 방법",
+      "content_ko": "CrewAI의 계층적 오케스트레이션이 실패하는 이유에 대한 실제 분석과 지금 구현할 수 있는 실질적인 수정 사항입니다.CrewAI의 관리자-작업자 아키텍처가 실패하는 이유 및 해결 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다.",
+      "summary": "CrewAI의 계층적 오케스트레이션이 실패하는 이유에 대한 실제 분석과 지금 구현할 수 있는 실질적인 수정 사항입니다.CrewAI의 관리자-작업자 아키텍처가 실패하는 이유 및 해결 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다.. CrewAI의 관리자-작업자 아키텍처가 실패하는 이유와 해결 방법에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 3,
+      "summarized_at": "2025-11-30T23:24:05.648035+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "towards_data_science_946702",
+      "title": "How to Implement Three Use Cases for the New Calendar-Based Time Intelligence",
+      "content": "Starting with the September 2025 Release of Power BI, Microsoft introduced the new Calendar-based Time Intelligence feature. Let’s see what can be done by implementing three use cases. The future looks very interesting with this new feature. The post How to Implement Three Use Cases for the New Calendar-Based Time Intelligence appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/use-cases-for-the-new-calendar-based-time-intelligence/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 90,
+      "published": "2025-11-25T14:30:00+00:00",
+      "collected_at": "2025-11-30T23:23:42.635187+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "새로운 달력 기반 시간 인텔리전스에 대한 세 가지 사용 사례를 구현하는 방법",
+      "content_ko": "Microsoft는 Power BI의 2025년 9월 릴리스부터 새로운 달력 기반 시간 인텔리전스 기능을 도입했습니다.세 가지 사용 사례를 구현하여 수행할 수 있는 작업을 살펴보겠습니다.이 새로운 기능으로 인해 미래는 매우 흥미로워 보입니다.새로운 달력 기반 시간 인텔리전스에 대한 세 가지 사용 사례를 구현하는 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다.",
+      "summary": "Microsoft는 Power BI의 2025년 9월 릴리스부터 새로운 달력 기반 시간 인텔리전스 기능을 도입했습니다.세 가지 사용 사례를 구현하여 수행할 수 있는 작업을 살펴보겠습니다.이 새로운 기능으로 인해 미래는 매우 흥미로워 보입니다.새로운 달력 기반 시간 인텔리전스에 대한 세 가지 사용 사례를 구현하는 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다.. 새로운 달력 기반 시간 인텔리전스에 대한 세 가지 사용 사례를 구현하는 방법에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 5,
+      "summarized_at": "2025-11-30T23:24:07.702816+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "tech42_837676",
+      "title": "AI 시대 생존 직업 vs 소멸 직업…2년 연속 30% 급감한 직종은?",
+      "content": "2023년 1월부터 2025년 10월까지 전 세계 1억8천만 개 채용공고를 분석한 결과, AI가 창작 실행 직무와 규제 관련 직무의 채용을 크게 감소시킨 반면 머신러닝엔지니어와 고위 경영진 수요는 증가한 것으로 나타났다. 소프트웨어엔지니어와 고객서비스 상담원은 예상과 달리 AI 시대에도 견고한 수요를 보였다.",
+      "url": "https://www.tech42.co.kr/ai-%ec%8b%9c%eb%8c%80-%ec%83%9d%ec%a1%b4-%ec%a7%81%ec%97%85-vs-%ec%86%8c%eb%a9%b8-%ec%a7%81%ec%97%852%eb%85%84-%ec%97%b0%ec%86%8d-30-%ea%b8%89%ea%b0%90%ed%95%9c-%ec%a7%81%ec%a2%85%ec%9d%80/?utm_source=rss&utm_medium=rss&utm_campaign=ai-%25ec%258b%259c%25eb%258c%2580-%25ec%2583%259d%25ec%25a1%25b4-%25ec%25a7%2581%25ec%2597%2585-vs-%25ec%2586%258c%25eb%25a9%25b8-%25ec%25a7%2581%25ec%2597%25852%25eb%2585%2584-%25ec%2597%25b0%25ec%2586%258d-30-%25ea%25b8%2589%25ea%25b0%2590%25ed%2595%259c-%25ec%25a7%2581%25ec%25a2%2585%25ec%259d%2580",
+      "source": "Tech42",
+      "source_id": "tech42",
+      "tags": [
+        "뉴스",
+        "국내",
+        "스타트업",
+        "AI"
+      ],
+      "score": 75,
+      "published": "2025-11-27T23:30:00+00:00",
+      "collected_at": "2025-11-30T23:23:41.209430+00:00",
+      "needs_translation": false,
+      "summary": "2023년 1월부터 2025년 10월까지 전 세계 1억8천만 개 채용공고를 분석한 결과, AI가 창작 실행 직무와 규제 관련 직무의 채용을 크게 감소시킨 반면 머신러닝엔지니어와 고위 경영진 수요는 증가한 것으로 나타났다. 소프트웨어엔지니어와 고객서비스 상담원은 예상과 달리 AI 시대에도 견고한 수요를 보였다..",
+      "summary_sentences": 2,
+      "summarized_at": "2025-11-30T23:24:09.755807+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    }
+  ]
+}
