@@ -1,0 +1,83 @@
+{
+  "date": "2025-12-28",
+  "articles": [
+    {
+      "id": "towards_data_science_225764",
+      "title": "How to Build an AI-Powered Weather ETL Pipeline with Databricks and GPT-4o: From API To Dashboard",
+      "content": "A step-by-step guide from weather API ETL to dashboard on Databricks The post How to Build an AI-Powered Weather ETL Pipeline with Databricks and GPT-4o: From API To Dashboard appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/how-to-build-an-ai-powered-weather-etl-pipeline-with-databricks-and-gpt-4o-from-api-to-dashboard/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 110,
+      "published": "2025-12-26T13:00:00+00:00",
+      "collected_at": "2025-12-28T23:25:32.770064+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "Databricks 및 GPT-4o를 사용하여 AI 기반 기상 ETL 파이프라인을 구축하는 방법: API에서 대시보드까지",
+      "content_ko": "날씨 API ETL에서 Databricks의 대시보드까지의 단계별 가이드 Databricks 및 GPT-4o를 사용하여 AI 기반 날씨 ETL 파이프라인을 구축하는 방법: API에서 대시보드까지 게시물이 Towards 데이터 사이언스에 처음으로 게재되었습니다.",
+      "summary": "날씨 API ETL에서 Databricks의 대시보드까지의 단계별 가이드 Databricks 및 GPT-4o를 사용하여 AI 기반 날씨 ETL 파이프라인을 구축하는 방법: API에서 대시보드까지 게시물이 Towards 데이터 사이언스에 처음으로 게재되었습니다.. Databricks 및 GPT-4o를 사용하여 AI 기반 기상 ETL 파이프라인을 구축하는 방법: API에서 대시보드까지에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 2,
+      "summarized_at": "2025-12-28T23:25:55.458737+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "towards_data_science_61229",
+      "title": "Hugging Face Transformers in Action: Learning How To Leverage AI for NLP",
+      "content": "A practical guide to Hugging Face Transformers and to how you can analyze your resumé sentiment in seconds with AI The post Hugging Face Transformers in Action: Learning How To Leverage AI for NLP appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/hugging-face-transformers-in-action-learning-how-to-leverage-ai-for-nlp/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 105,
+      "published": "2025-12-28T13:00:00+00:00",
+      "collected_at": "2025-12-28T23:25:32.767611+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "포옹하는 얼굴 변형기: NLP에 AI를 활용하는 방법 배우기",
+      "content_ko": "Hugging Face 트랜스포머s에 대한 실용적인 가이드와 AI를 사용하여 이력서 감정을 몇 초 안에 분석할 수 있는 방법에 대한 게시물 Hugging Face 트랜스포머s in Action: Learning How To Leverage AI for NLP가 Towards 데이터 사이언스에 처음 게재되었습니다.",
+      "summary": "Hugging Face 트랜스포머s에 대한 실용적인 가이드와 AI를 사용하여 이력서 감정을 몇 초 안에 분석할 수 있는 방법에 대한 게시물 Hugging Face 트랜스포머s in Action: Learning How To Leverage AI for NLP가 Towards 데이터 사이언스에 처음 게재되었습니다.. 포옹하는 얼굴 변형기: NLP에 AI를 활용하는 방법 배우기에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 2,
+      "summarized_at": "2025-12-28T23:25:57.516800+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "towards_data_science_51434",
+      "title": "Breaking the Hardware Barrier: Software FP8 for Older GPUs",
+      "content": "Deep learning workloads are increasingly memory-bound, with GPU cores sitting idle while waiting for data transfers. FP8 precision solves this on newer hardware, but what about the millions of RTX 30 and 20 series GPUs already deployed? Feather demonstrates that software-based FP8 emulation through bitwise packing can achieve near-theoretical 4x bandwidth improvements (3.3x measured), making efficient deep learning accessible without expensive hardware upgrades The post Breaking the Hardware Barrier: Software FP8 for Older GPUs appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/breaking-the-hardware-barrier-software-fp8-for-older-gpus/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 90,
+      "published": "2025-12-28T15:00:00+00:00",
+      "collected_at": "2025-12-28T23:25:32.766955+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "하드웨어 장벽 깨기: 구형 GPU용 소프트웨어 FP8",
+      "content_ko": "딥 러닝 워크로드는 데이터 전송을 기다리는 동안 GPU 코어가 유휴 상태로 유지되면서 점점 더 메모리에 묶여 있습니다.FP8 정밀도는 최신 하드웨어에서 이 문제를 해결합니다. 하지만 이미 배포된 수백만 개의 RTX 30 및 20 시리즈 GPU는 어떻습니까?Feather는 비트 단위 패킹을 통한 소프트웨어 기반 FP8 에뮬레이션이 이론적으로 거의 4배(3.3배 측정) 향상된 대역폭을 달성하여 값비싼 하드웨어 업그레이드 없이 효율적인 딥 러닝에 액세스할 수 있음을 보여줍니다. 하드웨어 장벽 깨기: 구형 GPU용 소프트웨어 FP8 게시물이 Towards 데이터 사이언스에 처음 등장했습니다.",
+      "summary": "딥 러닝 워크로드는 데이터 전송을 기다리는 동안 GPU 코어가 유휴 상태로 유지되면서 점점 더 메모리에 묶여 있습니다.FP8 정밀도는 최신 하드웨어에서 이 문제를 해결합니다. 하지만 이미 배포된 수백만 개의 RTX 30 및 20 시리즈 GPU는 어떻습니까?Feather는 비트 단위 패킹을 통한 소프트웨어 기반 FP8 에뮬레이션이 이론적으로 거의 4배(3.3배 측정) 향상된 대역폭을 달성하여 값비싼 하드웨어 업그레이드 없이 효율적인 딥 러닝에 액세스할 수 있음을 보여줍니다.",
+      "summary_sentences": 5,
+      "summarized_at": "2025-12-28T23:25:59.574601+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    }
+  ]
+}
