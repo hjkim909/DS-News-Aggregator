@@ -1,0 +1,131 @@
+{
+  "date": "2026-01-11",
+  "articles": [
+    {
+      "id": "tech42_178912",
+      "title": "구글, AI 기반 ‘에이전트 쇼핑’ 개방형 표준 UCP 공개",
+      "content": "구글이 인공지능(AI) 에이전트를 활용한 새로운 전자상거래 개방형 표준 ‘유니버설 커머스 프로토콜(UCP)’을 선보이며 온라인 쇼핑 주도권 경쟁에 드라이브를 걸었다.",
+      "url": "https://www.tech42.co.kr/%ea%b5%ac%ea%b8%80-ai-%ea%b8%b0%eb%b0%98-%ec%97%90%ec%9d%b4%ec%a0%84%ed%8a%b8-%ec%87%bc%ed%95%91-%ea%b0%9c%eb%b0%a9%ed%98%95-%ed%91%9c%ec%a4%80-ucp-%ea%b3%b5%ea%b0%9c/?utm_source=rss&utm_medium=rss&utm_campaign=%25ea%25b5%25ac%25ea%25b8%2580-ai-%25ea%25b8%25b0%25eb%25b0%2598-%25ec%2597%2590%25ec%259d%25b4%25ec%25a0%2584%25ed%258a%25b8-%25ec%2587%25bc%25ed%2595%2591-%25ea%25b0%259c%25eb%25b0%25a9%25ed%2598%2595-%25ed%2591%259c%25ec%25a4%2580-ucp-%25ea%25b3%25b5%25ea%25b0%259c",
+      "source": "Tech42",
+      "source_id": "tech42",
+      "tags": [
+        "뉴스",
+        "국내",
+        "스타트업",
+        "AI"
+      ],
+      "score": 110,
+      "published": "2026-01-11T23:24:04+00:00",
+      "collected_at": "2026-01-11T23:25:57.401553+00:00",
+      "needs_translation": false,
+      "summary": "구글이 인공지능(AI) 에이전트를 활용한 새로운 전자상거래 개방형 표준 ‘유니버설 커머스 프로토콜(UCP)’을 선보이며 온라인 쇼핑 주도권 경쟁에 드라이브를 걸었다.. 구글, AI 기반 ‘에이전트 쇼핑’ 개방형 표준 UCP 공개에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 2,
+      "summarized_at": "2026-01-11T23:26:20.873739+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "towards_data_science_616295",
+      "title": "Mastering Non-Linear Data: A Guide to Scikit-Learn’s SplineTransformer",
+      "content": "Forget stiff lines and wild polynomials. Discover why Splines are the \"Goldilocks\" of feature engineering, offering the perfect balance of flexibility and discipline for non-linear data using Scikit-Learn’s SplineTransformer. The post Mastering Non-Linear Data: A Guide to Scikit-Learn’s SplineTransformer appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/mastering-non-linear-data-a-guide-to-scikit-learns-splinetransformer/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 100,
+      "published": "2026-01-09T13:30:00+00:00",
+      "collected_at": "2026-01-11T23:25:58.725341+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "비선형 데이터 마스터하기: Scikit-Learn의 Spline트랜스포머 가이드",
+      "content_ko": "딱딱한 선과 거친 다항식은 잊어버리세요.Scikit-Learn의 Spline트랜스포머를 사용하여 비선형 데이터에 대한 유연성과 규율의 완벽한 균형을 제공하는 Spline이 기능 엔지니어링의 \"골디락\"인 이유를 알아보세요.비선형 데이터 마스터하기: Scikit-Learn의 Spline트랜스포머 가이드 게시물이 Towards 데이터 사이언스에 처음 게재되었습니다.",
+      "summary": "딱딱한 선과 거친 다항식은 잊어버리세요.Scikit-Learn의 Spline트랜스포머를 사용하여 비선형 데이터에 대한 유연성과 규율의 완벽한 균형을 제공하는 Spline이 기능 엔지니어링의 \"골디락\"인 이유를 알아보세요.비선형 데이터 마스터하기: Scikit-Learn의 Spline트랜스포머 가이드 게시물이 Towards 데이터 사이언스에 처음 게재되었습니다.. 비선형 데이터 마스터하기: Scikit-Learn의 Spline트랜스포머 가이드에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 4,
+      "summarized_at": "2026-01-11T23:26:22.944676+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "towards_data_science_950078",
+      "title": "How to Leverage Slash Commands to Code Effectively",
+      "content": "Learn how I utilize slash commands to be a more efficient engineer The post How to Leverage Slash Commands to Code Effectively appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/how-to-leverage-slash-commands-to-code-effectively/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 95,
+      "published": "2026-01-11T13:00:00+00:00",
+      "collected_at": "2026-01-11T23:25:58.722338+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "슬래시 명령을 활용하여 효과적으로 코딩하는 방법",
+      "content_ko": "보다 효율적인 엔지니어가 되기 위해 슬래시 명령을 활용하는 방법 알아보기 슬래시 명령을 효과적으로 코드에 활용하는 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다.",
+      "summary": "보다 효율적인 엔지니어가 되기 위해 슬래시 명령을 활용하는 방법 알아보기 슬래시 명령을 효과적으로 코드에 활용하는 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다.. 슬래시 명령을 활용하여 효과적으로 코딩하는 방법에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 2,
+      "summarized_at": "2026-01-11T23:26:25.009174+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "towards_data_science_541889",
+      "title": "How to Improve the Performance of Visual Anomaly Detection Models",
+      "content": "Apply the best methods from academia to get the most out of practical applications The post How to Improve the Performance of Visual Anomaly Detection Models appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/how-to-improve-the-performance-of-visual-anomaly-detection-models/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 90,
+      "published": "2026-01-08T13:30:00+00:00",
+      "collected_at": "2026-01-11T23:25:58.728364+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "시각적 이상 탐지 모델의 성능을 향상시키는 방법",
+      "content_ko": "실제 응용 프로그램을 최대한 활용하기 위해 학계에서 가장 좋은 방법을 적용하십시오. 시각적 이상 탐지 모델의 성능을 향상시키는 방법이라는 게시물이 Towards 데이터 사이언스에 처음 게재되었습니다.",
+      "summary": "실제 응용 프로그램을 최대한 활용하기 위해 학계에서 가장 좋은 방법을 적용하십시오. 시각적 이상 탐지 모델의 성능을 향상시키는 방법이라는 게시물이 Towards 데이터 사이언스에 처음 게재되었습니다..",
+      "summary_sentences": 2,
+      "summarized_at": "2026-01-11T23:26:27.074104+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "tech42_895314",
+      "title": "‘이젠 진짜 현실’ 휴머노이드 로봇과 살아갈 근미래",
+      "content": "지난주 미국 라스베이거스에서 펼쳐진 연례 CES 박람회에서는 마치 공상과학의 한 장면이 현실에서 펼쳐졌다. 휴머노이드 로봇들은 복싱을 하고 춤을 추며 작은 가게에서 일하는 모습을 시연했다. 탁구를 치고 블랙잭 카드를 나눠주는 로봇 손의 모습도 보였다. 기술 업계가 비전을 제시하는 물리적 인공지능 도약의 해가 도래하면서, 로봇이 ‘신기한 장난감’에서 현실적인 존재로 빠르게 변화하고 있다. (사진=LG전자)",
+      "url": "https://www.tech42.co.kr/%ec%9d%b4%ec%a0%a0-%ec%a7%84%ec%a7%9c-%ed%98%84%ec%8b%a4-%ed%9c%b4%eb%a8%b8%eb%85%b8%ec%9d%b4%eb%93%9c-%eb%a1%9c%eb%b4%87%ea%b3%bc-%ec%82%b4%ec%95%84%ea%b0%88-%ea%b7%bc%eb%af%b8/?utm_source=rss&utm_medium=rss&utm_campaign=%25ec%259d%25b4%25ec%25a0%25a0-%25ec%25a7%2584%25ec%25a7%259c-%25ed%2598%2584%25ec%258b%25a4-%25ed%259c%25b4%25eb%25a8%25b8%25eb%2585%25b8%25ec%259d%25b4%25eb%2593%259c-%25eb%25a1%259c%25eb%25b4%2587%25ea%25b3%25bc-%25ec%2582%25b4%25ec%2595%2584%25ea%25b0%2588-%25ea%25b7%25bc%25eb%25af%25b8",
+      "source": "Tech42",
+      "source_id": "tech42",
+      "tags": [
+        "뉴스",
+        "국내",
+        "스타트업",
+        "AI"
+      ],
+      "score": 80,
+      "published": "2026-01-11T23:20:19+00:00",
+      "collected_at": "2026-01-11T23:25:57.401843+00:00",
+      "needs_translation": false,
+      "summary": "지난주 미국 라스베이거스에서 펼쳐진 연례 CES 박람회에서는 마치 공상과학의 한 장면이 현실에서 펼쳐졌다. 휴머노이드 로봇들은 복싱을 하고 춤을 추며 작은 가게에서 일하는 모습을 시연했다.",
+      "summary_sentences": 2,
+      "summarized_at": "2026-01-11T23:26:29.141183+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    }
+  ]
+}
