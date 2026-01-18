@@ -1,0 +1,131 @@
+{
+  "date": "2026-01-18",
+  "articles": [
+    {
+      "id": "towards_data_science_520507",
+      "title": "How to Run Coding Agents in Parallel",
+      "content": "Get the most out of Claude Code The post How to Run Coding Agents in Parallel appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/how-to-run-coding-agents-in-parallell/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 100,
+      "published": "2026-01-15T15:00:00+00:00",
+      "collected_at": "2026-01-18T23:26:07.677241+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "코딩 에이전트를 병렬로 실행하는 방법",
+      "content_ko": "Claude Code 최대한 활용하기 Post How to Run Coding Agents in Parallel이 Towards 데이터 사이언스에 처음 게재되었습니다.",
+      "summary": "Claude Code 최대한 활용하기 Post How to Run Coding Agents in Parallel이 Towards 데이터 사이언스에 처음 게재되었습니다.. 코딩 에이전트를 병렬로 실행하는 방법에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 2,
+      "summarized_at": "2026-01-18T23:26:27.927735+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "towards_data_science_551287",
+      "title": "When Shapley Values Break: A Guide to Robust Model Explainability",
+      "content": "Shapley Values are one of the most common methods for explainability, yet they can be misleading. Discover how to overcome these limitations to achieve better insights. The post When Shapley Values Break: A Guide to Robust Model Explainability appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/when-shapley-values-break-a-guide-to-robust-model-explainability/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 90,
+      "published": "2026-01-15T16:30:00+00:00",
+      "collected_at": "2026-01-18T23:26:07.676682+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "Shapley 값이 깨질 때: 강력한 모델 설명 가능성 가이드",
+      "content_ko": "Shapley Values는 설명 가능성을 위한 가장 일반적인 방법 중 하나이지만 오해의 소지가 있습니다.더 나은 통찰력을 얻기 위해 이러한 한계를 극복하는 방법을 알아보세요.Shapley 가치가 깨질 때: 강력한 모델 설명 가능성에 대한 가이드 게시물이 Towards 데이터 사이언스에 처음 게재되었습니다.",
+      "summary": "Shapley Values는 설명 가능성을 위한 가장 일반적인 방법 중 하나이지만 오해의 소지가 있습니다.더 나은 통찰력을 얻기 위해 이러한 한계를 극복하는 방법을 알아보세요.Shapley 가치가 깨질 때: 강력한 모델 설명 가능성에 대한 가이드 게시물이 Towards 데이터 사이언스에 처음 게재되었습니다.. Shapley 값이 깨질 때: 강력한 모델 설명 가능성 가이드에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 4,
+      "summarized_at": "2026-01-18T23:26:29.964063+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "tech42_863133",
+      "title": "AI 제국의 다음 실험실은 ‘뇌’… 오픈AI, 샘 알트만 개인 스타트업에 대규모 베팅",
+      "content": "오픈AI(OpenAI)가 최고경영자(CEO) 샘 알트만이 공동 창업한 뇌-컴퓨터 인터페이스(BCI) 스타트업 ‘머지 랩스(Merge Labs)’에 투자하며 인간의 뇌와 인공지능(AI)을 직접 연결하는 영역으로 보폭을 넓히고 있다.",
+      "url": "https://www.tech42.co.kr/ai-%ec%a0%9c%ea%b5%ad%ec%9d%98-%eb%8b%a4%ec%9d%8c-%ec%8b%a4%ed%97%98%ec%8b%a4%ec%9d%80-%eb%87%8c-%ec%98%a4%ed%94%88ai-%ec%83%98-%ec%95%8c%ed%8a%b8%eb%a7%8c-%ea%b0%9c/?utm_source=rss&utm_medium=rss&utm_campaign=ai-%25ec%25a0%259c%25ea%25b5%25ad%25ec%259d%2598-%25eb%258b%25a4%25ec%259d%258c-%25ec%258b%25a4%25ed%2597%2598%25ec%258b%25a4%25ec%259d%2580-%25eb%2587%258c-%25ec%2598%25a4%25ed%2594%2588ai-%25ec%2583%2598-%25ec%2595%258c%25ed%258a%25b8%25eb%25a7%258c-%25ea%25b0%259c",
+      "source": "Tech42",
+      "source_id": "tech42",
+      "tags": [
+        "뉴스",
+        "국내",
+        "스타트업",
+        "AI"
+      ],
+      "score": 85,
+      "published": "2026-01-16T00:32:46+00:00",
+      "collected_at": "2026-01-18T23:26:06.479685+00:00",
+      "needs_translation": false,
+      "summary": "오픈AI(OpenAI)가 최고경영자(CEO) 샘 알트만이 공동 창업한 뇌-컴퓨터 인터페이스(BCI) 스타트업 ‘머지 랩스(Merge Labs)’에 투자하며 인간의 뇌와 인공지능(AI)을 직접 연결하는 영역으로 보폭을 넓히고 있다.. AI 제국의 다음 실험실은 ‘뇌’… 오픈AI, 샘 알트만 개인 스타트업에 대규모 베팅에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 2,
+      "summarized_at": "2026-01-18T23:26:32.003462+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "tech42_439756",
+      "title": "인간·AI 결합 ‘초인적 능력 실현’ 오픈AI가 ‘머지랩스’에 투자한 이유",
+      "content": "오픈AI가 BCI 스타트업 머지랩스에 투자를 결정하면서 일론 머스크의 뉴럴링크와 경쟁이 심화될 것으로 보인다. 인간의 능력을 극대화하기 위해 ‘생물학적 지능과 인공지능을 연결하는데 전념하는 연구소’로 기업을 소개하고 있는 머지랩스는 인간 생물학과 AI를 결합해 초인적인 능력을 부여하려는 ‘실리콘 밸리의 환상’을 실현하는데 집중하면서 주목받고 있다.",
+      "url": "https://www.tech42.co.kr/%ec%9d%b8%ea%b0%84%c2%b7ai-%ea%b2%b0%ed%95%a9-%ec%b4%88%ec%9d%b8%ec%a0%81-%eb%8a%a5%eb%a0%a5-%ec%8b%a4%ed%98%84-%ec%98%a4%ed%94%88ai%ea%b0%80-%eb%a8%b8%ec%a7%80%eb%9e%a9/?utm_source=rss&utm_medium=rss&utm_campaign=%25ec%259d%25b8%25ea%25b0%2584%25c2%25b7ai-%25ea%25b2%25b0%25ed%2595%25a9-%25ec%25b4%2588%25ec%259d%25b8%25ec%25a0%2581-%25eb%258a%25a5%25eb%25a0%25a5-%25ec%258b%25a4%25ed%2598%2584-%25ec%2598%25a4%25ed%2594%2588ai%25ea%25b0%2580-%25eb%25a8%25b8%25ec%25a7%2580%25eb%259e%25a9",
+      "source": "Tech42",
+      "source_id": "tech42",
+      "tags": [
+        "뉴스",
+        "국내",
+        "스타트업",
+        "AI"
+      ],
+      "score": 80,
+      "published": "2026-01-18T23:23:34+00:00",
+      "collected_at": "2026-01-18T23:26:06.478542+00:00",
+      "needs_translation": false,
+      "summary": "오픈AI가 BCI 스타트업 머지랩스에 투자를 결정하면서 일론 머스크의 뉴럴링크와 경쟁이 심화될 것으로 보인다. 인간의 능력을 극대화하기 위해 ‘생물학적 지능과 인공지능을 연결하는데 전념하는 연구소’로 기업을 소개하고 있는 머지랩스는 인간 생물학과 AI를 결합해 초인적인 능력을 부여하려는 ‘실리콘 밸리의 환상’을 실현하는데 집중하면서 주목받고 있다..",
+      "summary_sentences": 2,
+      "summarized_at": "2026-01-18T23:26:34.043631+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "towards_data_science_10576",
+      "title": "A Geometric Method to Spot Hallucinations Without an LLM Judge",
+      "content": "Imagine a flock of birds in flight. There’s no leader. No central command. Each bird aligns with its neighbors—matching direction, adjusting speed, maintaining coherence through purely local coordination. The result is global order emerging from local consistency. Now imagine one bird flying with the same conviction as the others. Its wingbeats are confident. Its speed […] The post A Geometric Method to Spot Hallucinations Without an LLM Judge appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/the-red-bird/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 80,
+      "published": "2026-01-17T13:00:00+00:00",
+      "collected_at": "2026-01-18T23:26:07.673208+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "LLM 판사 없이 환각을 발견하는 기하학적 방법",
+      "content_ko": "날아다니는 새 떼를 상상해 보세요.리더가 없습니다.중앙 명령이 없습니다.각 새는 이웃과 정렬하여 방향을 맞추고, 속도를 조정하고, 순전히 지역적 조정을 통해 일관성을 유지합니다.그 결과는 지역적 일관성에서 나오는 글로벌 질서입니다.이제 다른 새들과 같은 확신을 가지고 날아가는 새 한 마리를 상상해 보십시오.날개짓은 자신감이 넘친다.그 속도는 […] LLM 판사 없이 환각을 발견하는 기하학적 방법이라는 게시물이 Towards 데이터 사이언스에 처음으로 게재되었습니다.",
+      "summary": "날아다니는 새 떼를 상상해 보세요.리더가 없습니다.중앙 명령이 없습니다.각 새는 이웃과 정렬하여 방향을 맞추고, 속도를 조정하고, 순전히 지역적 조정을 통해 일관성을 유지합니다.그 결과는 지역적 일관성에서 나오는 글로벌 질서입니다.이제 다른 새들과 같은 확신을 가지고 날아가는 새 한 마리를 상상해 보십시오.날개짓은 자신감이 넘친다.그 속도는 […] LLM 판사 없이 환각을 발견하는 기하학적 방법이라는 게시물이 Towards 데이터 사이언스에 처음으로 게재되었습니다.. LLM 판사 없이 환각을 발견하는 기하학적 방법에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 9,
+      "summarized_at": "2026-01-18T23:26:36.081243+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    }
+  ]
+}
