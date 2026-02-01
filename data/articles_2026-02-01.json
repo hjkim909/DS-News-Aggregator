@@ -1,0 +1,83 @@
+{
+  "date": "2026-02-01",
+  "articles": [
+    {
+      "id": "towards_data_science_908980",
+      "title": "How to Run Claude Code for Free with Local and Cloud Models from Ollama",
+      "content": "Ollama now offers Anthropic API compatibility The post How to Run Claude Code for Free with Local and Cloud Models from Ollama appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/run-claude-code-for-free-with-local-and-cloud-models-from-ollama/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 100,
+      "published": "2026-01-31T13:00:00+00:00",
+      "collected_at": "2026-02-01T23:32:32.725659+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "Ollama의 로컬 및 클라우드 모델을 사용하여 Claude Code를 무료로 실행하는 방법",
+      "content_ko": "Ollama는 이제 Anthropic API 호환성을 제공합니다. Ollama의 로컬 및 클라우드 모델을 사용하여 Claude Code를 무료로 실행하는 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다.",
+      "summary": "Ollama는 이제 Anthropic API 호환성을 제공합니다. Ollama의 로컬 및 클라우드 모델을 사용하여 Claude Code를 무료로 실행하는 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다..",
+      "summary_sentences": 2,
+      "summarized_at": "2026-02-01T23:32:55.300704+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "towards_data_science_957721",
+      "title": "How to Apply Agentic Coding to Solve Problems",
+      "content": "Learn how to efficiently solve problems with coding agents The post How to Apply Agentic Coding to Solve Problems appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/how-to-apply-agentic-coding-to-solve-problem/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 90,
+      "published": "2026-01-31T15:00:00+00:00",
+      "collected_at": "2026-02-01T23:32:32.725129+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "문제 해결을 위해 에이전트 코딩을 적용하는 방법",
+      "content_ko": "코딩 에이전트로 문제를 효율적으로 해결하는 방법 알아보기 문제 해결을 위해 에이전트 코딩을 적용하는 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다.",
+      "summary": "코딩 에이전트로 문제를 효율적으로 해결하는 방법 알아보기 문제 해결을 위해 에이전트 코딩을 적용하는 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다.. 문제 해결을 위해 에이전트 코딩을 적용하는 방법에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 2,
+      "summarized_at": "2026-02-01T23:32:57.378434+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "towards_data_science_357097",
+      "title": "Federated Learning, Part 2: Implementation with the Flower Framework 🌼",
+      "content": "Implementing cross-silo federated learning step by step The post Federated Learning, Part 2: Implementation with the Flower Framework 🌼 appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/federated-learning-part-2-implementation-with-the-flower-framework-%f0%9f%8c%bc/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 90,
+      "published": "2026-01-28T16:30:00+00:00",
+      "collected_at": "2026-02-01T23:32:32.730864+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "연합 학습, 2부: Flower 프레임워크를 사용한 구현 🌼",
+      "content_ko": "사일로 간 연합 학습을 단계별로 구현 포스트 연합 학습, 2부: Flower 프레임워크를 사용한 구현 🌼이 Towards 데이터 사이언스에 처음 게재되었습니다.",
+      "summary": "사일로 간 연합 학습을 단계별로 구현 포스트 연합 학습, 2부: Flower 프레임워크를 사용한 구현 🌼이 Towards 데이터 사이언스에 처음 게재되었습니다.. 연합 학습, 2부: Flower 프레임워크를 사용한 구현 🌼에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 2,
+      "summarized_at": "2026-02-01T23:32:59.464495+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    }
+  ]
+}
