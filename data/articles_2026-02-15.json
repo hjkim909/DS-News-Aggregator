@@ -1,0 +1,107 @@
+{
+  "date": "2026-02-15",
+  "articles": [
+    {
+      "id": "tech42_656728",
+      "title": "오픈AI, 기존보다 15배 빠른 AI 코딩 모델 '스파크' 공개…초당 1,000토큰 생성",
+      "content": "오픈AI가 기존보다 15배 빠른 AI 코딩 모델 GPT-5.3-Codex-Spark를 공개했다. 세레브라스 칩으로 구동되는 이 모델은 초당 1,000개 이상의 토큰을 생성하며 실시간 코딩 협업을 지원한다. 챗GPT Pro 사용자 대상 연구 프리뷰로 제공된다.",
+      "url": "https://www.tech42.co.kr/%ec%98%a4%ed%94%88ai-%ea%b8%b0%ec%a1%b4%eb%b3%b4%eb%8b%a4-15%eb%b0%b0-%eb%b9%a0%eb%a5%b8-ai-%ec%bd%94%eb%94%a9-%eb%aa%a8%eb%8d%b8-%ec%8a%a4%ed%8c%8c%ed%81%ac-%ea%b3%b5%ea%b0%9c%ec%b4%88/?utm_source=rss&utm_medium=rss&utm_campaign=%25ec%2598%25a4%25ed%2594%2588ai-%25ea%25b8%25b0%25ec%25a1%25b4%25eb%25b3%25b4%25eb%258b%25a4-15%25eb%25b0%25b0-%25eb%25b9%25a0%25eb%25a5%25b8-ai-%25ec%25bd%2594%25eb%2594%25a9-%25eb%25aa%25a8%25eb%258d%25b8-%25ec%258a%25a4%25ed%258c%258c%25ed%2581%25ac-%25ea%25b3%25b5%25ea%25b0%259c%25ec%25b4%2588",
+      "source": "Tech42",
+      "source_id": "tech42",
+      "tags": [
+        "뉴스",
+        "국내",
+        "스타트업",
+        "AI"
+      ],
+      "score": 115,
+      "published": "2026-02-13T00:19:10+00:00",
+      "collected_at": "2026-02-15T23:34:15.720703+00:00",
+      "needs_translation": false,
+      "summary": "오픈AI가 기존보다 15배 빠른 AI 코딩 모델 GPT-5.3-Codex-Spark를 공개했다. 세레브라스 칩으로 구동되는 이 모델은 초당 1,000개 이상의 토큰을 생성하며 실시간 코딩 협업을 지원한다.",
+      "summary_sentences": 3,
+      "summarized_at": "2026-02-15T23:34:39.809659+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "towards_data_science_466774",
+      "title": "A beginner’s guide to Tmux: a multitasking superpower for your terminal",
+      "content": "One of the new things I’ve come across recently, while researching command-line-based coding assistants, is the mention and use of a tool I hadn’t heard of before. That tool is called Tmux, which stands for Terminal Multiplexer. In the simplest possible terms, Tmux allows you to split up a single terminal window into a number […] The post A beginner’s guide to Tmux: a multitasking superpower for your terminal appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/a-beginners-guide-to-tmux-a-multitasking-superpower-for-your-terminal/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 95,
+      "published": "2026-02-15T11:50:00+00:00",
+      "collected_at": "2026-02-15T23:34:17.083337+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "Tmux 초보자 가이드: 터미널을 위한 멀티태스킹 초능력",
+      "content_ko": "최근 명령줄 기반 코딩 도우미를 연구하면서 제가 접한 새로운 것 중 하나는 이전에 들어본 적이 없는 도구에 대한 언급과 사용입니다.이 도구는 Terminal Multiplexer의 약자인 Tmux라고 합니다.가장 간단한 용어로 Tmux를 사용하면 단일 터미널 창을 숫자로 분할할 수 있습니다. […] Tmux 초보자 가이드: 터미널을 위한 멀티태스킹 초강력 포스트가 Towards 데이터 사이언스에 처음 게재되었습니다.",
+      "summary": "최근 명령줄 기반 코딩 도우미를 연구하면서 제가 접한 새로운 것 중 하나는 이전에 들어본 적이 없는 도구에 대한 언급과 사용입니다.이 도구는 Terminal Multiplexer의 약자인 Tmux라고 합니다.가장 간단한 용어로 Tmux를 사용하면 단일 터미널 창을 숫자로 분할할 수 있습니다. […] Tmux 초보자 가이드: 터미널을 위한 멀티태스킹 초강력 포스트가 Towards 데이터 사이언스에 처음 게재되었습니다..",
+      "summary_sentences": 4,
+      "summarized_at": "2026-02-15T23:34:41.874336+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "towards_data_science_586848",
+      "title": "How to Leverage Explainable AI for Better Business Decisions",
+      "content": "Moving beyond the black box to turn complex model outputs into actionable organizational strategies. The post How to Leverage Explainable AI for Better Business Decisions appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/how-to-leverage-explainable-ai-for-better-business-decisions/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 90,
+      "published": "2026-02-12T15:00:00+00:00",
+      "collected_at": "2026-02-15T23:34:17.086192+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "더 나은 비즈니스 결정을 위해 설명 가능한 AI를 활용하는 방법",
+      "content_ko": "블랙박스를 뛰어넘어 복잡한 모델 결과를 실행 가능한 조직 전략으로 전환합니다.더 나은 비즈니스 의사결정을 위해 설명 가능한 AI를 활용하는 방법이라는 게시물이 Towards 데이터 사이언스에 처음 게재되었습니다.",
+      "summary": "블랙박스를 뛰어넘어 복잡한 모델 결과를 실행 가능한 조직 전략으로 전환합니다.더 나은 비즈니스 의사결정을 위해 설명 가능한 AI를 활용하는 방법이라는 게시물이 Towards 데이터 사이언스에 처음 게재되었습니다.. 더 나은 비즈니스 결정을 위해 설명 가능한 AI를 활용하는 방법에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 3,
+      "summarized_at": "2026-02-15T23:34:43.941953+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "towards_data_science_405917",
+      "title": "How to Model The Expected Value of Marketing Campaigns",
+      "content": "The approach that takes companies to the next level of data maturity The post How to Model The Expected Value of Marketing Campaigns appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/how-to-model-the-expected-value-of-marketing-campaigns/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 90,
+      "published": "2026-02-10T15:00:00+00:00",
+      "collected_at": "2026-02-15T23:34:17.089089+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "마케팅 캠페인의 기대 가치를 모델링하는 방법",
+      "content_ko": "기업을 다음 단계의 데이터 성숙도로 이끄는 접근 방식 마케팅 캠페인의 기대 가치를 모델링하는 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다.",
+      "summary": "기업을 다음 단계의 데이터 성숙도로 이끄는 접근 방식 마케팅 캠페인의 기대 가치를 모델링하는 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다.. 마케팅 캠페인의 기대 가치를 모델링하는 방법에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 2,
+      "summarized_at": "2026-02-15T23:34:46.010938+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    }
+  ]
+}
