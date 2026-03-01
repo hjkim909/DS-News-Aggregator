@@ -1,0 +1,83 @@
+{
+  "date": "2026-03-01",
+  "articles": [
+    {
+      "id": "towards_data_science_487063",
+      "title": "How to Define the Modeling Scope of an Internal Credit Risk Model",
+      "content": "Dataset construction for Internal Ratings-Based (IRB) Probability of Default (PD) models The post How to Define the Modeling Scope of an Internal Credit Risk Model appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/how-to-define-the-modeling-scope-of-an-internal-credit-risk-model/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 90,
+      "published": "2026-02-25T12:00:00+00:00",
+      "collected_at": "2026-03-01T23:31:02.398934+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "내부 신용 위험 모델의 모델링 범위를 정의하는 방법",
+      "content_ko": "내부 등급 기반(IRB) 부도 확률(PD) 모델을 위한 데이터 세트 구성 내부 신용 위험 모델의 모델링 범위를 정의하는 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다.",
+      "summary": "내부 등급 기반(IRB) 부도 확률(PD) 모델을 위한 데이터 세트 구성 내부 신용 위험 모델의 모델링 범위를 정의하는 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다.. 내부 신용 위험 모델의 모델링 범위를 정의하는 방법에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 2,
+      "summarized_at": "2026-03-01T23:31:27.211542+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "towards_data_science_277868",
+      "title": "Zero-Waste Agentic RAG: Designing Caching Architectures to Minimize Latency and LLM Costs at Scale",
+      "content": "Reducing LLM costs by 30% with validation-aware, multi-tier caching The post Zero-Waste Agentic RAG: Designing Caching Architectures to Minimize Latency and LLM Costs at Scale appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/zero-waste-agentic-rag-designing-caching-architectures-to-minimize-latency-and-llm-costs-at-scale/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 85,
+      "published": "2026-03-01T15:00:00+00:00",
+      "collected_at": "2026-03-01T23:31:02.389852+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "Zero-Waste Agentic RAG: 지연 시간을 최소화하고 규모에 따른 LLM 비용을 최소화하기 위한 캐싱 아키텍처 설계",
+      "content_ko": "검증 인식 다중 계층 캐싱을 통해 LLM 비용을 30% 절감 포스트 Zero-Waste Agentic RAG: Designing Caching Architectures to Minimize Latency and LLM Costs at Scale은 Towards 데이터 사이언스에서 처음으로 등장했습니다.",
+      "summary": "검증 인식 다중 계층 캐싱을 통해 LLM 비용을 30% 절감 포스트 Zero-Waste Agentic RAG: Designing Caching Architectures to Minimize Latency and LLM Costs at Scale은 Towards 데이터 사이언스에서 처음으로 등장했습니다.. Zero-Waste Agentic RAG: 지연 시간을 최소화하고 규모에 따른 LLM 비용을 최소화하기 위한 캐싱 아키텍처 설계에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 2,
+      "summarized_at": "2026-03-01T23:31:29.271353+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "towards_data_science_269112",
+      "title": "Designing Data and AI Systems That Hold Up in Production",
+      "content": "A system-level perspective on architecture, agents, and responsible scale The post Designing Data and AI Systems That Hold Up in Production appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/designing-data-and-ai-systems-that-hold-up-in-production/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 85,
+      "published": "2026-02-26T16:30:00+00:00",
+      "collected_at": "2026-03-01T23:31:02.394719+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "생산에 필요한 데이터 및 AI 시스템 설계",
+      "content_ko": "아키텍처, 에이전트 및 책임 규모에 대한 시스템 수준 관점 프로덕션에서 유지되는 데이터 및 AI 시스템 설계 포스트는 데이터 과학을 향하여(Towards 데이터 사이언스)에 처음으로 게재되었습니다.",
+      "summary": "아키텍처, 에이전트 및 책임 규모에 대한 시스템 수준 관점 프로덕션에서 유지되는 데이터 및 AI 시스템 설계 포스트는 데이터 과학을 향하여(Towards 데이터 사이언스)에 처음으로 게재되었습니다.. 생산에 필요한 데이터 및 AI 시스템 설계에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 2,
+      "summarized_at": "2026-03-01T23:31:31.343761+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    }
+  ]
+}
