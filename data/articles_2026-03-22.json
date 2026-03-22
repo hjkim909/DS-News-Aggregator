@@ -1,0 +1,131 @@
+{
+  "date": "2026-03-22",
+  "articles": [
+    {
+      "id": "towards_data_science_30077",
+      "title": "Prompt Caching with the OpenAI API: A Full Hands-On Python tutorial",
+      "content": "A step-by-step guide to making your OpenAI apps faster, cheaper, and more efficient The post Prompt Caching with the OpenAI API: A Full Hands-On Python tutorial appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/prompt-caching-with-openai-api-full-hands-on-python-tutorial/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 105,
+      "published": "2026-03-22T15:00:00+00:00",
+      "collected_at": "2026-03-22T23:35:05.737100+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "OpenAI API를 사용한 프롬프트 캐싱: 전체 실습 Python 튜토리얼",
+      "content_ko": "OpenAI 앱을 더 빠르고, 저렴하고, 효율적으로 만들기 위한 단계별 가이드 OpenAI를 사용한 사후 프롬프트 캐싱 API: 전체 실습 Python 튜토리얼이 Towards 데이터 사이언스에 처음 등장했습니다.",
+      "summary": "OpenAI 앱을 더 빠르고, 저렴하고, 효율적으로 만들기 위한 단계별 가이드 OpenAI를 사용한 사후 프롬프트 캐싱 API: 전체 실습 Python 튜토리얼이 Towards 데이터 사이언스에 처음 등장했습니다.. OpenAI API를 사용한 프롬프트 캐싱: 전체 실습 Python 튜토리얼에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 2,
+      "summarized_at": "2026-03-22T23:35:29.002887+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "towards_data_science_520033",
+      "title": "How to Effectively Review Claude Code Output",
+      "content": "Get more out of your coding agents by making reviewing more efficient The post How to Effectively Review Claude Code Output appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/how-to-effectively-review-claude-code-output/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 100,
+      "published": "2026-03-17T20:00:00+00:00",
+      "collected_at": "2026-03-22T23:35:05.747467+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "Claude 코드 출력을 효과적으로 검토하는 방법",
+      "content_ko": "보다 효율적으로 검토하여 코딩 에이전트에서 더 많은 것을 얻으십시오. Claude 코드 출력을 효과적으로 검토하는 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다.",
+      "summary": "보다 효율적으로 검토하여 코딩 에이전트에서 더 많은 것을 얻으십시오. Claude 코드 출력을 효과적으로 검토하는 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다..",
+      "summary_sentences": 2,
+      "summarized_at": "2026-03-22T23:35:31.081808+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "towards_data_science_325197",
+      "title": "How to Measure AI Value",
+      "content": "While efficiency is an important source of AI value, it is only part of the picture The post How to Measure AI Value appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/how-to-measure-ai-value/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 90,
+      "published": "2026-03-20T13:30:00+00:00",
+      "collected_at": "2026-03-22T23:35:05.741178+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "AI 가치를 측정하는 방법",
+      "content_ko": "효율성은 AI 가치의 중요한 원천이지만 그림의 일부일 뿐입니다. AI 가치를 측정하는 방법이라는 게시물이 Towards 데이터 사이언스에 처음 게재되었습니다.",
+      "summary": "효율성은 AI 가치의 중요한 원천이지만 그림의 일부일 뿐입니다. AI 가치를 측정하는 방법에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 2,
+      "summarized_at": "2026-03-22T23:35:33.156945+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "tech42_439998",
+      "title": "오픈AI, 챗GPT·코덱스·브라우저 합친 데스크톱 슈퍼앱 추진",
+      "content": "오픈AI가 챗GPT·코덱스·브라우저를 통합한 데스크톱 슈퍼앱 출시를 추진한다. 그렉 브록먼 사장이 직접 이끄는 이 프로젝트는 분산된 앱 구조를 하나로 통합해 기업 시장 공략을 강화하는 것이 목표다.",
+      "url": "https://www.tech42.co.kr/%ec%98%a4%ed%94%88ai-%ec%b1%97gpt%c2%b7%ec%bd%94%eb%8d%b1%ec%8a%a4%c2%b7%eb%b8%8c%eb%9d%bc%ec%9a%b0%ec%a0%80-%ed%95%a9%ec%b9%9c-%eb%8d%b0%ec%8a%a4%ed%81%ac%ed%86%b1-%ec%8a%88%ed%8d%bc%ec%95%b1/?utm_source=rss&utm_medium=rss&utm_campaign=%25ec%2598%25a4%25ed%2594%2588ai-%25ec%25b1%2597gpt%25c2%25b7%25ec%25bd%2594%25eb%258d%25b1%25ec%258a%25a4%25c2%25b7%25eb%25b8%258c%25eb%259d%25bc%25ec%259a%25b0%25ec%25a0%2580-%25ed%2595%25a9%25ec%25b9%259c-%25eb%258d%25b0%25ec%258a%25a4%25ed%2581%25ac%25ed%2586%25b1-%25ec%258a%2588%25ed%258d%25bc%25ec%2595%25b1",
+      "source": "Tech42",
+      "source_id": "tech42",
+      "tags": [
+        "뉴스",
+        "국내",
+        "스타트업",
+        "AI"
+      ],
+      "score": 85,
+      "published": "2026-03-19T23:54:15+00:00",
+      "collected_at": "2026-03-22T23:35:04.428031+00:00",
+      "needs_translation": false,
+      "summary": "오픈AI가 챗GPT·코덱스·브라우저를 통합한 데스크톱 슈퍼앱 출시를 추진한다. 그렉 브록먼 사장이 직접 이끄는 이 프로젝트는 분산된 앱 구조를 하나로 통합해 기업 시장 공략을 강화하는 것이 목표다..",
+      "summary_sentences": 2,
+      "summarized_at": "2026-03-22T23:35:35.239976+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "tech42_968386",
+      "title": "“AI가 그린 붉은사막?” 펄어비스, 생성형 에셋 무단 노출 공식 사과… 전수 교체 착수",
+      "content": "오픈월드 액션 RPG '붉은사막'의 개발사 펄어비스가 게임 내 생성형 AI(인공지능)를 활용한 아트 자산이 포함된 것에 대해 공식 사과하고 전량 교체를 약속했다.",
+      "url": "https://www.tech42.co.kr/ai%ea%b0%80-%ea%b7%b8%eb%a6%b0-%eb%b6%89%ec%9d%80%ec%82%ac%eb%a7%89-%ed%8e%84%ec%96%b4%eb%b9%84%ec%8a%a4-%ec%83%9d%ec%84%b1%ed%98%95-%ec%97%90%ec%85%8b-%eb%ac%b4%eb%8b%a8-%eb%85%b8/?utm_source=rss&utm_medium=rss&utm_campaign=ai%25ea%25b0%2580-%25ea%25b7%25b8%25eb%25a6%25b0-%25eb%25b6%2589%25ec%259d%2580%25ec%2582%25ac%25eb%25a7%2589-%25ed%258e%2584%25ec%2596%25b4%25eb%25b9%2584%25ec%258a%25a4-%25ec%2583%259d%25ec%2584%25b1%25ed%2598%2595-%25ec%2597%2590%25ec%2585%258b-%25eb%25ac%25b4%25eb%258b%25a8-%25eb%2585%25b8",
+      "source": "Tech42",
+      "source_id": "tech42",
+      "tags": [
+        "뉴스",
+        "국내",
+        "스타트업",
+        "AI"
+      ],
+      "score": 80,
+      "published": "2026-03-22T23:32:35+00:00",
+      "collected_at": "2026-03-22T23:35:04.426572+00:00",
+      "needs_translation": false,
+      "summary": "오픈월드 액션 RPG '붉은사막'의 개발사 펄어비스가 게임 내 생성형 AI(인공지능)를 활용한 아트 자산이 포함된 것에 대해 공식 사과하고 전량 교체를 약속했다.. “AI가 그린 붉은사막?” 펄어비스, 생성형 에셋 무단 노출 공식 사과… 전수 교체 착수에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 3,
+      "summarized_at": "2026-03-22T23:35:37.324172+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    }
+  ]
+}
