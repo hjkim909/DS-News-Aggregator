@@ -1,0 +1,131 @@
+{
+  "date": "2026-04-05",
+  "articles": [
+    {
+      "id": "tech42_79276",
+      "title": "오픈AI, 애플 카플레이용 ‘AI 음성 비서’ 전격 출시",
+      "content": "운전 중 스마트폰을 만지지 않고도 생성형 AI와 자유롭게 대화할 수 있는 시대가 열렸다. 1일(현지시간) 오픈AI는 애플의 차량용 인포테인먼트 시스템인 '카플레이(CarPlay)'에 챗GPT 음성 모드를 공식 지원한다고 밝혔다.",
+      "url": "https://www.tech42.co.kr/%ec%98%a4%ed%94%88ai-%ec%95%a0%ed%94%8c-%ec%b9%b4%ed%94%8c%eb%a0%88%ec%9d%b4%ec%9a%a9-ai-%ec%9d%8c%ec%84%b1-%eb%b9%84%ec%84%9c-%ec%a0%84%ea%b2%a9-%ec%b6%9c%ec%8b%9c/?utm_source=rss&utm_medium=rss&utm_campaign=%25ec%2598%25a4%25ed%2594%2588ai-%25ec%2595%25a0%25ed%2594%258c-%25ec%25b9%25b4%25ed%2594%258c%25eb%25a0%2588%25ec%259d%25b4%25ec%259a%25a9-ai-%25ec%259d%258c%25ec%2584%25b1-%25eb%25b9%2584%25ec%2584%259c-%25ec%25a0%2584%25ea%25b2%25a9-%25ec%25b6%259c%25ec%258b%259c",
+      "source": "Tech42",
+      "source_id": "tech42",
+      "tags": [
+        "뉴스",
+        "국내",
+        "스타트업",
+        "AI"
+      ],
+      "score": 115,
+      "published": "2026-04-03T00:02:07+00:00",
+      "collected_at": "2026-04-05T23:41:12.431012+00:00",
+      "needs_translation": false,
+      "summary": "운전 중 스마트폰을 만지지 않고도 생성형 AI와 자유롭게 대화할 수 있는 시대가 열렸다. 1일(현지시간) 오픈AI는 애플의 차량용 인포테인먼트 시스템인 '카플레이(CarPlay)'에 챗GPT 음성 모드를 공식 지원한다고 밝혔다..",
+      "summary_sentences": 2,
+      "summarized_at": "2026-04-05T23:41:33.738945+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "towards_data_science_989074",
+      "title": "Explainable AI in Production: A Neuro-Symbolic Model for Real-Time Fraud Detection",
+      "content": "SHAP needs 30 ms to explain a fraud prediction. That explanation is stochastic, runs after the decision, and requires a background dataset you have to maintain at inference time. This article benchmarks a neuro-symbolic model that produces a deterministic, human-readable explanation in 0.9 ms — as a by-product of the forward pass itself — on the Kaggle Credit Card Fraud dataset. The speedup is 33×. The fraud recall is identical. The post Explainable AI in Production: A Neuro-Symbolic Model for Real-Time Fraud Detection appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/explainable-ai-in-production-a-neuro-symbolic-model-for-real-time-fraud-detection/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 110,
+      "published": "2026-03-30T10:47:00+00:00",
+      "collected_at": "2026-04-05T23:41:13.649974+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "생산 중인 설명 가능한 AI: 실시간 사기 탐지를 위한 신경 기호 모델",
+      "content_ko": "SHAP는 사기 예측을 설명하는 데 30ms가 필요합니다.이러한 설명은 확률론적이며 결정 이후에 실행되며 추론 시 유지해야 하는 배경 데이터 세트가 필요합니다.이 기사에서는 Kaggle 신용 카드 사기 데이터 세트에서 정방향 전달 자체의 부산물로 결정론적이고 사람이 읽을 수 있는 설명을 0.9ms 내에 생성하는 신경 기호 모델을 벤치마킹합니다.속도 향상은 33배입니다.사기 리콜은 동일합니다.생산 중인 설명 가능한 AI: 실시간 사기 탐지를 위한 신경 기호 모델 포스트는 Towards 데이터 사이언스에 처음 게재되었습니다.",
+      "summary": "SHAP는 사기 예측을 설명하는 데 30ms가 필요합니다.이러한 설명은 확률론적이며 결정 이후에 실행되며 추론 시 유지해야 하는 배경 데이터 세트가 필요합니다.이 기사에서는 Kaggle 신용 카드 사기 데이터 세트에서 정방향 전달 자체의 부산물로 결정론적이고 사람이 읽을 수 있는 설명을 0.9ms 내에 생성하는 신경 기호 모델을 벤치마킹합니다.속도 향상은 33배입니다.사기 리콜은 동일합니다.생산 중인 설명 가능한 AI: 실시간 사기 탐지를 위한 신경 기호 모델 포스트는 Towards 데이터 사이언스에 처음 게재되었습니다.. 생산 중인 설명 가능한 AI: 실시간 사기 탐지를 위한 신경 기호 모델에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 8,
+      "summarized_at": "2026-04-05T23:41:35.812217+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "towards_data_science_906417",
+      "title": "How to Make Claude Code Better at One-Shotting Implementations",
+      "content": "Make your coding agent more efficient The post How to Make Claude Code Better at One-Shotting Implementations appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/how-to-make-claude-code-better-at-one-shotting-implementations/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 100,
+      "published": "2026-03-31T15:45:00+00:00",
+      "collected_at": "2026-04-05T23:41:13.646437+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "원샷 구현에서 Claude 코드를 개선하는 방법",
+      "content_ko": "코딩 에이전트를 더욱 효율적으로 만들기 원샷 구현에서 Claude 코드를 더 좋게 만드는 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다.",
+      "summary": "코딩 에이전트를 더욱 효율적으로 만들기 원샷 구현에서 Claude 코드를 더 좋게 만드는 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다.. 원샷 구현에서 Claude 코드를 개선하는 방법에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 2,
+      "summarized_at": "2026-04-05T23:41:37.890059+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "towards_data_science_417057",
+      "title": "DenseNet Paper Walkthrough: All Connected",
+      "content": "When we try to train a very deep neural network model, one issue that we might encounter is the vanishing gradient problem. This is essentially a problem where the weight update of a model during training slows down or even stops, hence causing the model not to improve. When a network is very deep, the […] The post DenseNet Paper Walkthrough: All Connected appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/densenet-paper-walkthrough-all-connected/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 90,
+      "published": "2026-04-03T14:21:00+00:00",
+      "collected_at": "2026-04-05T23:41:13.640118+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "DenseNet 문서 연습: 모두 연결됨",
+      "content_ko": "매우 깊은 신경망 모델을 훈련하려고 할 때 직면할 수 있는 문제 중 하나는 Vanishing Gradient 문제입니다.이는 본질적으로 훈련 중 모델의 가중치 업데이트가 느려지거나 심지어 중지되어 모델이 개선되지 않는 문제입니다.네트워크가 매우 깊을 때 [...] DenseNet Paper Walkthrough: All Connected 포스트가 Towards 데이터 사이언스에 처음 게재되었습니다.",
+      "summary": "매우 깊은 신경망 모델을 훈련하려고 할 때 직면할 수 있는 문제 중 하나는 Vanishing Gradient 문제입니다.이는 본질적으로 훈련 중 모델의 가중치 업데이트가 느려지거나 심지어 중지되어 모델이 개선되지 않는 문제입니다.네트워크가 매우 깊을 때 [...] DenseNet Paper Walkthrough: All Connected 포스트가 Towards 데이터 사이언스에 처음 게재되었습니다.. DenseNet 문서 연습: 모두 연결됨에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 5,
+      "summarized_at": "2026-04-05T23:41:39.951576+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "tech42_434063",
+      "title": "영국, 앤트로픽에 ‘런던 상장’ 파격 구애",
+      "content": "미국 정부와 갈등을 빚고 있는 대형 인공지능(AI) 기업 앤트로픽(Anthropic)을 유치하기 위해 영국 정부가 런던 사무소 확대와 주식 이중 상장이라는 파격적인 카드를 꺼내 들었다.",
+      "url": "https://www.tech42.co.kr/%ec%98%81%ea%b5%ad-%ec%95%a4%ed%8a%b8%eb%a1%9c%ed%94%bd%ec%97%90-%eb%9f%b0%eb%8d%98-%ec%83%81%ec%9e%a5-%ed%8c%8c%ea%b2%a9-%ea%b5%ac%ec%95%a0/?utm_source=rss&utm_medium=rss&utm_campaign=%25ec%2598%2581%25ea%25b5%25ad-%25ec%2595%25a4%25ed%258a%25b8%25eb%25a1%259c%25ed%2594%25bd%25ec%2597%2590-%25eb%259f%25b0%25eb%258d%2598-%25ec%2583%2581%25ec%259e%25a5-%25ed%258c%258c%25ea%25b2%25a9-%25ea%25b5%25ac%25ec%2595%25a0",
+      "source": "Tech42",
+      "source_id": "tech42",
+      "tags": [
+        "뉴스",
+        "국내",
+        "스타트업",
+        "AI"
+      ],
+      "score": 80,
+      "published": "2026-04-05T23:39:25+00:00",
+      "collected_at": "2026-04-05T23:41:12.430142+00:00",
+      "needs_translation": false,
+      "summary": "미국 정부와 갈등을 빚고 있는 대형 인공지능(AI) 기업 앤트로픽(Anthropic)을 유치하기 위해 영국 정부가 런던 사무소 확대와 주식 이중 상장이라는 파격적인 카드를 꺼내 들었다.. 영국, 앤트로픽에 ‘런던 상장’ 파격 구애에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 2,
+      "summarized_at": "2026-04-05T23:41:42.038957+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    }
+  ]
+}
