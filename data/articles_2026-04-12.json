@@ -1,0 +1,83 @@
+{
+  "date": "2026-04-12",
+  "articles": [
+    {
+      "id": "towards_data_science_792471",
+      "title": "A Survival Analysis Guide with Python: Using Time-To-Event Models to Forecast Customer Lifetime",
+      "content": "Understand survival analysis by modeling customer retention through Kaplan-Meier curves and Cox Proportional Hazard regressions. The post A Survival Analysis Guide with Python: Using Time-To-Event Models to Forecast Customer Lifetime appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/a-survival-analysis-guide-with-python-using-time-to-event-models-to-forecast-customer-lifetime/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 100,
+      "published": "2026-04-09T13:30:00+00:00",
+      "collected_at": "2026-04-12T23:42:57.081814+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "Python을 사용한 생존 분석 가이드: 이벤트 발생 시간 모델을 사용하여 고객 수명 예측",
+      "content_ko": "Kaplan-Meier 곡선과 Cox 비례 위험 회귀를 통해 고객 유지를 모델링하여 생존 분석을 이해합니다.Python을 사용한 생존 분석 가이드: 이벤트 발생 시간 모델을 사용하여 고객 수명 예측 게시물이 Towards 데이터 사이언스에 처음 게재되었습니다.",
+      "summary": "Kaplan-Meier 곡선과 Cox 비례 위험 회귀를 통해 고객 유지를 모델링하여 생존 분석을 이해합니다.Python을 사용한 생존 분석 가이드: 이벤트 발생 시간 모델을 사용하여 고객 수명 예측 게시물이 Towards 데이터 사이언스에 처음 게재되었습니다.. Python을 사용한 생존 분석 가이드: 이벤트 발생 시간 모델을 사용하여 고객 수명 예측에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 3,
+      "summarized_at": "2026-04-12T23:43:19.763036+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "towards_data_science_766129",
+      "title": "How to Use Claude Code to Build a Minimum Viable Product",
+      "content": "Learn how to effectively present product ideas by building MVPs with coding agents The post How to Use Claude Code to Build a Minimum Viable Product appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/how-to-use-claude-code-to-build-a-minimum-viable-product/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 100,
+      "published": "2026-04-08T13:30:00+00:00",
+      "collected_at": "2026-04-12T23:42:57.084136+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "Claude 코드를 사용하여 최소 실행 가능 제품을 구축하는 방법",
+      "content_ko": "코딩 에이전트를 사용하여 MVP를 구축하여 제품 아이디어를 효과적으로 제시하는 방법에 대해 알아보십시오. Claude 코드를 사용하여 최소 실행 가능한 제품을 구축하는 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다.",
+      "summary": "코딩 에이전트를 사용하여 MVP를 구축하여 제품 아이디어를 효과적으로 제시하는 방법에 대해 알아보십시오. Claude 코드를 사용하여 최소 실행 가능한 제품을 구축하는 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다..",
+      "summary_sentences": 2,
+      "summarized_at": "2026-04-12T23:43:21.832765+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "towards_data_science_413005",
+      "title": "Grounding Your LLM: A Practical Guide to RAG for Enterprise Knowledge Bases",
+      "content": "A clear mental model and a practical foundation you can build on The post Grounding Your LLM: A Practical Guide to RAG for Enterprise Knowledge Bases appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/grounding-your-llm-a-practical-guide-to-rag-for-enterprise-knowledge-bases/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 100,
+      "published": "2026-04-08T12:00:00+00:00",
+      "collected_at": "2026-04-12T23:42:57.084707+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "LLM 기반 구축: 기업 기술 자료를 위한 RAG 실용 가이드",
+      "content_ko": "구축할 수 있는 명확한 정신 모델과 실용적인 기반 LLM 접지: 기업 지식 기반을 위한 RAG 실용 가이드 게시물이 Towards 데이터 사이언스에 처음으로 게재되었습니다.",
+      "summary": "구축할 수 있는 명확한 정신 모델과 실용적인 기반 LLM 접지: 기업 지식 기반을 위한 RAG 실용 가이드 게시물이 Towards 데이터 사이언스에 처음으로 게재되었습니다.. LLM 기반 구축: 기업 기술 자료를 위한 RAG 실용 가이드에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 2,
+      "summarized_at": "2026-04-12T23:43:23.905953+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    }
+  ]
+}
