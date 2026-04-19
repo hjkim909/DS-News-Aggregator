@@ -1,0 +1,83 @@
+{
+  "date": "2026-04-19",
+  "articles": [
+    {
+      "id": "towards_data_science_117567",
+      "title": "6 Things I Learned Building LLMs From Scratch That No Tutorial Teaches You",
+      "content": "From rank-stabilized scaling to quantization stability: A statistical and architectural deep dive into the optimizations powering modern Transformers. The post 6 Things I Learned Building LLMs From Scratch That No Tutorial Teaches You appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/6-things-i-learned-building-llms-from-scratch-that-no-tutorial-teaches-you/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 100,
+      "published": "2026-04-17T13:30:00+00:00",
+      "collected_at": "2026-04-19T23:45:54.943660+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "튜토리얼 없이 처음부터 LLM을 구축하면서 배운 6가지",
+      "content_ko": "순위 안정화 스케일링에서 양자화 안정성까지: 최신 트랜스포머s를 지원하는 최적화에 대한 통계 및 아키텍처 심층 분석입니다.내가 배운 6가지 튜토리얼 없이 처음부터 LLMs를 구축하면서 배운 내용은 Towards 데이터 사이언스에 처음 게재되었습니다.",
+      "summary": "순위 안정화 스케일링에서 양자화 안정성까지: 최신 트랜스포머s를 지원하는 최적화에 대한 통계 및 아키텍처 심층 분석입니다.내가 배운 6가지 튜토리얼 없이 처음부터 LLMs를 구축하면서 배운 내용은 Towards 데이터 사이언스에 처음 게재되었습니다.. 튜토리얼 없이 처음부터 LLM을 구축하면서 배운 6가지에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 3,
+      "summarized_at": "2026-04-19T23:46:17.754317+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "towards_data_science_28962",
+      "title": "A Practical Guide to Memory for Autonomous LLM Agents",
+      "content": "Architectures, pitfalls, and patterns that work The post A Practical Guide to Memory for Autonomous LLM Agents appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/a-practical-guide-to-memory-for-autonomous-llm-agents/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 100,
+      "published": "2026-04-17T12:00:00+00:00",
+      "collected_at": "2026-04-19T23:45:54.944325+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "자율 LLM 에이전트를 위한 메모리에 대한 실용 가이드",
+      "content_ko": "작동하는 아키텍처, 함정 및 패턴 A Practical Guide to Memory for Autonomous LLM Agents 포스트는 Towards 데이터 사이언스에서 처음으로 게재되었습니다.",
+      "summary": "작동하는 아키텍처, 함정 및 패턴 A Practical Guide to Memory for Autonomous LLM Agents 포스트는 Towards 데이터 사이언스에서 처음으로 게재되었습니다.. 자율 LLM 에이전트를 위한 메모리에 대한 실용 가이드에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 2,
+      "summarized_at": "2026-04-19T23:46:19.831496+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "towards_data_science_702063",
+      "title": "How to Maximize Claude Cowork",
+      "content": "Learn how to get the most out of Claude Cowork The post How to Maximize Claude Cowork appeared first on Towards Data Science.",
+      "url": "https://towardsdatascience.com/how-to-maximize-claude-cowork/",
+      "source": "Towards Data Science",
+      "source_id": "towards_data_science",
+      "tags": [
+        "블로그",
+        "튜토리얼",
+        "실용"
+      ],
+      "score": 100,
+      "published": "2026-04-15T16:30:00+00:00",
+      "collected_at": "2026-04-19T23:45:54.948430+00:00",
+      "claps": null,
+      "needs_translation": true,
+      "title_ko": "클로드 코워크를 극대화하는 방법",
+      "content_ko": "Claude Cowork를 최대한 활용하는 방법 알아보기 Claude Cowork를 극대화하는 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다.",
+      "summary": "Claude Cowork를 최대한 활용하는 방법 알아보기 Claude Cowork를 극대화하는 방법 게시물은 Towards 데이터 사이언스에 처음 게재되었습니다.. 클로드 코워크를 극대화하는 방법에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 2,
+      "summarized_at": "2026-04-19T23:46:21.902564+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+    }
+  ]
+}
