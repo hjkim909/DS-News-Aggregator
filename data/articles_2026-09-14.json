@@ -1,0 +1,77 @@
+{
+  "date": "2026-09-14",
+  "articles": [
+    {
+      "id": "tech42_688868",
+      "title": "아스트라 공개 일주일, 화려한 벤치마크와 현실 체감의 온도차",
+      "content": "오픈AI 'GPT-6 아스트라' 공개 이후 확인된 개발자 활용 사례와 국내 반도체 업계 파급, 개발자 커뮤니티 실사용 후기를 한 번에 정리했다.",
+      "url": "https://www.tech42.co.kr/%ec%95%84%ec%8a%a4%ed%8a%b8%eb%9d%bc-%ea%b3%b5%ea%b0%9c-%ec%9d%bc%ec%a3%bc%ec%9d%bc-%ed%99%94%eb%a0%a4%ed%95%9c-%eb%b2%a4%ec%b9%98%eb%a7%88%ed%81%ac%ec%99%80-%ed%98%84%ec%8b%a4-%ec%b2%b4%ea%b0%90/?utm_source=rss&utm_medium=rss&utm_campaign=%25ec%2595%2584%25ec%258a%25a4%25ed%258a%25b8%25eb%259d%25bc-%25ea%25b3%25b5%25ea%25b0%259c-%25ec%259d%25bc%25ec%25a3%25bc%25ec%259d%25bc-%25ed%2599%2594%25eb%25a0%25a4%25ed%2595%259c-%25eb%25b2%25a4%25ec%25b9%2598%25eb%25a7%2588%25ed%2581%25ac%25ec%2599%2580-%25ed%2598%2584%25ec%258b%25a4-%25ec%25b2%25b4%25ea%25b0%2590",
+      "source": "Tech42",
+      "source_id": "tech42",
+      "tags": [
+        "뉴스",
+        "국내",
+        "스타트업",
+        "AI"
+      ],
+      "score": 120,
+      "published": "2026-09-13T23:58:41+00:00",
+      "collected_at": "2026-09-14T00:51:59.283332+00:00",
+      "needs_translation": false,
+      "summary": "오픈AI 'GPT-6 아스트라' 공개 이후 확인된 개발자 활용 사례와 국내 반도체 업계 파급, 개발자 커뮤니티 실사용 후기를 한 번에 정리했다.. 아스트라 공개 일주일, 화려한 벤치마크와 현실 체감의 온도차에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 2,
+      "summarized_at": "2026-09-14T00:52:16.374747+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "tech42_546454",
+      "title": "\"월 30만 원 내도 몇 번 못 쓴다?\" 오픈AI, 'GPT-6 아스트라' 기습 출시… 가혹한 한도 논란",
+      "content": "오픈AI(OpenAI)가 차세대 AI 모델 ‘GPT-6 아스트라(Astra)’의 순차 배포를 시작했다. 다만 출시 초기 복잡한 접근 방식과 극도로 엄격한 이용 한도로 인해 유료 사용자들 사이에서 혼선이 이어지고 있다.",
+      "url": "https://www.tech42.co.kr/%ec%9b%94-30%eb%a7%8c-%ec%9b%90-%eb%82%b4%eb%8f%84-%eb%aa%87-%eb%b2%88-%eb%aa%bb-%ec%93%b4%eb%8b%a4-%ec%98%a4%ed%94%88ai-gpt-6-%ec%95%84%ec%8a%a4%ed%8a%b8%eb%9d%bc-%ea%b8%b0%ec%8a%b5/?utm_source=rss&utm_medium=rss&utm_campaign=%25ec%259b%2594-30%25eb%25a7%258c-%25ec%259b%2590-%25eb%2582%25b4%25eb%258f%2584-%25eb%25aa%2587-%25eb%25b2%2588-%25eb%25aa%25bb-%25ec%2593%25b4%25eb%258b%25a4-%25ec%2598%25a4%25ed%2594%2588ai-gpt-6-%25ec%2595%2584%25ec%258a%25a4%25ed%258a%25b8%25eb%259d%25bc-%25ea%25b8%25b0%25ec%258a%25b5",
+      "source": "Tech42",
+      "source_id": "tech42",
+      "tags": [
+        "뉴스",
+        "국내",
+        "스타트업",
+        "AI"
+      ],
+      "score": 120,
+      "published": "2026-09-13T23:33:55+00:00",
+      "collected_at": "2026-09-14T00:51:59.284337+00:00",
+      "needs_translation": false,
+      "summary": "오픈AI(OpenAI)가 차세대 AI 모델 ‘GPT-6 아스트라(Astra)’의 순차 배포를 시작했다. 다만 출시 초기 복잡한 접근 방식과 극도로 엄격한 이용 한도로 인해 유료 사용자들 사이에서 혼선이 이어지고 있다..",
+      "summary_sentences": 2,
+      "summarized_at": "2026-09-14T00:52:18.447835+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "tech42_516208",
+      "title": "“해킹하고 격리망 뚫었다” 상장 철회 선언한 오픈AI, AI 통제 불능 공포",
+      "content": "오픈AI(OpenAI)가 올해 추진할 것으로 알려졌던 기업공개(IPO) 계획을 전격 철회했다. 최근 자사 인공지능(AI) 모델이 스스로 제약망을 뚫고 타 기관을 해킹하는 등 안전성 문제가 수면 위로 급부상했기 때문이다.",
+      "url": "https://www.tech42.co.kr/%ed%95%b4%ed%82%b9%ed%95%98%ea%b3%a0-%ea%b2%a9%eb%a6%ac%eb%a7%9d-%eb%9a%ab%ec%97%88%eb%8b%a4-%ec%83%81%ec%9e%a5-%ec%b2%a0%ed%9a%8c-%ec%84%a0%ec%96%b8%ed%95%9c-%ec%98%a4%ed%94%88ai-a/?utm_source=rss&utm_medium=rss&utm_campaign=%25ed%2595%25b4%25ed%2582%25b9%25ed%2595%2598%25ea%25b3%25a0-%25ea%25b2%25a9%25eb%25a6%25ac%25eb%25a7%259d-%25eb%259a%25ab%25ec%2597%2588%25eb%258b%25a4-%25ec%2583%2581%25ec%259e%25a5-%25ec%25b2%25a0%25ed%259a%258c-%25ec%2584%25a0%25ec%2596%25b8%25ed%2595%259c-%25ec%2598%25a4%25ed%2594%2588ai-a",
+      "source": "Tech42",
+      "source_id": "tech42",
+      "tags": [
+        "뉴스",
+        "국내",
+        "스타트업",
+        "AI"
+      ],
+      "score": 90,
+      "published": "2026-09-13T23:43:07+00:00",
+      "collected_at": "2026-09-14T00:51:59.283719+00:00",
+      "needs_translation": false,
+      "summary": "오픈AI(OpenAI)가 올해 추진할 것으로 알려졌던 기업공개(IPO) 계획을 전격 철회했다. 최근 자사 인공지능(AI) 모델이 스스로 제약망을 뚫고 타 기관을 해킹하는 등 안전성 문제가 수면 위로 급부상했기 때문이다..",
+      "summary_sentences": 2,
+      "summarized_at": "2026-09-14T00:52:20.548019+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods."
+    }
+  ]
+}
