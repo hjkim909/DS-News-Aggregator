@@ -1,0 +1,77 @@
+{
+  "date": "2026-09-21",
+  "articles": [
+    {
+      "id": "tech42_328129",
+      "title": "\"사진만 넣으면 스티커 완성\"…오픈AI, 챗GPT 전용 스티커 생성 기능 탑재",
+      "content": "오픈AI(OpenAI)가 챗GPT(ChatGPT) 모바일 앱의 이미지 서비스에 사용자가 간편하게 나만의 스티커를 제작할 수 있는 전용 워크플로를 새롭게 추가했다.",
+      "url": "https://www.tech42.co.kr/%ec%82%ac%ec%a7%84%eb%a7%8c-%eb%84%a3%ec%9c%bc%eb%a9%b4-%ec%8a%a4%ed%8b%b0%ec%bb%a4-%ec%99%84%ec%84%b1%ec%98%a4%ed%94%88ai-%ec%b1%97gpt-%ec%a0%84%ec%9a%a9-%ec%8a%a4%ed%8b%b0%ec%bb%a4/?utm_source=rss&utm_medium=rss&utm_campaign=%25ec%2582%25ac%25ec%25a7%2584%25eb%25a7%258c-%25eb%2584%25a3%25ec%259c%25bc%25eb%25a9%25b4-%25ec%258a%25a4%25ed%258b%25b0%25ec%25bb%25a4-%25ec%2599%2584%25ec%2584%25b1%25ec%2598%25a4%25ed%2594%2588ai-%25ec%25b1%2597gpt-%25ec%25a0%2584%25ec%259a%25a9-%25ec%258a%25a4%25ed%258b%25b0%25ec%25bb%25a4",
+      "source": "Tech42",
+      "source_id": "tech42",
+      "tags": [
+        "뉴스",
+        "국내",
+        "스타트업",
+        "AI"
+      ],
+      "score": 90,
+      "published": "2026-09-21T00:12:02+00:00",
+      "collected_at": "2026-09-21T00:57:59.357067+00:00",
+      "needs_translation": false,
+      "summary": "오픈AI(OpenAI)가 챗GPT(ChatGPT) 모바일 앱의 이미지 서비스에 사용자가 간편하게 나만의 스티커를 제작할 수 있는 전용 워크플로를 새롭게 추가했다.. \"사진만 넣으면 스티커 완성\"…오픈AI, 챗GPT 전용 스티커 생성 기능 탑재에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 2,
+      "summarized_at": "2026-09-21T00:58:16.044761+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "tech42_135037",
+      "title": "‘로봇의 ChatGPT 모멘트’ 누가 먼저 도달할까?",
+      "content": "인공지능(AI)의 ‘화면 밖 진출’이 본격화되고 있다. 사람의 질문에 답하고 문서를 만드는 생성형 AI를 넘어, 주변 환경을 이해하고 직접 이동하며 물체를 다루는 ‘피지컬 AI(Physical AI)’를 두고 미국과 중국의 경쟁 구도가 격화되는 모양새다. 흥미로운 점은 이들이 집중하는 방향성의 차이다.",
+      "url": "https://www.tech42.co.kr/%eb%a1%9c%eb%b4%87%ec%9d%98-chatgpt-%eb%aa%a8%eb%a9%98%ed%8a%b8-%eb%88%84%ea%b0%80-%eb%a8%bc%ec%a0%80-%eb%8f%84%eb%8b%ac%ed%95%a0%ea%b9%8c/?utm_source=rss&utm_medium=rss&utm_campaign=%25eb%25a1%259c%25eb%25b4%2587%25ec%259d%2598-chatgpt-%25eb%25aa%25a8%25eb%25a9%2598%25ed%258a%25b8-%25eb%2588%2584%25ea%25b0%2580-%25eb%25a8%25bc%25ec%25a0%2580-%25eb%258f%2584%25eb%258b%25ac%25ed%2595%25a0%25ea%25b9%258c",
+      "source": "Tech42",
+      "source_id": "tech42",
+      "tags": [
+        "뉴스",
+        "국내",
+        "스타트업",
+        "AI"
+      ],
+      "score": 90,
+      "published": "2026-09-20T23:42:13+00:00",
+      "collected_at": "2026-09-21T00:57:59.357486+00:00",
+      "needs_translation": false,
+      "summary": "인공지능(AI)의 ‘화면 밖 진출’이 본격화되고 있다. 사람의 질문에 답하고 문서를 만드는 생성형 AI를 넘어, 주변 환경을 이해하고 직접 이동하며 물체를 다루는 ‘피지컬 AI(Physical AI)’를 두고 미국과 중국의 경쟁 구도가 격화되는 모양새다.",
+      "summary_sentences": 2,
+      "summarized_at": "2026-09-21T00:58:18.120394+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "id": "tech42_491047",
+      "title": "‘카메라 뺀 안경’ 나올까… 메타, 역대급 'AI·MR' 대공습",
+      "content": "메타(Meta)가 오는 23일(현지시간) 연례 최대 행사 ‘메타 커넥트 2026’을 열고 차세대 하드웨어와 인공지능(AI) 신기술을 대거 공개한다.",
+      "url": "https://www.tech42.co.kr/%ec%b9%b4%eb%a9%94%eb%9d%bc-%eb%ba%80-%ec%95%88%ea%b2%bd-%eb%82%98%ec%98%ac%ea%b9%8c-%eb%a9%94%ed%83%80-%ec%97%ad%eb%8c%80%ea%b8%89-ai%c2%b7mr-%eb%8c%80%ea%b3%b5/?utm_source=rss&utm_medium=rss&utm_campaign=%25ec%25b9%25b4%25eb%25a9%2594%25eb%259d%25bc-%25eb%25ba%2580-%25ec%2595%2588%25ea%25b2%25bd-%25eb%2582%2598%25ec%2598%25ac%25ea%25b9%258c-%25eb%25a9%2594%25ed%2583%2580-%25ec%2597%25ad%25eb%258c%2580%25ea%25b8%2589-ai%25c2%25b7mr-%25eb%258c%2580%25ea%25b3%25b5",
+      "source": "Tech42",
+      "source_id": "tech42",
+      "tags": [
+        "뉴스",
+        "국내",
+        "스타트업",
+        "AI"
+      ],
+      "score": 80,
+      "published": "2026-09-21T00:01:21+00:00",
+      "collected_at": "2026-09-21T00:57:59.357332+00:00",
+      "needs_translation": false,
+      "summary": "메타(Meta)가 오는 23일(현지시간) 연례 최대 행사 ‘메타 커넥트 2026’을 열고 차세대 하드웨어와 인공지능(AI) 신기술을 대거 공개한다.. ‘카메라 뺀 안경’ 나올까… 메타, 역대급 'AI·MR' 대공습에 대한 추가 정보는 원문을 참조하세요.",
+      "summary_sentences": 2,
+      "summarized_at": "2026-09-21T00:58:20.195449+00:00",
+      "summarization_service": "fallback",
+      "summarization_success": false,
+      "summarization_error": "404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods."
+    }
+  ]
+}
